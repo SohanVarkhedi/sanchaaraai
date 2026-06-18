@@ -34,6 +34,18 @@ translations = {
     "col_dominant_vehicle": {"en": "Top Vehicle", "kn": "ಪ್ರಮುಖ ವಾಹನ"},
     "col_dominant_violation": {"en": "Top Violation", "kn": "ಪ್ರಮುಖ ಉಲ್ಲಂಘನೆ"},
     "violation_breakdown_title": {"en": "Violation breakdown", "kn": "ಉಲ್ಲಂಘನೆ ವಿಶ್ಲೇಷಣೆ"},
+    "nav_temporal": {"en": "Temporal Patterns", "kn": "ಕಾಲಿಕ ಮಾದರಿಗಳು"},
+    "temporal_header": {"en": "Temporal Pattern Analysis", "kn": "ಕಾಲಿಕ ಮಾದರಿ ವಿಶ್ಲೇಷಣೆ"},
+    "select_hotspot": {"en": "Select hotspot", "kn": "ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಯ್ಕೆ ಮಾಡಿ"},
+    "peak_day_label": {"en": "Peak day", "kn": "ಹೆಚ್ಚು ಉಲ್ಲಂಘನೆ ದಿನ"},
+    "peak_hour_label": {"en": "Peak hour (IST)", "kn": "ಹೆಚ್ಚು ಉಲ್ಲಂಘನೆ ಸಮಯ (IST)"},
+    "trend_label": {"en": "Observed trend", "kn": "ಗಮನಿಸಿದ ಪ್ರವೃತ್ತಿ"},
+    "trend_increasing": {"en": "Increasing", "kn": "ಏರುತ್ತಿದೆ"},
+    "trend_decreasing": {"en": "Decreasing", "kn": "ಇಳಿಯುತ್ತಿದೆ"},
+    "trend_stable": {"en": "Stable", "kn": "ಸ್ಥಿರ"},
+    "day_chart_title": {"en": "Violations by day of week", "kn": "ವಾರದ ದಿನದ ಪ್ರಕಾರ ಉಲ್ಲಂಘನೆಗಳು"},
+    "hour_chart_title": {"en": "Violations by hour of day (IST)", "kn": "ಗಂಟೆಯ ಪ್ರಕಾರ ಉಲ್ಲಂಘನೆಗಳು (IST)"},
+    "month_chart_title": {"en": "Monthly violation trend", "kn": "ಮಾಸಿಕ ಉಲ್ಲಂಘನೆ ಪ್ರವೃತ್ತಿ"},
 }
 
 

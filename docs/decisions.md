@@ -28,7 +28,9 @@ violation_type is stored as a JSON array per row (e.g. ["WRONG PARKING","NO PARK
 Person A outputs exactly:
 ```
 hotspot_id, lat, lon, impact_score, score_breakdown, violations_per_hour, recommended_officers,
-police_station, junction_name, station_count, severity_norm, dominant_vehicle_type
+police_station, junction_name, station_count, severity_norm, dominant_vehicle_type,
+dominant_violation_type, violation_type_breakdown,
+day_of_week_distribution, peak_day, hour_distribution, peak_hour, monthly_trend, trend_direction
 ```
 score_breakdown is a JSON string with keys:
   violation_count, count_norm, rush_violations, rush_frac,
@@ -42,6 +44,12 @@ dominant_violation_type: mode violation type across all exploded violation_type_
 violation_type_breakdown: JSON string mapping violation type → {count, pct} for types ≥5% share, capped at top 5.
   count = occurrences after exploding violation_type_list; pct = count / total exploded entries in cluster.
   Serialized as a JSON string in the handoff file (same pattern as score_breakdown).
+day_of_week_distribution: JSON string {day_name: count} Monday-Sunday (IST). All 7 days present; zeros filled.
+peak_day: string day name with highest violation count in the cluster.
+hour_distribution: JSON string {str(hour): count} for hours 0-23 IST. All 24 hours present; zeros filled.
+peak_hour: integer IST hour with highest violation count in the cluster.
+monthly_trend: JSON string {YYYY-MM: count} for each calendar month present in the cluster (IST).
+trend_direction: string "increasing" / "decreasing" / "stable" — see trend direction calculation in decisions.md.
 
 ---
 
@@ -80,10 +88,38 @@ The dataset marks all timestamps as UTC (+00:00). Bangalore is IST = UTC+5:30 (A
 
 ---
 
-**Actual date range: Nov 9 2023 to Apr 8 2024 (filename is misleading)**
-The source CSV is named "jan to may" but the actual data spans Nov 2023 - Apr 2024. Do not cite "Jan-May" in the demo. Use the confirmed range.
+**Actual date range: Nov 10 2023 to Mar 29 2024 IST (filename is misleading)**
+The source CSV is named "jan to may" but the actual data spans Nov 2023 - Mar 2024 in IST. UTC min is Nov 9, UTC max is Mar 29 — after IST conversion (+5:30) the IST range is Nov 10 to Mar 29. Do not cite "Jan-May" or "Apr 8" in the demo. Use the confirmed range: Nov 2023 – Mar 2024.
 
 ---
+
+**Temporal pattern fields added to handoff (Phase 8)**
+Six new fields per hotspot computed from created_datetime values within each cluster:
+- day_of_week_distribution: {day_name: count} for Monday-Sunday (IST day). Stored as JSON string.
+- peak_day: day name with highest violation count (mode day).
+- hour_distribution: {str(0..23): count} for each IST hour. Stored as JSON string. Zeros included for all 24 hours.
+- peak_hour: integer IST hour with highest count.
+- monthly_trend: {YYYY-MM: count} for each calendar month present in the cluster. Stored as JSON string.
+- trend_direction: "increasing" / "decreasing" / "stable" — see calculation below.
+
+Partial months (fewer calendar days in dataset than a full month):
+- 2023-11: starts Nov 10 IST (21 of 30 days). Raw counts are ~30% lower than a full November would be.
+- 2024-03: ends Mar 29 IST (28 of 31 days). Raw counts slightly understated.
+- 2024-02 and 2024-03 have dramatically sparse enforcement data city-wide (1,719 and 7,038 records vs ~38,000/month in Dec–Jan). This is an enforcement reporting gap, not a proven decline in parking violations. The UI notes this explicitly and avoids implying a real trend.
+
+Trend direction calculation:
+- Midpoint: dataset IST min (Nov 10) + half of total span (140.3 days / 2 = 70.2 days) = Jan 19, 2024.
+- First-half count: violations in that cluster before Jan 19, 2024 IST.
+- Second-half count: violations on or after Jan 19, 2024 IST.
+- Daily rates: fh_rate = fh_count / 70.2; sh_rate = sh_count / 70.2.
+- Ratio = sh_rate / fh_rate. If ratio > 1.10: "increasing". If ratio < 0.90: "decreasing". Else: "stable".
+- This is a simple observed ratio on recorded violations, NOT a forecast. 99 of 101 hotspots are "decreasing" in this dataset due to the Feb–Mar reporting gap. The UI explicitly warns against interpreting this as a real enforcement trend.
+
+City-wide day-of-week finding:
+- No sharp weekday/weekend cliff. Sunday (18,129) and Thursday (19,164) are highest; Monday (12,073) is lowest.
+- Weekend avg/day (17,540) marginally exceeds weekday avg/day (16,064).
+- The Monday dip is partly a data artifact: the dataset has fewer Mondays in its 140-day window.
+- Per-hotspot day-of-week breakdown is informative — different zones show different peaks.
 
 **Row count after approved filter: 115,400 of 298,450 (61.3% removed)**
 NULLs account for 125,254 rows (no status assigned). Rejected: 49,754. Others (created1, processing, duplicate): ~8,042. Only approved records are used downstream.

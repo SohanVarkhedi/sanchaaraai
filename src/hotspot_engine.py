@@ -17,6 +17,9 @@ WEIGHT_SEVERITY = 0.2   # ASSUMPTION -- see docs/decisions.md for weight rationa
 OFFICER_THROUGHPUT = 4  # violations per officer per hour -- ASSUMPTION, not measured
 ENFORCEMENT_HOURS_PER_DAY = 5  # observed: IST 7-12 is dominant enforcement window
 
+DOW_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+PARTIAL_MONTHS = {'2023-11', '2024-03'}  # incomplete months: Nov starts Nov 10; Mar ends Mar 29
+
 # Vehicle severity weights: 0=easiest to relocate, 1=hardest. ASSUMPTION, not measured.
 # Larger/heavier vehicles score higher. All 22 distinct values found in the dataset are mapped.
 # Any unknown value defaults to 0.5 (neutral) at compute time via .fillna(0.5).
@@ -59,7 +62,8 @@ def tune_dbscan(coords: np.ndarray) -> None:
 
 
 def build_hotspots(
-    df: pd.DataFrame, labels: np.ndarray, enforcement_hours: float
+    df: pd.DataFrame, labels: np.ndarray, enforcement_hours: float,
+    midpoint: pd.Timestamp, half_days: float,
 ) -> pd.DataFrame:
     df = df.copy()
     df["cluster"] = labels
@@ -89,6 +93,32 @@ def build_hotspots(
             for vtype, cnt in vt_filtered.items()
         }
 
+        # Temporal patterns (observed data only, no forecasting)
+        ist = grp["dt_ist"]
+
+        dow_counts = ist.dt.day_name().value_counts().reindex(DOW_ORDER).fillna(0).astype(int)
+        day_of_week_distribution = {d: int(c) for d, c in dow_counts.items()}
+        peak_day = str(dow_counts.idxmax())
+
+        hc = ist.dt.hour.value_counts().sort_index()
+        hour_distribution = {str(h): int(hc.get(h, 0)) for h in range(24)}
+        peak_hour = int(hc.idxmax())
+
+        mc = ist.dt.strftime("%Y-%m").value_counts().sort_index()
+        monthly_trend = {m: int(c) for m, c in mc.items()}
+
+        fh_count = int((ist < midpoint).sum())
+        sh_count = total - fh_count
+        fh_rate = fh_count / half_days if half_days > 0 else 0.0
+        sh_rate = sh_count / half_days if half_days > 0 else 0.0
+        ratio = sh_rate / fh_rate if fh_rate > 0 else 1.0
+        if ratio > 1.1:
+            trend_direction = "increasing"
+        elif ratio < 0.9:
+            trend_direction = "decreasing"
+        else:
+            trend_direction = "stable"
+
         rows.append(
             {
                 "hotspot_id": int(cid),
@@ -105,6 +135,12 @@ def build_hotspots(
                 "dominant_vehicle_type": dominant_vehicle_type,
                 "dominant_violation_type": dominant_violation_type,
                 "violation_type_breakdown": violation_type_breakdown,
+                "day_of_week_distribution": day_of_week_distribution,
+                "peak_day": peak_day,
+                "hour_distribution": hour_distribution,
+                "peak_hour": peak_hour,
+                "monthly_trend": monthly_trend,
+                "trend_direction": trend_direction,
             }
         )
 
@@ -195,6 +231,8 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
     df = pd.read_parquet(PARQUET)
     print(f"Loaded {len(df):,} rows")
 
+    df["dt_ist"] = df["created_datetime"].dt.tz_convert("Asia/Kolkata")
+
     unmapped_mask = ~df["vehicle_type"].isin(SEVERITY_WEIGHTS)
     n_unmapped = int(unmapped_mask.sum())
     if n_unmapped > 0:
@@ -212,6 +250,10 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
         f"= {enforcement_hours:.0f} enforcement hours"
     )
 
+    half_days = span_days / 2
+    midpoint = df["dt_ist"].min() + (df["dt_ist"].max() - df["dt_ist"].min()) / 2
+    print(f"Midpoint for trend split: {midpoint.date()} (half_days={half_days:.1f})")
+
     coords = df[["latitude", "longitude"]].values
 
     print(f"\nRunning DBSCAN eps={eps}, min_samples={min_samples}")
@@ -222,7 +264,7 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
     print(f"Clusters  : {n_clusters}")
     print(f"Noise pts : {n_noise:,} ({n_noise / len(labels) * 100:.1f}% of rows)")
 
-    hs = build_hotspots(df, labels, enforcement_hours)
+    hs = build_hotspots(df, labels, enforcement_hours, midpoint, half_days)
 
     display = [
         "hotspot_id", "lat", "lon", "impact_score",
@@ -239,10 +281,16 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
          "score_breakdown", "violations_per_hour", "recommended_officers",
          "police_station", "junction_name", "station_count",
          "severity_norm", "dominant_vehicle_type",
-         "dominant_violation_type", "violation_type_breakdown"]
+         "dominant_violation_type", "violation_type_breakdown",
+         "day_of_week_distribution", "peak_day",
+         "hour_distribution", "peak_hour",
+         "monthly_trend", "trend_direction"]
     ].copy()
     handoff["score_breakdown"] = handoff["score_breakdown"].apply(json.dumps)
     handoff["violation_type_breakdown"] = handoff["violation_type_breakdown"].apply(json.dumps)
+    handoff["day_of_week_distribution"] = handoff["day_of_week_distribution"].apply(json.dumps)
+    handoff["hour_distribution"] = handoff["hour_distribution"].apply(json.dumps)
+    handoff["monthly_trend"] = handoff["monthly_trend"].apply(json.dumps)
     handoff.to_json(OUT_JSON, orient="records", indent=2)
 
     print(f"\nSaved {len(hs)} hotspots to data/processed/")

@@ -1,9 +1,10 @@
 import json
 import pandas as pd
+import plotly.express as px
 import folium
 import streamlit as st
 from streamlit_folium import st_folium
-from src.hotspot_engine import simulate_allocation, OFFICER_THROUGHPUT
+from src.hotspot_engine import simulate_allocation, OFFICER_THROUGHPUT, DOW_ORDER, PARTIAL_MONTHS
 from src.i18n import t
 
 st.set_page_config(
@@ -46,6 +47,19 @@ def load_hotspots() -> pd.DataFrame:
         df["violation_type_breakdown"] = [{} for _ in range(len(df))]
     if "dominant_violation_type" not in df.columns:
         df["dominant_violation_type"] = "UNKNOWN"
+    for dict_field in ("day_of_week_distribution", "hour_distribution", "monthly_trend"):
+        if dict_field in df.columns:
+            df[dict_field] = df[dict_field].apply(
+                lambda x: json.loads(x) if isinstance(x, str) else (x if isinstance(x, dict) else {})
+            )
+        else:
+            df[dict_field] = [{} for _ in range(len(df))]
+    if "peak_day" not in df.columns:
+        df["peak_day"] = "Unknown"
+    if "peak_hour" not in df.columns:
+        df["peak_hour"] = 0
+    if "trend_direction" not in df.columns:
+        df["trend_direction"] = "stable"
     return df.sort_values("impact_score", ascending=False).reset_index(drop=True)
 
 
@@ -342,6 +356,120 @@ def page_simulator(df: pd.DataFrame, lang: str) -> None:
             st.dataframe(_fmt_sim(uncov_display, lang), use_container_width=True)
 
 
+def page_temporal(df: pd.DataFrame, lang: str) -> None:
+    st.header(t("temporal_header", lang))
+    st.caption(
+        "Observed violation patterns by day of week, hour of day, and month for the selected hotspot. "
+        "Pattern reporting on recorded data only — no forecasting or predictive claims."
+    )
+
+    options = [
+        f"#{int(r['hotspot_id'])} — {r['junction_name']} (rank {i + 1})"
+        for i, (_, r) in enumerate(df.iterrows())
+    ]
+    selected_idx = st.selectbox(t("select_hotspot", lang), range(len(options)), format_func=lambda i: options[i])
+    row = df.iloc[selected_idx]
+
+    def _parse(field: str) -> dict:
+        val = row.get(field, {})
+        return json.loads(val) if isinstance(val, str) else (val if isinstance(val, dict) else {})
+
+    dow_dist = _parse("day_of_week_distribution")
+    hour_dist = _parse("hour_distribution")
+    monthly = _parse("monthly_trend")
+    peak_day = str(row.get("peak_day", "Unknown"))
+    peak_hour = int(row.get("peak_hour", 0))
+    trend_dir = str(row.get("trend_direction", "stable"))
+
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric(t("peak_day_label", lang), peak_day)
+    m2.metric(t("peak_hour_label", lang), f"{peak_hour}:00")
+    trend_badge = {"increasing": "▲", "decreasing": "▼", "stable": "→"}.get(trend_dir, "→")
+    m3.metric(t("trend_label", lang), f"{trend_badge} {t('trend_' + trend_dir, lang)}")
+    m4.metric(t("col_violations", lang), f"{int(row['violation_count']):,}")
+
+    st.divider()
+
+    # Day of week chart
+    st.subheader(t("day_chart_title", lang))
+    dow_vals = [dow_dist.get(d, 0) for d in DOW_ORDER]
+    dow_df = pd.DataFrame({
+        "Day": DOW_ORDER,
+        "Violations": dow_vals,
+        "Peak": [d == peak_day for d in DOW_ORDER],
+    })
+    fig_dow = px.bar(
+        dow_df, x="Day", y="Violations",
+        color="Peak",
+        color_discrete_map={True: "#e80000", False: "#6688aa"},
+        labels={"Peak": "Peak day"},
+        height=300,
+    )
+    fig_dow.update_layout(showlegend=False, margin=dict(t=10, b=10))
+    st.plotly_chart(fig_dow, use_container_width=True)
+
+    st.divider()
+
+    # Hour of day chart
+    st.subheader(t("hour_chart_title", lang))
+    hour_vals = [hour_dist.get(str(h), 0) for h in range(24)]
+    hour_df = pd.DataFrame({
+        "Hour (IST)": list(range(24)),
+        "Violations": hour_vals,
+        "Morning rush (7–11 IST)": [7 <= h <= 11 for h in range(24)],
+    })
+    fig_hour = px.bar(
+        hour_df, x="Hour (IST)", y="Violations",
+        color="Morning rush (7–11 IST)",
+        color_discrete_map={True: "#e8a830", False: "#6688aa"},
+        height=300,
+    )
+    fig_hour.update_layout(margin=dict(t=10, b=10))
+    st.plotly_chart(fig_hour, use_container_width=True)
+    st.caption(
+        "Evening hours (17–20 IST) are very sparse — enforcement in this dataset is "
+        "overwhelmingly morning-concentrated. Low evening counts reflect enforcement timing, "
+        "not absence of congestion."
+    )
+
+    st.divider()
+
+    # Monthly trend chart
+    st.subheader(t("month_chart_title", lang))
+    trend_color_map = {"increasing": "green", "decreasing": "red", "stable": "gray"}
+    trend_display = (
+        f":{trend_color_map.get(trend_dir, 'gray')}[{trend_badge} {t('trend_' + trend_dir, lang)}]"
+    )
+    st.markdown(
+        f"**{t('trend_label', lang)}:** {trend_display} — "
+        "second-half daily rate vs first-half daily rate (split at dataset midpoint Jan 19, 2024). "
+        "Declining trend is dataset-wide due to enforcement sparseness in Feb–Mar 2024, "
+        "not necessarily a real reduction in parking violations."
+    )
+    month_keys = sorted(monthly.keys())
+    month_labels = [f"{m}*" if m in PARTIAL_MONTHS else m for m in month_keys]
+    month_df = pd.DataFrame({
+        "Month": month_labels,
+        "Violations": [monthly[m] for m in month_keys],
+        "Partial month": [m in PARTIAL_MONTHS for m in month_keys],
+    })
+    fig_month = px.bar(
+        month_df, x="Month", y="Violations",
+        color="Partial month",
+        color_discrete_map={True: "#888888", False: "#e86020"},
+        height=300,
+    )
+    fig_month.update_layout(margin=dict(t=10, b=10))
+    st.plotly_chart(fig_month, use_container_width=True)
+    st.caption(
+        "* Nov 2023 starts Nov 10 (21 days); Mar 2024 ends Mar 29 (28 days) — "
+        "raw counts are lower than full months. "
+        "Feb 2024 and Mar 2024 have dramatically sparse enforcement data city-wide (1,719 and 7,038 records "
+        "vs ~38,000/month in Dec–Jan); this appears to be an enforcement reporting gap, not a true "
+        "decline in parking violations."
+    )
+
+
 def _sidebar_methodology(lang: str) -> None:
     with st.sidebar.expander(t("about_data_title", lang)):
         st.markdown(
@@ -388,7 +516,7 @@ def main() -> None:
 
     st.sidebar.divider()
 
-    nav_keys = ["nav_map", "nav_priority_list", "nav_simulator"]
+    nav_keys = ["nav_map", "nav_priority_list", "nav_simulator", "nav_temporal"]
     page_key = st.sidebar.radio(
         "Navigate",
         nav_keys,
@@ -422,8 +550,10 @@ def main() -> None:
         page_map(filtered_df, lang)
     elif page_key == "nav_priority_list":
         page_priority_list(filtered_df, lang)
-    else:
+    elif page_key == "nav_simulator":
         page_simulator(filtered_df, lang)
+    else:
+        page_temporal(filtered_df, lang)
 
 
 main()

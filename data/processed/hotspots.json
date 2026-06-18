@@ -13,7 +13,13 @@
     "severity_norm":0.3988,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 26589, \"pct\": 0.4872}, \"NO PARKING\": {\"count\": 24376, \"pct\": 0.4467}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 26589, \"pct\": 0.4872}, \"NO PARKING\": {\"count\": 24376, \"pct\": 0.4467}}",
+    "day_of_week_distribution":"{\"Monday\": 5766, \"Tuesday\": 6586, \"Wednesday\": 6667, \"Thursday\": 8139, \"Friday\": 7435, \"Saturday\": 7538, \"Sunday\": 8492}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 933, \"1\": 2054, \"2\": 2291, \"3\": 2597, \"4\": 3582, \"5\": 4249, \"6\": 3776, \"7\": 4170, \"8\": 5791, \"9\": 5612, \"10\": 5944, \"11\": 4730, \"12\": 2204, \"13\": 1304, \"14\": 801, \"15\": 185, \"16\": 56, \"17\": 36, \"18\": 13, \"19\": 0, \"20\": 9, \"21\": 33, \"22\": 153, \"23\": 100}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 13917, \"2023-12\": 17188, \"2024-01\": 16120, \"2024-02\": 635, \"2024-03\": 2763}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":3,
@@ -29,7 +35,13 @@
     "severity_norm":0.3215,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 10430, \"pct\": 0.553}, \"NO PARKING\": {\"count\": 7390, \"pct\": 0.3918}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 10430, \"pct\": 0.553}, \"NO PARKING\": {\"count\": 7390, \"pct\": 0.3918}}",
+    "day_of_week_distribution":"{\"Monday\": 1819, \"Tuesday\": 2817, \"Wednesday\": 2501, \"Thursday\": 2927, \"Friday\": 2326, \"Saturday\": 2546, \"Sunday\": 2811}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 76, \"1\": 364, \"2\": 913, \"3\": 1610, \"4\": 1698, \"5\": 1677, \"6\": 1408, \"7\": 1147, \"8\": 1686, \"9\": 1672, \"10\": 2068, \"11\": 1817, \"12\": 1012, \"13\": 435, \"14\": 125, \"15\": 23, \"16\": 12, \"17\": 0, \"18\": 3, \"19\": 0, \"20\": 1, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 4622, \"2023-12\": 6471, \"2024-01\": 5256, \"2024-02\": 338, \"2024-03\": 1060}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":6,
@@ -45,7 +57,13 @@
     "severity_norm":0.4487,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 3980, \"pct\": 0.3713}, \"WRONG PARKING\": {\"count\": 3811, \"pct\": 0.3556}, \"PARKING IN A MAIN ROAD\": {\"count\": 2005, \"pct\": 0.1871}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 3980, \"pct\": 0.3713}, \"WRONG PARKING\": {\"count\": 3811, \"pct\": 0.3556}, \"PARKING IN A MAIN ROAD\": {\"count\": 2005, \"pct\": 0.1871}}",
+    "day_of_week_distribution":"{\"Monday\": 355, \"Tuesday\": 1253, \"Wednesday\": 1326, \"Thursday\": 1639, \"Friday\": 1343, \"Saturday\": 1044, \"Sunday\": 269}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 14, \"1\": 130, \"2\": 413, \"3\": 729, \"4\": 1030, \"5\": 892, \"6\": 838, \"7\": 524, \"8\": 950, \"9\": 686, \"10\": 364, \"11\": 377, \"12\": 131, \"13\": 91, \"14\": 48, \"15\": 3, \"16\": 2, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 6, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 1100, \"2023-12\": 2136, \"2024-01\": 3132, \"2024-02\": 95, \"2024-03\": 766}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":9,
@@ -61,7 +79,13 @@
     "severity_norm":0.5676,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1789, \"pct\": 0.631}, \"WRONG PARKING\": {\"count\": 490, \"pct\": 0.1728}, \"PARKING IN A MAIN ROAD\": {\"count\": 337, \"pct\": 0.1189}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1789, \"pct\": 0.631}, \"WRONG PARKING\": {\"count\": 490, \"pct\": 0.1728}, \"PARKING IN A MAIN ROAD\": {\"count\": 337, \"pct\": 0.1189}}",
+    "day_of_week_distribution":"{\"Monday\": 173, \"Tuesday\": 157, \"Wednesday\": 257, \"Thursday\": 307, \"Friday\": 305, \"Saturday\": 398, \"Sunday\": 513}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 3, \"1\": 7, \"2\": 61, \"3\": 132, \"4\": 194, \"5\": 236, \"6\": 199, \"7\": 214, \"8\": 253, \"9\": 160, \"10\": 163, \"11\": 124, \"12\": 118, \"13\": 154, \"14\": 68, \"15\": 6, \"16\": 6, \"17\": 8, \"18\": 0, \"19\": 1, \"20\": 0, \"21\": 3, \"22\": 0, \"23\": 0}",
+    "peak_hour":8,
+    "monthly_trend":"{\"2023-11\": 345, \"2023-12\": 938, \"2024-01\": 674, \"2024-02\": 35, \"2024-03\": 118}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":25,
@@ -77,7 +101,13 @@
     "severity_norm":0.637,
     "dominant_vehicle_type":"MAXI-CAB",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1582, \"pct\": 0.7774}, \"NO PARKING\": {\"count\": 207, \"pct\": 0.1017}, \"PARKING IN A MAIN ROAD\": {\"count\": 162, \"pct\": 0.0796}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1582, \"pct\": 0.7774}, \"NO PARKING\": {\"count\": 207, \"pct\": 0.1017}, \"PARKING IN A MAIN ROAD\": {\"count\": 162, \"pct\": 0.0796}}",
+    "day_of_week_distribution":"{\"Monday\": 189, \"Tuesday\": 398, \"Wednesday\": 390, \"Thursday\": 226, \"Friday\": 160, \"Saturday\": 270, \"Sunday\": 113}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 4, \"1\": 30, \"2\": 92, \"3\": 170, \"4\": 211, \"5\": 308, \"6\": 199, \"7\": 178, \"8\": 155, \"9\": 96, \"10\": 168, \"11\": 85, \"12\": 13, \"13\": 10, \"14\": 11, \"15\": 8, \"16\": 8, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-11\": 35, \"2023-12\": 534, \"2024-01\": 1049, \"2024-02\": 23, \"2024-03\": 105}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":14,
@@ -93,7 +123,13 @@
     "severity_norm":0.3613,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1436, \"pct\": 0.6563}, \"WRONG PARKING\": {\"count\": 536, \"pct\": 0.245}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1436, \"pct\": 0.6563}, \"WRONG PARKING\": {\"count\": 536, \"pct\": 0.245}}",
+    "day_of_week_distribution":"{\"Monday\": 169, \"Tuesday\": 287, \"Wednesday\": 300, \"Thursday\": 212, \"Friday\": 221, \"Saturday\": 217, \"Sunday\": 514}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 8, \"1\": 10, \"2\": 77, \"3\": 95, \"4\": 101, \"5\": 116, \"6\": 123, \"7\": 180, \"8\": 252, \"9\": 184, \"10\": 191, \"11\": 245, \"12\": 151, \"13\": 71, \"14\": 66, \"15\": 18, \"16\": 17, \"17\": 8, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 7, \"23\": 0}",
+    "peak_hour":8,
+    "monthly_trend":"{\"2023-11\": 462, \"2023-12\": 854, \"2024-01\": 472, \"2024-02\": 24, \"2024-03\": 108}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":11,
@@ -109,7 +145,13 @@
     "severity_norm":0.8144,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1024, \"pct\": 0.4406}, \"WRONG PARKING\": {\"count\": 812, \"pct\": 0.3494}, \"PARKING IN A MAIN ROAD\": {\"count\": 356, \"pct\": 0.1532}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1024, \"pct\": 0.4406}, \"WRONG PARKING\": {\"count\": 812, \"pct\": 0.3494}, \"PARKING IN A MAIN ROAD\": {\"count\": 356, \"pct\": 0.1532}}",
+    "day_of_week_distribution":"{\"Monday\": 224, \"Tuesday\": 258, \"Wednesday\": 253, \"Thursday\": 282, \"Friday\": 383, \"Saturday\": 211, \"Sunday\": 218}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 64, \"1\": 128, \"2\": 82, \"3\": 179, \"4\": 316, \"5\": 189, \"6\": 82, \"7\": 35, \"8\": 146, \"9\": 48, \"10\": 96, \"11\": 119, \"12\": 129, \"13\": 112, \"14\": 71, \"15\": 26, \"16\": 3, \"17\": 4, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 251, \"2023-12\": 599, \"2024-01\": 769, \"2024-02\": 32, \"2024-03\": 178}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":43,
@@ -125,7 +167,13 @@
     "severity_norm":0.5663,
     "dominant_vehicle_type":"PASSENGER AUTO",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 914, \"pct\": 0.3655}, \"NO PARKING\": {\"count\": 797, \"pct\": 0.3187}, \"PARKING IN A MAIN ROAD\": {\"count\": 569, \"pct\": 0.2275}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 914, \"pct\": 0.3655}, \"NO PARKING\": {\"count\": 797, \"pct\": 0.3187}, \"PARKING IN A MAIN ROAD\": {\"count\": 569, \"pct\": 0.2275}}",
+    "day_of_week_distribution":"{\"Monday\": 124, \"Tuesday\": 194, \"Wednesday\": 242, \"Thursday\": 374, \"Friday\": 289, \"Saturday\": 277, \"Sunday\": 154}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 40, \"1\": 181, \"2\": 156, \"3\": 150, \"4\": 88, \"5\": 36, \"6\": 227, \"7\": 123, \"8\": 84, \"9\": 113, \"10\": 183, \"11\": 108, \"12\": 58, \"13\": 44, \"14\": 26, \"15\": 28, \"16\": 8, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":6,
+    "monthly_trend":"{\"2023-11\": 301, \"2023-12\": 694, \"2024-01\": 458, \"2024-02\": 43, \"2024-03\": 158}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":19,
@@ -141,7 +189,13 @@
     "severity_norm":0.36,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1086, \"pct\": 0.5644}, \"WRONG PARKING\": {\"count\": 697, \"pct\": 0.3623}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 102, \"pct\": 0.053}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1086, \"pct\": 0.5644}, \"WRONG PARKING\": {\"count\": 697, \"pct\": 0.3623}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 102, \"pct\": 0.053}}",
+    "day_of_week_distribution":"{\"Monday\": 59, \"Tuesday\": 354, \"Wednesday\": 345, \"Thursday\": 281, \"Friday\": 226, \"Saturday\": 298, \"Sunday\": 216}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 16, \"2\": 76, \"3\": 171, \"4\": 206, \"5\": 135, \"6\": 82, \"7\": 114, \"8\": 102, \"9\": 141, \"10\": 234, \"11\": 279, \"12\": 116, \"13\": 78, \"14\": 21, \"15\": 6, \"16\": 0, \"17\": 2, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 358, \"2023-12\": 716, \"2024-01\": 586, \"2024-02\": 33, \"2024-03\": 86}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":20,
@@ -157,7 +211,13 @@
     "severity_norm":1.0,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5628}, \"PARKING IN A MAIN ROAD\": {\"count\": 149, \"pct\": 0.3744}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5628}, \"PARKING IN A MAIN ROAD\": {\"count\": 149, \"pct\": 0.3744}}",
+    "day_of_week_distribution":"{\"Monday\": 24, \"Tuesday\": 45, \"Wednesday\": 47, \"Thursday\": 40, \"Friday\": 19, \"Saturday\": 32, \"Sunday\": 36}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 2, \"1\": 4, \"2\": 28, \"3\": 22, \"4\": 35, \"5\": 10, \"6\": 6, \"7\": 6, \"8\": 10, \"9\": 0, \"10\": 50, \"11\": 39, \"12\": 21, \"13\": 9, \"14\": 1, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 61, \"2023-12\": 107, \"2024-01\": 59, \"2024-02\": 4, \"2024-03\": 12}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":49,
@@ -173,7 +233,13 @@
     "severity_norm":0.5201,
     "dominant_vehicle_type":"PASSENGER AUTO",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 238, \"pct\": 0.4312}, \"WRONG PARKING\": {\"count\": 141, \"pct\": 0.2554}, \"PARKING IN A MAIN ROAD\": {\"count\": 85, \"pct\": 0.154}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 238, \"pct\": 0.4312}, \"WRONG PARKING\": {\"count\": 141, \"pct\": 0.2554}, \"PARKING IN A MAIN ROAD\": {\"count\": 85, \"pct\": 0.154}}",
+    "day_of_week_distribution":"{\"Monday\": 49, \"Tuesday\": 1, \"Wednesday\": 7, \"Thursday\": 11, \"Friday\": 14, \"Saturday\": 31, \"Sunday\": 245}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 7, \"3\": 3, \"4\": 4, \"5\": 4, \"6\": 8, \"7\": 21, \"8\": 57, \"9\": 45, \"10\": 26, \"11\": 87, \"12\": 65, \"13\": 21, \"14\": 9, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 45, \"2023-12\": 187, \"2024-01\": 77, \"2024-02\": 4, \"2024-03\": 45}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":46,
@@ -189,7 +255,13 @@
     "severity_norm":0.236,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 678, \"pct\": 0.5424}, \"NO PARKING\": {\"count\": 404, \"pct\": 0.3232}, \"PARKING ON FOOTPATH\": {\"count\": 95, \"pct\": 0.076}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 678, \"pct\": 0.5424}, \"NO PARKING\": {\"count\": 404, \"pct\": 0.3232}, \"PARKING ON FOOTPATH\": {\"count\": 95, \"pct\": 0.076}}",
+    "day_of_week_distribution":"{\"Monday\": 328, \"Tuesday\": 107, \"Wednesday\": 118, \"Thursday\": 79, \"Friday\": 96, \"Saturday\": 106, \"Sunday\": 247}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 2, \"2\": 6, \"3\": 36, \"4\": 56, \"5\": 57, \"6\": 37, \"7\": 12, \"8\": 97, \"9\": 101, \"10\": 174, \"11\": 289, \"12\": 178, \"13\": 14, \"14\": 14, \"15\": 0, \"16\": 8, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 290, \"2023-12\": 446, \"2024-01\": 336, \"2024-02\": 7, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":4,
@@ -205,7 +277,13 @@
     "severity_norm":0.446,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1147, \"pct\": 0.5623}, \"NO PARKING\": {\"count\": 665, \"pct\": 0.326}, \"PARKING IN A MAIN ROAD\": {\"count\": 185, \"pct\": 0.0907}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1147, \"pct\": 0.5623}, \"NO PARKING\": {\"count\": 665, \"pct\": 0.326}, \"PARKING IN A MAIN ROAD\": {\"count\": 185, \"pct\": 0.0907}}",
+    "day_of_week_distribution":"{\"Monday\": 211, \"Tuesday\": 240, \"Wednesday\": 298, \"Thursday\": 310, \"Friday\": 244, \"Saturday\": 218, \"Sunday\": 269}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 313, \"1\": 254, \"2\": 127, \"3\": 49, \"4\": 48, \"5\": 56, \"6\": 13, \"7\": 101, \"8\": 82, \"9\": 95, \"10\": 184, \"11\": 181, \"12\": 123, \"13\": 72, \"14\": 29, \"15\": 2, \"16\": 2, \"17\": 1, \"18\": 1, \"19\": 2, \"20\": 2, \"21\": 0, \"22\": 11, \"23\": 42}",
+    "peak_hour":0,
+    "monthly_trend":"{\"2023-11\": 428, \"2023-12\": 661, \"2024-01\": 552, \"2024-02\": 30, \"2024-03\": 119}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":30,
@@ -221,7 +299,13 @@
     "severity_norm":0.7885,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 395, \"pct\": 0.6049}, \"PARKING IN A MAIN ROAD\": {\"count\": 153, \"pct\": 0.2343}, \"WRONG PARKING\": {\"count\": 77, \"pct\": 0.1179}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 395, \"pct\": 0.6049}, \"PARKING IN A MAIN ROAD\": {\"count\": 153, \"pct\": 0.2343}, \"WRONG PARKING\": {\"count\": 77, \"pct\": 0.1179}}",
+    "day_of_week_distribution":"{\"Monday\": 116, \"Tuesday\": 84, \"Wednesday\": 55, \"Thursday\": 33, \"Friday\": 61, \"Saturday\": 75, \"Sunday\": 42}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 12, \"1\": 56, \"2\": 58, \"3\": 29, \"4\": 10, \"5\": 30, \"6\": 15, \"7\": 58, \"8\": 21, \"9\": 35, \"10\": 52, \"11\": 21, \"12\": 43, \"13\": 6, \"14\": 15, \"15\": 5, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 38, \"2023-12\": 264, \"2024-01\": 147, \"2024-02\": 4, \"2024-03\": 13}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":17,
@@ -237,7 +321,13 @@
     "severity_norm":0.3963,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 819, \"pct\": 0.4718}, \"WRONG PARKING\": {\"count\": 535, \"pct\": 0.3082}, \"PARKING IN A MAIN ROAD\": {\"count\": 348, \"pct\": 0.2005}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 819, \"pct\": 0.4718}, \"WRONG PARKING\": {\"count\": 535, \"pct\": 0.3082}, \"PARKING IN A MAIN ROAD\": {\"count\": 348, \"pct\": 0.2005}}",
+    "day_of_week_distribution":"{\"Monday\": 122, \"Tuesday\": 227, \"Wednesday\": 205, \"Thursday\": 191, \"Friday\": 145, \"Saturday\": 253, \"Sunday\": 209}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 2, \"1\": 29, \"2\": 212, \"3\": 115, \"4\": 66, \"5\": 72, \"6\": 60, \"7\": 84, \"8\": 102, \"9\": 103, \"10\": 73, \"11\": 142, \"12\": 101, \"13\": 88, \"14\": 28, \"15\": 18, \"16\": 24, \"17\": 17, \"18\": 15, \"19\": 1, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 324, \"2023-12\": 523, \"2024-01\": 391, \"2024-02\": 13, \"2024-03\": 101}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":23,
@@ -253,7 +343,13 @@
     "severity_norm":0.8233,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 231, \"pct\": 0.5203}, \"NO PARKING\": {\"count\": 157, \"pct\": 0.3536}, \"PARKING IN A MAIN ROAD\": {\"count\": 41, \"pct\": 0.0923}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 231, \"pct\": 0.5203}, \"NO PARKING\": {\"count\": 157, \"pct\": 0.3536}, \"PARKING IN A MAIN ROAD\": {\"count\": 41, \"pct\": 0.0923}}",
+    "day_of_week_distribution":"{\"Monday\": 37, \"Tuesday\": 52, \"Wednesday\": 107, \"Thursday\": 48, \"Friday\": 27, \"Saturday\": 44, \"Sunday\": 73}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 3, \"1\": 12, \"2\": 33, \"3\": 47, \"4\": 58, \"5\": 29, \"6\": 15, \"7\": 36, \"8\": 5, \"9\": 16, \"10\": 33, \"11\": 51, \"12\": 24, \"13\": 17, \"14\": 7, \"15\": 2, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 89, \"2023-12\": 154, \"2024-01\": 130, \"2024-02\": 2, \"2024-03\": 13}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":5,
@@ -269,7 +365,13 @@
     "severity_norm":0.3529,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 822, \"pct\": 0.5021}, \"WRONG PARKING\": {\"count\": 705, \"pct\": 0.4307}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 822, \"pct\": 0.5021}, \"WRONG PARKING\": {\"count\": 705, \"pct\": 0.4307}}",
+    "day_of_week_distribution":"{\"Monday\": 145, \"Tuesday\": 185, \"Wednesday\": 216, \"Thursday\": 138, \"Friday\": 189, \"Saturday\": 196, \"Sunday\": 452}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 1, \"1\": 12, \"2\": 87, \"3\": 93, \"4\": 88, \"5\": 70, \"6\": 42, \"7\": 29, \"8\": 44, \"9\": 92, \"10\": 166, \"11\": 237, \"12\": 196, \"13\": 172, \"14\": 156, \"15\": 30, \"16\": 3, \"17\": 3, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 439, \"2023-12\": 544, \"2024-01\": 491, \"2024-02\": 7, \"2024-03\": 40}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":1,
@@ -285,7 +387,13 @@
     "severity_norm":0.6353,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 418, \"pct\": 0.4805}, \"WRONG PARKING\": {\"count\": 237, \"pct\": 0.2724}, \"PARKING IN A MAIN ROAD\": {\"count\": 166, \"pct\": 0.1908}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 418, \"pct\": 0.4805}, \"WRONG PARKING\": {\"count\": 237, \"pct\": 0.2724}, \"PARKING IN A MAIN ROAD\": {\"count\": 166, \"pct\": 0.1908}}",
+    "day_of_week_distribution":"{\"Monday\": 131, \"Tuesday\": 71, \"Wednesday\": 23, \"Thursday\": 103, \"Friday\": 117, \"Saturday\": 74, \"Sunday\": 131}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 41, \"1\": 16, \"2\": 8, \"3\": 27, \"4\": 41, \"5\": 16, \"6\": 46, \"7\": 17, \"8\": 16, \"9\": 7, \"10\": 58, \"11\": 127, \"12\": 129, \"13\": 54, \"14\": 34, \"15\": 11, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 2}",
+    "peak_hour":12,
+    "monthly_trend":"{\"2023-11\": 121, \"2023-12\": 224, \"2024-01\": 278, \"2024-02\": 9, \"2024-03\": 18}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":45,
@@ -301,7 +409,13 @@
     "severity_norm":0.4868,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 147, \"pct\": 0.525}, \"WRONG PARKING\": {\"count\": 120, \"pct\": 0.4286}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 147, \"pct\": 0.525}, \"WRONG PARKING\": {\"count\": 120, \"pct\": 0.4286}}",
+    "day_of_week_distribution":"{\"Monday\": 42, \"Tuesday\": 7, \"Wednesday\": 47, \"Thursday\": 28, \"Friday\": 31, \"Saturday\": 52, \"Sunday\": 59}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 11, \"3\": 16, \"4\": 13, \"5\": 8, \"6\": 9, \"7\": 34, \"8\": 14, \"9\": 54, \"10\": 38, \"11\": 24, \"12\": 25, \"13\": 16, \"14\": 2, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 104, \"2023-12\": 73, \"2024-01\": 81, \"2024-02\": 1, \"2024-03\": 7}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":21,
@@ -317,7 +431,13 @@
     "severity_norm":0.8209,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 864, \"pct\": 0.9162}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 864, \"pct\": 0.9162}}",
+    "day_of_week_distribution":"{\"Monday\": 123, \"Tuesday\": 97, \"Wednesday\": 186, \"Thursday\": 189, \"Friday\": 72, \"Saturday\": 122, \"Sunday\": 114}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 61, \"2\": 326, \"3\": 148, \"4\": 97, \"5\": 59, \"6\": 20, \"7\": 27, \"8\": 8, \"9\": 7, \"10\": 53, \"11\": 32, \"12\": 9, \"13\": 47, \"14\": 8, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 218, \"2023-12\": 306, \"2024-01\": 278, \"2024-02\": 22, \"2024-03\": 79}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":59,
@@ -333,7 +453,13 @@
     "severity_norm":0.2249,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 731, \"pct\": 0.7877}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 74, \"pct\": 0.0797}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 49, \"pct\": 0.0528}, \"DOUBLE PARKING\": {\"count\": 48, \"pct\": 0.0517}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 731, \"pct\": 0.7877}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 74, \"pct\": 0.0797}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 49, \"pct\": 0.0528}, \"DOUBLE PARKING\": {\"count\": 48, \"pct\": 0.0517}}",
+    "day_of_week_distribution":"{\"Monday\": 18, \"Tuesday\": 106, \"Wednesday\": 126, \"Thursday\": 178, \"Friday\": 161, \"Saturday\": 112, \"Sunday\": 46}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 4, \"1\": 18, \"2\": 4, \"3\": 26, \"4\": 42, \"5\": 38, \"6\": 93, \"7\": 162, \"8\": 69, \"9\": 62, \"10\": 62, \"11\": 63, \"12\": 42, \"13\": 25, \"14\": 36, \"15\": 0, \"16\": 1, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":7,
+    "monthly_trend":"{\"2023-11\": 38, \"2023-12\": 329, \"2024-01\": 335, \"2024-02\": 16, \"2024-03\": 29}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":0,
@@ -349,7 +475,13 @@
     "severity_norm":0.7751,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 228, \"pct\": 0.7972}, \"WRONG PARKING\": {\"count\": 34, \"pct\": 0.1189}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.0524}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 228, \"pct\": 0.7972}, \"WRONG PARKING\": {\"count\": 34, \"pct\": 0.1189}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.0524}}",
+    "day_of_week_distribution":"{\"Monday\": 25, \"Tuesday\": 60, \"Wednesday\": 34, \"Thursday\": 36, \"Friday\": 53, \"Saturday\": 30, \"Sunday\": 21}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 12, \"1\": 52, \"2\": 17, \"3\": 17, \"4\": 18, \"5\": 9, \"6\": 2, \"7\": 4, \"8\": 14, \"9\": 39, \"10\": 30, \"11\": 17, \"12\": 13, \"13\": 6, \"14\": 2, \"15\": 1, \"16\": 5, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":1,
+    "monthly_trend":"{\"2023-11\": 16, \"2023-12\": 70, \"2024-01\": 140, \"2024-02\": 4, \"2024-03\": 29}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":29,
@@ -365,7 +497,13 @@
     "severity_norm":0.5184,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 483, \"pct\": 0.4132}, \"NO PARKING\": {\"count\": 405, \"pct\": 0.3464}, \"PARKING IN A MAIN ROAD\": {\"count\": 196, \"pct\": 0.1677}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 483, \"pct\": 0.4132}, \"NO PARKING\": {\"count\": 405, \"pct\": 0.3464}, \"PARKING IN A MAIN ROAD\": {\"count\": 196, \"pct\": 0.1677}}",
+    "day_of_week_distribution":"{\"Monday\": 104, \"Tuesday\": 107, \"Wednesday\": 118, \"Thursday\": 98, \"Friday\": 98, \"Saturday\": 145, \"Sunday\": 212}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 61, \"1\": 124, \"2\": 53, \"3\": 74, \"4\": 58, \"5\": 41, \"6\": 60, \"7\": 32, \"8\": 36, \"9\": 61, \"10\": 89, \"11\": 64, \"12\": 46, \"13\": 28, \"14\": 21, \"15\": 7, \"16\": 19, \"17\": 8, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":1,
+    "monthly_trend":"{\"2023-11\": 188, \"2023-12\": 323, \"2024-01\": 300, \"2024-02\": 21, \"2024-03\": 50}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":34,
@@ -381,7 +519,13 @@
     "severity_norm":0.4991,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 343, \"pct\": 0.3841}, \"NO PARKING\": {\"count\": 277, \"pct\": 0.3102}, \"PARKING IN A MAIN ROAD\": {\"count\": 119, \"pct\": 0.1333}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 78, \"pct\": 0.0873}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 58, \"pct\": 0.0649}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 343, \"pct\": 0.3841}, \"NO PARKING\": {\"count\": 277, \"pct\": 0.3102}, \"PARKING IN A MAIN ROAD\": {\"count\": 119, \"pct\": 0.1333}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 78, \"pct\": 0.0873}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 58, \"pct\": 0.0649}}",
+    "day_of_week_distribution":"{\"Monday\": 60, \"Tuesday\": 63, \"Wednesday\": 88, \"Thursday\": 105, \"Friday\": 78, \"Saturday\": 108, \"Sunday\": 107}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 18, \"1\": 83, \"2\": 36, \"3\": 69, \"4\": 50, \"5\": 27, \"6\": 27, \"7\": 24, \"8\": 39, \"9\": 52, \"10\": 86, \"11\": 38, \"12\": 33, \"13\": 14, \"14\": 6, \"15\": 0, \"16\": 5, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 1}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 151, \"2023-12\": 251, \"2024-01\": 146, \"2024-02\": 34, \"2024-03\": 27}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":42,
@@ -397,7 +541,13 @@
     "severity_norm":0.3931,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 100, \"pct\": 0.4367}, \"NO PARKING\": {\"count\": 87, \"pct\": 0.3799}, \"PARKING IN A MAIN ROAD\": {\"count\": 34, \"pct\": 0.1485}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 100, \"pct\": 0.4367}, \"NO PARKING\": {\"count\": 87, \"pct\": 0.3799}, \"PARKING IN A MAIN ROAD\": {\"count\": 34, \"pct\": 0.1485}}",
+    "day_of_week_distribution":"{\"Monday\": 21, \"Tuesday\": 13, \"Wednesday\": 32, \"Thursday\": 43, \"Friday\": 43, \"Saturday\": 14, \"Sunday\": 20}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 4, \"1\": 5, \"2\": 0, \"3\": 6, \"4\": 11, \"5\": 8, \"6\": 6, \"7\": 34, \"8\": 13, \"9\": 6, \"10\": 33, \"11\": 44, \"12\": 8, \"13\": 5, \"14\": 3, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 16, \"2023-12\": 55, \"2024-01\": 72, \"2024-02\": 2, \"2024-03\": 41}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":35,
@@ -413,7 +563,13 @@
     "severity_norm":0.3,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 589, \"pct\": 0.4836}, \"NO PARKING\": {\"count\": 580, \"pct\": 0.4762}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 589, \"pct\": 0.4836}, \"NO PARKING\": {\"count\": 580, \"pct\": 0.4762}}",
+    "day_of_week_distribution":"{\"Monday\": 127, \"Tuesday\": 94, \"Wednesday\": 174, \"Thursday\": 232, \"Friday\": 204, \"Saturday\": 102, \"Sunday\": 234}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 5, \"2\": 44, \"3\": 141, \"4\": 132, \"5\": 147, \"6\": 89, \"7\": 30, \"8\": 75, \"9\": 76, \"10\": 148, \"11\": 111, \"12\": 99, \"13\": 41, \"14\": 29, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 315, \"2023-12\": 295, \"2024-01\": 471, \"2024-02\": 33, \"2024-03\": 53}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":26,
@@ -429,7 +585,13 @@
     "severity_norm":0.4139,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 243, \"pct\": 0.7967}, \"NO PARKING\": {\"count\": 48, \"pct\": 0.1574}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 243, \"pct\": 0.7967}, \"NO PARKING\": {\"count\": 48, \"pct\": 0.1574}}",
+    "day_of_week_distribution":"{\"Monday\": 47, \"Tuesday\": 29, \"Wednesday\": 73, \"Thursday\": 50, \"Friday\": 45, \"Saturday\": 29, \"Sunday\": 15}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 1, \"1\": 9, \"2\": 12, \"3\": 18, \"4\": 8, \"5\": 20, \"6\": 7, \"7\": 6, \"8\": 19, \"9\": 40, \"10\": 60, \"11\": 40, \"12\": 25, \"13\": 13, \"14\": 10, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 68, \"2023-12\": 79, \"2024-01\": 101, \"2024-02\": 1, \"2024-03\": 39}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":36,
@@ -445,7 +607,13 @@
     "severity_norm":0.7341,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 189, \"pct\": 0.3474}, \"WRONG PARKING\": {\"count\": 135, \"pct\": 0.2482}, \"PARKING IN A MAIN ROAD\": {\"count\": 88, \"pct\": 0.1618}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 47, \"pct\": 0.0864}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 31, \"pct\": 0.057}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 189, \"pct\": 0.3474}, \"WRONG PARKING\": {\"count\": 135, \"pct\": 0.2482}, \"PARKING IN A MAIN ROAD\": {\"count\": 88, \"pct\": 0.1618}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 47, \"pct\": 0.0864}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 31, \"pct\": 0.057}}",
+    "day_of_week_distribution":"{\"Monday\": 3, \"Tuesday\": 50, \"Wednesday\": 21, \"Thursday\": 70, \"Friday\": 49, \"Saturday\": 63, \"Sunday\": 22}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 19, \"2\": 17, \"3\": 39, \"4\": 32, \"5\": 47, \"6\": 19, \"7\": 9, \"8\": 31, \"9\": 18, \"10\": 6, \"11\": 31, \"12\": 9, \"13\": 1, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-11\": 24, \"2023-12\": 95, \"2024-01\": 96, \"2024-02\": 12, \"2024-03\": 51}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":75,
@@ -461,7 +629,13 @@
     "severity_norm":0.5861,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 75, \"pct\": 0.3927}, \"WRONG PARKING\": {\"count\": 44, \"pct\": 0.2304}, \"PARKING IN A MAIN ROAD\": {\"count\": 32, \"pct\": 0.1675}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 24, \"pct\": 0.1257}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 75, \"pct\": 0.3927}, \"WRONG PARKING\": {\"count\": 44, \"pct\": 0.2304}, \"PARKING IN A MAIN ROAD\": {\"count\": 32, \"pct\": 0.1675}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 24, \"pct\": 0.1257}}",
+    "day_of_week_distribution":"{\"Monday\": 27, \"Tuesday\": 5, \"Wednesday\": 18, \"Thursday\": 4, \"Friday\": 17, \"Saturday\": 23, \"Sunday\": 15}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 1, \"1\": 2, \"2\": 6, \"3\": 4, \"4\": 4, \"5\": 1, \"6\": 2, \"7\": 9, \"8\": 25, \"9\": 16, \"10\": 15, \"11\": 2, \"12\": 3, \"13\": 0, \"14\": 16, \"15\": 2, \"16\": 1, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":8,
+    "monthly_trend":"{\"2023-11\": 31, \"2023-12\": 11, \"2024-01\": 63, \"2024-03\": 4}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":55,
@@ -477,7 +651,13 @@
     "severity_norm":0.9721,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 196, \"pct\": 0.827}, \"WRONG PARKING\": {\"count\": 28, \"pct\": 0.1181}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 196, \"pct\": 0.827}, \"WRONG PARKING\": {\"count\": 28, \"pct\": 0.1181}}",
+    "day_of_week_distribution":"{\"Monday\": 8, \"Tuesday\": 41, \"Wednesday\": 24, \"Thursday\": 29, \"Friday\": 33, \"Saturday\": 41, \"Sunday\": 44}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 2, \"2\": 35, \"3\": 57, \"4\": 69, \"5\": 0, \"6\": 5, \"7\": 10, \"8\": 2, \"9\": 6, \"10\": 11, \"11\": 18, \"12\": 5, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 40, \"2023-12\": 103, \"2024-01\": 73, \"2024-02\": 2, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":74,
@@ -493,7 +673,13 @@
     "severity_norm":0.6118,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 194, \"pct\": 0.7433}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.1341}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 21, \"pct\": 0.0805}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 194, \"pct\": 0.7433}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.1341}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 21, \"pct\": 0.0805}}",
+    "day_of_week_distribution":"{\"Monday\": 8, \"Tuesday\": 28, \"Wednesday\": 64, \"Thursday\": 90, \"Friday\": 19, \"Saturday\": 16, \"Sunday\": 4}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 2, \"1\": 2, \"2\": 6, \"3\": 45, \"4\": 36, \"5\": 15, \"6\": 10, \"7\": 14, \"8\": 8, \"9\": 23, \"10\": 14, \"11\": 38, \"12\": 6, \"13\": 7, \"14\": 3, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 10, \"2023-12\": 188, \"2024-01\": 15, \"2024-02\": 3, \"2024-03\": 13}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":15,
@@ -509,7 +695,13 @@
     "severity_norm":0.4275,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 154, \"pct\": 0.8701}, \"NO PARKING\": {\"count\": 22, \"pct\": 0.1243}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 154, \"pct\": 0.8701}, \"NO PARKING\": {\"count\": 22, \"pct\": 0.1243}}",
+    "day_of_week_distribution":"{\"Monday\": 8, \"Tuesday\": 10, \"Wednesday\": 56, \"Thursday\": 32, \"Friday\": 15, \"Saturday\": 13, \"Sunday\": 42}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 3, \"3\": 0, \"4\": 14, \"5\": 6, \"6\": 10, \"7\": 37, \"8\": 28, \"9\": 4, \"10\": 4, \"11\": 32, \"12\": 16, \"13\": 14, \"14\": 7, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":7,
+    "monthly_trend":"{\"2023-11\": 67, \"2023-12\": 72, \"2024-01\": 34, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":24,
@@ -525,7 +717,13 @@
     "severity_norm":0.5152,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 440, \"pct\": 0.5263}, \"NO PARKING\": {\"count\": 282, \"pct\": 0.3373}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 440, \"pct\": 0.5263}, \"NO PARKING\": {\"count\": 282, \"pct\": 0.3373}}",
+    "day_of_week_distribution":"{\"Monday\": 15, \"Tuesday\": 102, \"Wednesday\": 142, \"Thursday\": 133, \"Friday\": 106, \"Saturday\": 139, \"Sunday\": 59}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 41, \"2\": 57, \"3\": 48, \"4\": 65, \"5\": 37, \"6\": 43, \"7\": 3, \"8\": 27, \"9\": 35, \"10\": 33, \"11\": 74, \"12\": 52, \"13\": 145, \"14\": 29, \"15\": 0, \"16\": 6, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":13,
+    "monthly_trend":"{\"2023-11\": 198, \"2023-12\": 291, \"2024-01\": 182, \"2024-02\": 24, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":77,
@@ -541,7 +739,13 @@
     "severity_norm":0.7504,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 97, \"pct\": 0.4732}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.4537}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 97, \"pct\": 0.4732}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.4537}}",
+    "day_of_week_distribution":"{\"Monday\": 37, \"Tuesday\": 12, \"Wednesday\": 33, \"Thursday\": 34, \"Friday\": 27, \"Saturday\": 39, \"Sunday\": 7}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 4, \"2\": 31, \"3\": 26, \"4\": 31, \"5\": 9, \"6\": 3, \"7\": 5, \"8\": 7, \"9\": 14, \"10\": 9, \"11\": 27, \"12\": 13, \"13\": 9, \"14\": 0, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 30, \"2023-12\": 96, \"2024-01\": 59, \"2024-03\": 4}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":92,
@@ -557,7 +761,13 @@
     "severity_norm":0.7166,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 29, \"pct\": 0.4915}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.3559}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1186}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 29, \"pct\": 0.4915}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.3559}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1186}}",
+    "day_of_week_distribution":"{\"Monday\": 9, \"Tuesday\": 4, \"Wednesday\": 5, \"Thursday\": 8, \"Friday\": 6, \"Saturday\": 5, \"Sunday\": 13}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 1, \"4\": 2, \"5\": 4, \"6\": 8, \"7\": 2, \"8\": 6, \"9\": 0, \"10\": 6, \"11\": 15, \"12\": 3, \"13\": 1, \"14\": 1, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 15, \"2023-12\": 17, \"2024-01\": 10, \"2024-03\": 8}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":56,
@@ -573,7 +783,13 @@
     "severity_norm":0.3894,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 347, \"pct\": 0.5651}, \"WRONG PARKING\": {\"count\": 209, \"pct\": 0.3404}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 347, \"pct\": 0.5651}, \"WRONG PARKING\": {\"count\": 209, \"pct\": 0.3404}}",
+    "day_of_week_distribution":"{\"Monday\": 23, \"Tuesday\": 79, \"Wednesday\": 86, \"Thursday\": 105, \"Friday\": 68, \"Saturday\": 124, \"Sunday\": 67}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 7, \"1\": 16, \"2\": 54, \"3\": 131, \"4\": 47, \"5\": 25, \"6\": 55, \"7\": 20, \"8\": 13, \"9\": 10, \"10\": 45, \"11\": 87, \"12\": 21, \"13\": 18, \"14\": 1, \"15\": 0, \"16\": 1, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 1}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 145, \"2023-12\": 217, \"2024-01\": 94, \"2024-02\": 20, \"2024-03\": 76}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":22,
@@ -589,7 +805,13 @@
     "severity_norm":0.5293,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 91, \"pct\": 0.6594}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1304}, \"WRONG PARKING\": {\"count\": 13, \"pct\": 0.0942}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 91, \"pct\": 0.6594}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1304}, \"WRONG PARKING\": {\"count\": 13, \"pct\": 0.0942}}",
+    "day_of_week_distribution":"{\"Monday\": 5, \"Tuesday\": 10, \"Wednesday\": 11, \"Thursday\": 14, \"Friday\": 27, \"Saturday\": 19, \"Sunday\": 16}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 4, \"2\": 8, \"3\": 12, \"4\": 6, \"5\": 9, \"6\": 1, \"7\": 13, \"8\": 14, \"9\": 13, \"10\": 6, \"11\": 11, \"12\": 3, \"13\": 2, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":8,
+    "monthly_trend":"{\"2023-11\": 20, \"2023-12\": 36, \"2024-01\": 40, \"2024-02\": 5, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":37,
@@ -605,7 +827,13 @@
     "severity_norm":0.3874,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 208, \"pct\": 0.6562}, \"WRONG PARKING\": {\"count\": 101, \"pct\": 0.3186}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 208, \"pct\": 0.6562}, \"WRONG PARKING\": {\"count\": 101, \"pct\": 0.3186}}",
+    "day_of_week_distribution":"{\"Monday\": 101, \"Tuesday\": 10, \"Wednesday\": 35, \"Thursday\": 25, \"Friday\": 21, \"Saturday\": 4, \"Sunday\": 113}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 5, \"1\": 8, \"2\": 15, \"3\": 21, \"4\": 24, \"5\": 14, \"6\": 12, \"7\": 20, \"8\": 4, \"9\": 18, \"10\": 46, \"11\": 43, \"12\": 22, \"13\": 21, \"14\": 25, \"15\": 6, \"16\": 5, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 115, \"2023-12\": 73, \"2024-01\": 107, \"2024-02\": 1, \"2024-03\": 13}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":7,
@@ -621,7 +849,13 @@
     "severity_norm":0.3462,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 134, \"pct\": 0.6634}, \"WRONG PARKING\": {\"count\": 62, \"pct\": 0.3069}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 134, \"pct\": 0.6634}, \"WRONG PARKING\": {\"count\": 62, \"pct\": 0.3069}}",
+    "day_of_week_distribution":"{\"Monday\": 45, \"Tuesday\": 40, \"Wednesday\": 16, \"Thursday\": 15, \"Friday\": 25, \"Saturday\": 11, \"Sunday\": 44}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 2, \"2\": 16, \"3\": 3, \"4\": 9, \"5\": 5, \"6\": 31, \"7\": 21, \"8\": 13, \"9\": 9, \"10\": 31, \"11\": 32, \"12\": 14, \"13\": 10, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 71, \"2023-12\": 57, \"2024-01\": 56, \"2024-02\": 6, \"2024-03\": 6}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":81,
@@ -637,7 +871,13 @@
     "severity_norm":0.2847,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5849}, \"WRONG PARKING\": {\"count\": 87, \"pct\": 0.2272}, \"PARKING IN A MAIN ROAD\": {\"count\": 37, \"pct\": 0.0966}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5849}, \"WRONG PARKING\": {\"count\": 87, \"pct\": 0.2272}, \"PARKING IN A MAIN ROAD\": {\"count\": 37, \"pct\": 0.0966}}",
+    "day_of_week_distribution":"{\"Monday\": 7, \"Tuesday\": 42, \"Wednesday\": 40, \"Thursday\": 35, \"Friday\": 72, \"Saturday\": 53, \"Sunday\": 50}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 1, \"1\": 6, \"2\": 14, \"3\": 21, \"4\": 10, \"5\": 14, \"6\": 47, \"7\": 30, \"8\": 13, \"9\": 55, \"10\": 15, \"11\": 34, \"12\": 23, \"13\": 14, \"14\": 1, \"15\": 0, \"16\": 1, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 31, \"2023-12\": 168, \"2024-01\": 90, \"2024-03\": 10}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":39,
@@ -653,7 +893,13 @@
     "severity_norm":0.5411,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 202, \"pct\": 0.867}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.103}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 202, \"pct\": 0.867}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.103}}",
+    "day_of_week_distribution":"{\"Monday\": 6, \"Tuesday\": 18, \"Wednesday\": 27, \"Thursday\": 42, \"Friday\": 20, \"Saturday\": 88, \"Sunday\": 20}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 39, \"3\": 29, \"4\": 32, \"5\": 17, \"6\": 11, \"7\": 16, \"8\": 13, \"9\": 12, \"10\": 14, \"11\": 26, \"12\": 9, \"13\": 1, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 53, \"2023-12\": 76, \"2024-01\": 58, \"2024-02\": 13, \"2024-03\": 21}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":58,
@@ -669,7 +915,13 @@
     "severity_norm":0.1955,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 148, \"pct\": 0.8409}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.1364}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 148, \"pct\": 0.8409}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.1364}}",
+    "day_of_week_distribution":"{\"Monday\": 36, \"Tuesday\": 28, \"Wednesday\": 21, \"Thursday\": 30, \"Friday\": 13, \"Saturday\": 16, \"Sunday\": 28}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 1, \"3\": 5, \"4\": 3, \"5\": 9, \"6\": 8, \"7\": 2, \"8\": 7, \"9\": 7, \"10\": 40, \"11\": 55, \"12\": 17, \"13\": 17, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 42, \"2023-12\": 47, \"2024-01\": 68, \"2024-03\": 15}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":87,
@@ -685,7 +937,13 @@
     "severity_norm":0.3907,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 43, \"pct\": 0.3496}, \"WRONG PARKING\": {\"count\": 37, \"pct\": 0.3008}, \"PARKING IN A MAIN ROAD\": {\"count\": 35, \"pct\": 0.2846}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 43, \"pct\": 0.3496}, \"WRONG PARKING\": {\"count\": 37, \"pct\": 0.3008}, \"PARKING IN A MAIN ROAD\": {\"count\": 35, \"pct\": 0.2846}}",
+    "day_of_week_distribution":"{\"Monday\": 9, \"Tuesday\": 24, \"Wednesday\": 19, \"Thursday\": 11, \"Friday\": 1, \"Saturday\": 14, \"Sunday\": 2}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 9, \"2\": 5, \"3\": 1, \"4\": 3, \"5\": 0, \"6\": 0, \"7\": 4, \"8\": 13, \"9\": 0, \"10\": 18, \"11\": 18, \"12\": 1, \"13\": 1, \"14\": 0, \"15\": 5, \"16\": 2, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 1, \"2023-12\": 33, \"2024-01\": 44, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":93,
@@ -701,7 +959,13 @@
     "severity_norm":0.3837,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"PARKING IN A MAIN ROAD",
-    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 130, \"pct\": 0.4422}, \"NO PARKING\": {\"count\": 83, \"pct\": 0.2823}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.2245}}"
+    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 130, \"pct\": 0.4422}, \"NO PARKING\": {\"count\": 83, \"pct\": 0.2823}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.2245}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 14, \"Wednesday\": 8, \"Thursday\": 90, \"Friday\": 0, \"Saturday\": 27, \"Sunday\": 2}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 0, \"4\": 0, \"5\": 3, \"6\": 60, \"7\": 78, \"8\": 0, \"9\": 0, \"10\": 0, \"11\": 0, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":7,
+    "monthly_trend":"{\"2023-11\": 12, \"2023-12\": 90, \"2024-01\": 39}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":52,
@@ -717,7 +981,13 @@
     "severity_norm":0.3588,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 346, \"pct\": 0.7775}, \"NO PARKING\": {\"count\": 78, \"pct\": 0.1753}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 346, \"pct\": 0.7775}, \"NO PARKING\": {\"count\": 78, \"pct\": 0.1753}}",
+    "day_of_week_distribution":"{\"Monday\": 20, \"Tuesday\": 65, \"Wednesday\": 104, \"Thursday\": 109, \"Friday\": 72, \"Saturday\": 30, \"Sunday\": 24}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 2, \"1\": 19, \"2\": 14, \"3\": 45, \"4\": 63, \"5\": 46, \"6\": 37, \"7\": 44, \"8\": 42, \"9\": 22, \"10\": 5, \"11\": 32, \"12\": 36, \"13\": 14, \"14\": 2, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 5, \"2023-12\": 395, \"2024-01\": 24}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":82,
@@ -733,7 +1003,13 @@
     "severity_norm":0.4552,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 39, \"pct\": 0.6094}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.3281}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.0625}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 39, \"pct\": 0.6094}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.3281}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.0625}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 0, \"Wednesday\": 15, \"Thursday\": 8, \"Friday\": 5, \"Saturday\": 6, \"Sunday\": 26}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 1, \"4\": 2, \"5\": 10, \"6\": 6, \"7\": 7, \"8\": 3, \"9\": 8, \"10\": 5, \"11\": 17, \"12\": 1, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 23, \"2023-12\": 30, \"2024-01\": 5, \"2024-02\": 1, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":27,
@@ -749,7 +1025,13 @@
     "severity_norm":0.5747,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 55, \"pct\": 0.7333}, \"WRONG PARKING\": {\"count\": 17, \"pct\": 0.2267}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 55, \"pct\": 0.7333}, \"WRONG PARKING\": {\"count\": 17, \"pct\": 0.2267}}",
+    "day_of_week_distribution":"{\"Monday\": 4, \"Tuesday\": 25, \"Wednesday\": 16, \"Thursday\": 13, \"Friday\": 4, \"Saturday\": 7, \"Sunday\": 3}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 6, \"2\": 0, \"3\": 2, \"4\": 9, \"5\": 8, \"6\": 3, \"7\": 2, \"8\": 0, \"9\": 1, \"10\": 18, \"11\": 18, \"12\": 1, \"13\": 4, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 10, \"2024-01\": 44, \"2024-02\": 3, \"2024-03\": 15}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":63,
@@ -765,7 +1047,13 @@
     "severity_norm":0.4986,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 58, \"pct\": 0.6591}, \"WRONG PARKING\": {\"count\": 26, \"pct\": 0.2955}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 58, \"pct\": 0.6591}, \"WRONG PARKING\": {\"count\": 26, \"pct\": 0.2955}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 18, \"Wednesday\": 13, \"Thursday\": 20, \"Friday\": 1, \"Saturday\": 17, \"Sunday\": 13}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 3, \"2\": 3, \"3\": 9, \"4\": 5, \"5\": 1, \"6\": 4, \"7\": 10, \"8\": 7, \"9\": 6, \"10\": 13, \"11\": 10, \"12\": 8, \"13\": 3, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 25, \"2023-12\": 38, \"2024-01\": 14, \"2024-02\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":31,
@@ -781,7 +1069,13 @@
     "severity_norm":0.4979,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 44, \"pct\": 0.4074}, \"WRONG PARKING\": {\"count\": 31, \"pct\": 0.287}, \"PARKING IN A MAIN ROAD\": {\"count\": 21, \"pct\": 0.1944}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 44, \"pct\": 0.4074}, \"WRONG PARKING\": {\"count\": 31, \"pct\": 0.287}, \"PARKING IN A MAIN ROAD\": {\"count\": 21, \"pct\": 0.1944}}",
+    "day_of_week_distribution":"{\"Monday\": 6, \"Tuesday\": 11, \"Wednesday\": 16, \"Thursday\": 11, \"Friday\": 2, \"Saturday\": 9, \"Sunday\": 13}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 5, \"4\": 5, \"5\": 9, \"6\": 3, \"7\": 4, \"8\": 3, \"9\": 6, \"10\": 21, \"11\": 6, \"12\": 3, \"13\": 2, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 15, \"2023-12\": 27, \"2024-01\": 22, \"2024-02\": 3, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":44,
@@ -797,7 +1091,13 @@
     "severity_norm":0.5599,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5818}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.2}, \"WRONG PARKING\": {\"count\": 16, \"pct\": 0.1455}, \"PARKING ON FOOTPATH\": {\"count\": 6, \"pct\": 0.0545}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5818}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.2}, \"WRONG PARKING\": {\"count\": 16, \"pct\": 0.1455}, \"PARKING ON FOOTPATH\": {\"count\": 6, \"pct\": 0.0545}}",
+    "day_of_week_distribution":"{\"Monday\": 8, \"Tuesday\": 11, \"Wednesday\": 13, \"Thursday\": 19, \"Friday\": 23, \"Saturday\": 4, \"Sunday\": 1}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 3, \"3\": 10, \"4\": 3, \"5\": 4, \"6\": 7, \"7\": 8, \"8\": 8, \"9\": 11, \"10\": 7, \"11\": 6, \"12\": 3, \"13\": 5, \"14\": 4, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 18, \"2023-12\": 43, \"2024-01\": 15, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":71,
@@ -813,7 +1113,13 @@
     "severity_norm":0.3996,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 86, \"pct\": 0.585}, \"NO PARKING\": {\"count\": 34, \"pct\": 0.2313}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1224}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 86, \"pct\": 0.585}, \"NO PARKING\": {\"count\": 34, \"pct\": 0.2313}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1224}}",
+    "day_of_week_distribution":"{\"Monday\": 35, \"Tuesday\": 3, \"Wednesday\": 12, \"Thursday\": 23, \"Friday\": 27, \"Saturday\": 12, \"Sunday\": 8}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 8, \"1\": 0, \"2\": 2, \"3\": 5, \"4\": 0, \"5\": 2, \"6\": 6, \"7\": 0, \"8\": 3, \"9\": 1, \"10\": 31, \"11\": 26, \"12\": 14, \"13\": 16, \"14\": 5, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 1, \"2023-12\": 18, \"2024-01\": 90, \"2024-03\": 11}",
+    "trend_direction":"stable"
   },
   {
     "hotspot_id":12,
@@ -829,7 +1135,13 @@
     "severity_norm":0.1969,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 138, \"pct\": 0.5679}, \"WRONG PARKING\": {\"count\": 73, \"pct\": 0.3004}, \"PARKING IN A MAIN ROAD\": {\"count\": 17, \"pct\": 0.07}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 138, \"pct\": 0.5679}, \"WRONG PARKING\": {\"count\": 73, \"pct\": 0.3004}, \"PARKING IN A MAIN ROAD\": {\"count\": 17, \"pct\": 0.07}}",
+    "day_of_week_distribution":"{\"Monday\": 36, \"Tuesday\": 25, \"Wednesday\": 26, \"Thursday\": 32, \"Friday\": 43, \"Saturday\": 17, \"Sunday\": 25}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 2, \"2\": 9, \"3\": 9, \"4\": 16, \"5\": 11, \"6\": 24, \"7\": 22, \"8\": 10, \"9\": 12, \"10\": 36, \"11\": 26, \"12\": 16, \"13\": 9, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 28, \"2023-12\": 63, \"2024-01\": 77, \"2024-02\": 1, \"2024-03\": 35}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":89,
@@ -845,7 +1157,13 @@
     "severity_norm":0.4413,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.4206}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.2336}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.1963}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 9, \"pct\": 0.0841}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 6, \"pct\": 0.0561}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.4206}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.2336}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.1963}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 9, \"pct\": 0.0841}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 6, \"pct\": 0.0561}}",
+    "day_of_week_distribution":"{\"Monday\": 1, \"Tuesday\": 14, \"Wednesday\": 3, \"Thursday\": 17, \"Friday\": 14, \"Saturday\": 7, \"Sunday\": 7}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 5, \"3\": 1, \"4\": 2, \"5\": 2, \"6\": 3, \"7\": 14, \"8\": 4, \"9\": 2, \"10\": 1, \"11\": 16, \"12\": 4, \"13\": 4, \"14\": 5, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 7, \"2023-12\": 51, \"2024-01\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":18,
@@ -861,7 +1179,13 @@
     "severity_norm":0.3153,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 326, \"pct\": 0.5497}, \"NO PARKING\": {\"count\": 228, \"pct\": 0.3845}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 326, \"pct\": 0.5497}, \"NO PARKING\": {\"count\": 228, \"pct\": 0.3845}}",
+    "day_of_week_distribution":"{\"Monday\": 78, \"Tuesday\": 78, \"Wednesday\": 63, \"Thursday\": 52, \"Friday\": 37, \"Saturday\": 62, \"Sunday\": 183}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 1, \"1\": 7, \"2\": 21, \"3\": 13, \"4\": 23, \"5\": 30, \"6\": 27, \"7\": 27, \"8\": 11, \"9\": 11, \"10\": 27, \"11\": 54, \"12\": 142, \"13\": 133, \"14\": 25, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":12,
+    "monthly_trend":"{\"2023-11\": 214, \"2023-12\": 189, \"2024-01\": 97, \"2024-02\": 18, \"2024-03\": 35}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":68,
@@ -877,7 +1201,13 @@
     "severity_norm":0.6412,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 61, \"pct\": 0.5648}, \"WRONG PARKING\": {\"count\": 45, \"pct\": 0.4167}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 61, \"pct\": 0.5648}, \"WRONG PARKING\": {\"count\": 45, \"pct\": 0.4167}}",
+    "day_of_week_distribution":"{\"Monday\": 9, \"Tuesday\": 34, \"Wednesday\": 32, \"Thursday\": 10, \"Friday\": 3, \"Saturday\": 14, \"Sunday\": 3}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 7, \"3\": 6, \"4\": 21, \"5\": 18, \"6\": 16, \"7\": 9, \"8\": 5, \"9\": 8, \"10\": 3, \"11\": 11, \"12\": 1, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 36, \"2023-12\": 22, \"2024-01\": 42, \"2024-03\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":50,
@@ -893,7 +1223,13 @@
     "severity_norm":0.4018,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 339, \"pct\": 0.6753}, \"NO PARKING\": {\"count\": 112, \"pct\": 0.2231}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 28, \"pct\": 0.0558}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 339, \"pct\": 0.6753}, \"NO PARKING\": {\"count\": 112, \"pct\": 0.2231}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 28, \"pct\": 0.0558}}",
+    "day_of_week_distribution":"{\"Monday\": 47, \"Tuesday\": 23, \"Wednesday\": 90, \"Thursday\": 92, \"Friday\": 39, \"Saturday\": 83, \"Sunday\": 76}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 5, \"1\": 95, \"2\": 141, \"3\": 40, \"4\": 17, \"5\": 30, \"6\": 6, \"7\": 6, \"8\": 43, \"9\": 5, \"10\": 8, \"11\": 30, \"12\": 2, \"13\": 20, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 87, \"2023-12\": 274, \"2024-01\": 39, \"2024-02\": 5, \"2024-03\": 45}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":66,
@@ -909,7 +1245,13 @@
     "severity_norm":0.7287,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.9333}, \"WRONG PARKING\": {\"count\": 3, \"pct\": 0.05}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.9333}, \"WRONG PARKING\": {\"count\": 3, \"pct\": 0.05}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 11, \"Wednesday\": 31, \"Thursday\": 3, \"Friday\": 6, \"Saturday\": 8, \"Sunday\": 0}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 3, \"3\": 3, \"4\": 2, \"5\": 21, \"6\": 7, \"7\": 15, \"8\": 5, \"9\": 3, \"10\": 0, \"11\": 0, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-12\": 12, \"2024-01\": 47}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":76,
@@ -925,7 +1267,13 @@
     "severity_norm":0.4846,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 29, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.3966}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.069}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 29, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.3966}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.069}}",
+    "day_of_week_distribution":"{\"Monday\": 13, \"Tuesday\": 5, \"Wednesday\": 3, \"Thursday\": 4, \"Friday\": 11, \"Saturday\": 12, \"Sunday\": 3}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 5, \"3\": 0, \"4\": 1, \"5\": 2, \"6\": 1, \"7\": 2, \"8\": 2, \"9\": 1, \"10\": 8, \"11\": 16, \"12\": 5, \"13\": 1, \"14\": 1, \"15\": 5, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 12, \"2023-12\": 12, \"2024-01\": 13, \"2024-03\": 14}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":79,
@@ -941,7 +1289,13 @@
     "severity_norm":0.8278,
     "dominant_vehicle_type":"MAXI-CAB",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 199, \"pct\": 0.9343}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 199, \"pct\": 0.9343}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 29, \"Wednesday\": 24, \"Thursday\": 27, \"Friday\": 5, \"Saturday\": 67, \"Sunday\": 50}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 4, \"2\": 34, \"3\": 60, \"4\": 65, \"5\": 4, \"6\": 1, \"7\": 2, \"8\": 6, \"9\": 1, \"10\": 2, \"11\": 1, \"12\": 15, \"13\": 8, \"14\": 1, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 173, \"2023-12\": 11, \"2024-01\": 20}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":8,
@@ -957,7 +1311,13 @@
     "severity_norm":0.3909,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 229, \"pct\": 0.7003}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.1376}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 22, \"pct\": 0.0673}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.0673}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 229, \"pct\": 0.7003}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.1376}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 22, \"pct\": 0.0673}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.0673}}",
+    "day_of_week_distribution":"{\"Monday\": 17, \"Tuesday\": 32, \"Wednesday\": 33, \"Thursday\": 108, \"Friday\": 24, \"Saturday\": 27, \"Sunday\": 27}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 13, \"2\": 38, \"3\": 34, \"4\": 43, \"5\": 19, \"6\": 24, \"7\": 12, \"8\": 7, \"9\": 15, \"10\": 14, \"11\": 30, \"12\": 15, \"13\": 3, \"14\": 0, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 84, \"2023-12\": 49, \"2024-01\": 112, \"2024-02\": 3, \"2024-03\": 20}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":100,
@@ -973,7 +1333,13 @@
     "severity_norm":0.6177,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 11, \"pct\": 0.9167}, \"WRONG PARKING\": {\"count\": 1, \"pct\": 0.0833}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 11, \"pct\": 0.9167}, \"WRONG PARKING\": {\"count\": 1, \"pct\": 0.0833}}",
+    "day_of_week_distribution":"{\"Monday\": 5, \"Tuesday\": 0, \"Wednesday\": 3, \"Thursday\": 1, \"Friday\": 2, \"Saturday\": 1, \"Sunday\": 0}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 0, \"4\": 0, \"5\": 1, \"6\": 0, \"7\": 2, \"8\": 0, \"9\": 3, \"10\": 1, \"11\": 3, \"12\": 0, \"13\": 1, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 5, \"2023-12\": 5, \"2024-01\": 1, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":65,
@@ -989,7 +1355,13 @@
     "severity_norm":0.1594,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 94, \"pct\": 0.9038}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0577}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 94, \"pct\": 0.9038}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0577}}",
+    "day_of_week_distribution":"{\"Monday\": 3, \"Tuesday\": 18, \"Wednesday\": 4, \"Thursday\": 0, \"Friday\": 0, \"Saturday\": 41, \"Sunday\": 34}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 6, \"4\": 0, \"5\": 12, \"6\": 3, \"7\": 7, \"8\": 5, \"9\": 6, \"10\": 6, \"11\": 40, \"12\": 15, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 22, \"2023-12\": 24, \"2024-01\": 48, \"2024-03\": 6}",
+    "trend_direction":"stable"
   },
   {
     "hotspot_id":32,
@@ -1005,7 +1377,13 @@
     "severity_norm":0.6407,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 63, \"pct\": 0.3706}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 29, \"pct\": 0.1706}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.1353}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 22, \"pct\": 0.1294}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 22, \"pct\": 0.1294}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 63, \"pct\": 0.3706}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 29, \"pct\": 0.1706}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.1353}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 22, \"pct\": 0.1294}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 22, \"pct\": 0.1294}}",
+    "day_of_week_distribution":"{\"Monday\": 10, \"Tuesday\": 16, \"Wednesday\": 21, \"Thursday\": 6, \"Friday\": 3, \"Saturday\": 8, \"Sunday\": 17}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 3, \"3\": 4, \"4\": 9, \"5\": 11, \"6\": 5, \"7\": 2, \"8\": 3, \"9\": 0, \"10\": 13, \"11\": 11, \"12\": 11, \"13\": 7, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 16, \"2023-12\": 42, \"2024-01\": 21, \"2024-02\": 1, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":13,
@@ -1021,7 +1399,13 @@
     "severity_norm":0.2478,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 432, \"pct\": 0.9664}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 432, \"pct\": 0.9664}}",
+    "day_of_week_distribution":"{\"Monday\": 4, \"Tuesday\": 11, \"Wednesday\": 31, \"Thursday\": 139, \"Friday\": 68, \"Saturday\": 128, \"Sunday\": 57}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 6, \"4\": 57, \"5\": 86, \"6\": 45, \"7\": 2, \"8\": 5, \"9\": 1, \"10\": 32, \"11\": 81, \"12\": 87, \"13\": 29, \"14\": 5, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":12,
+    "monthly_trend":"{\"2023-11\": 162, \"2023-12\": 217, \"2024-01\": 59}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":51,
@@ -1037,7 +1421,13 @@
     "severity_norm":0.4003,
     "dominant_vehicle_type":"MOTOR CYCLE",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 145, \"pct\": 0.5273}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.3382}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 33, \"pct\": 0.12}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 145, \"pct\": 0.5273}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.3382}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 33, \"pct\": 0.12}}",
+    "day_of_week_distribution":"{\"Monday\": 10, \"Tuesday\": 50, \"Wednesday\": 28, \"Thursday\": 70, \"Friday\": 8, \"Saturday\": 39, \"Sunday\": 33}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 8, \"2\": 54, \"3\": 57, \"4\": 2, \"5\": 28, \"6\": 8, \"7\": 0, \"8\": 3, \"9\": 0, \"10\": 25, \"11\": 39, \"12\": 6, \"13\": 6, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 68, \"2023-12\": 82, \"2024-01\": 88}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":94,
@@ -1053,7 +1443,13 @@
     "severity_norm":0.5058,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.5843}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2584}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1348}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.5843}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2584}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1348}}",
+    "day_of_week_distribution":"{\"Monday\": 11, \"Tuesday\": 6, \"Wednesday\": 9, \"Thursday\": 15, \"Friday\": 17, \"Saturday\": 4, \"Sunday\": 13}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 8, \"3\": 12, \"4\": 2, \"5\": 3, \"6\": 0, \"7\": 7, \"8\": 3, \"9\": 8, \"10\": 3, \"11\": 10, \"12\": 7, \"13\": 8, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 2, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 12, \"2023-12\": 32, \"2024-01\": 22, \"2024-03\": 9}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":97,
@@ -1069,7 +1465,13 @@
     "severity_norm":0.5822,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 41, \"pct\": 0.3534}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.181}, \"PARKING IN A MAIN ROAD\": {\"count\": 20, \"pct\": 0.1724}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 12, \"pct\": 0.1034}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 7, \"pct\": 0.0603}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 41, \"pct\": 0.3534}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.181}, \"PARKING IN A MAIN ROAD\": {\"count\": 20, \"pct\": 0.1724}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 12, \"pct\": 0.1034}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 7, \"pct\": 0.0603}}",
+    "day_of_week_distribution":"{\"Monday\": 4, \"Tuesday\": 8, \"Wednesday\": 12, \"Thursday\": 11, \"Friday\": 12, \"Saturday\": 3, \"Sunday\": 2}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 6, \"3\": 1, \"4\": 6, \"5\": 4, \"6\": 4, \"7\": 7, \"8\": 3, \"9\": 6, \"10\": 4, \"11\": 4, \"12\": 4, \"13\": 0, \"14\": 2, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":7,
+    "monthly_trend":"{\"2023-11\": 18, \"2023-12\": 10, \"2024-01\": 24}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":60,
@@ -1085,7 +1487,13 @@
     "severity_norm":0.5063,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 50, \"pct\": 0.7143}, \"WRONG PARKING\": {\"count\": 11, \"pct\": 0.1571}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 50, \"pct\": 0.7143}, \"WRONG PARKING\": {\"count\": 11, \"pct\": 0.1571}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1}}",
+    "day_of_week_distribution":"{\"Monday\": 6, \"Tuesday\": 13, \"Wednesday\": 17, \"Thursday\": 6, \"Friday\": 7, \"Saturday\": 8, \"Sunday\": 4}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 11, \"3\": 7, \"4\": 2, \"5\": 7, \"6\": 2, \"7\": 3, \"8\": 10, \"9\": 6, \"10\": 1, \"11\": 9, \"12\": 0, \"13\": 1, \"14\": 0, \"15\": 2, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 30, \"2023-12\": 16, \"2024-01\": 9, \"2024-02\": 1, \"2024-03\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":95,
@@ -1101,7 +1509,13 @@
     "severity_norm":0.5782,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.8491}, \"WRONG PARKING\": {\"count\": 5, \"pct\": 0.0943}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.8491}, \"WRONG PARKING\": {\"count\": 5, \"pct\": 0.0943}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 6, \"Wednesday\": 12, \"Thursday\": 11, \"Friday\": 2, \"Saturday\": 9, \"Sunday\": 8}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 5, \"3\": 6, \"4\": 3, \"5\": 2, \"6\": 2, \"7\": 0, \"8\": 0, \"9\": 0, \"10\": 18, \"11\": 5, \"12\": 3, \"13\": 5, \"14\": 0, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 15, \"2023-12\": 6, \"2024-01\": 20, \"2024-02\": 1, \"2024-03\": 8}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":57,
@@ -1117,7 +1531,13 @@
     "severity_norm":0.663,
     "dominant_vehicle_type":"MAXI-CAB",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 127, \"pct\": 0.4811}, \"PARKING IN A MAIN ROAD\": {\"count\": 79, \"pct\": 0.2992}, \"WRONG PARKING\": {\"count\": 41, \"pct\": 0.1553}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 127, \"pct\": 0.4811}, \"PARKING IN A MAIN ROAD\": {\"count\": 79, \"pct\": 0.2992}, \"WRONG PARKING\": {\"count\": 41, \"pct\": 0.1553}}",
+    "day_of_week_distribution":"{\"Monday\": 10, \"Tuesday\": 15, \"Wednesday\": 30, \"Thursday\": 3, \"Friday\": 38, \"Saturday\": 32, \"Sunday\": 39}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 25, \"1\": 23, \"2\": 7, \"3\": 20, \"4\": 13, \"5\": 1, \"6\": 2, \"7\": 15, \"8\": 5, \"9\": 4, \"10\": 1, \"11\": 1, \"12\": 1, \"13\": 49, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":13,
+    "monthly_trend":"{\"2023-11\": 52, \"2023-12\": 35, \"2024-01\": 64, \"2024-02\": 3, \"2024-03\": 13}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":61,
@@ -1133,7 +1553,13 @@
     "severity_norm":0.4356,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 92, \"pct\": 0.8142}, \"WRONG PARKING\": {\"count\": 20, \"pct\": 0.177}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 92, \"pct\": 0.8142}, \"WRONG PARKING\": {\"count\": 20, \"pct\": 0.177}}",
+    "day_of_week_distribution":"{\"Monday\": 24, \"Tuesday\": 12, \"Wednesday\": 18, \"Thursday\": 11, \"Friday\": 21, \"Saturday\": 22, \"Sunday\": 4}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 3, \"3\": 18, \"4\": 15, \"5\": 30, \"6\": 0, \"7\": 4, \"8\": 10, \"9\": 13, \"10\": 7, \"11\": 9, \"12\": 2, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-11\": 41, \"2023-12\": 34, \"2024-01\": 35, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":41,
@@ -1149,7 +1575,13 @@
     "severity_norm":0.1915,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 83, \"pct\": 0.883}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0638}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 83, \"pct\": 0.883}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0638}}",
+    "day_of_week_distribution":"{\"Monday\": 4, \"Tuesday\": 2, \"Wednesday\": 6, \"Thursday\": 22, \"Friday\": 10, \"Saturday\": 8, \"Sunday\": 37}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 1, \"4\": 5, \"5\": 8, \"6\": 20, \"7\": 1, \"8\": 12, \"9\": 14, \"10\": 19, \"11\": 5, \"12\": 2, \"13\": 2, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":6,
+    "monthly_trend":"{\"2023-11\": 12, \"2023-12\": 34, \"2024-01\": 8, \"2024-02\": 1, \"2024-03\": 34}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":96,
@@ -1165,7 +1597,13 @@
     "severity_norm":0.4561,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 35, \"pct\": 0.6364}, \"WRONG PARKING\": {\"count\": 18, \"pct\": 0.3273}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 35, \"pct\": 0.6364}, \"WRONG PARKING\": {\"count\": 18, \"pct\": 0.3273}}",
+    "day_of_week_distribution":"{\"Monday\": 5, \"Tuesday\": 12, \"Wednesday\": 9, \"Thursday\": 0, \"Friday\": 1, \"Saturday\": 19, \"Sunday\": 6}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 5, \"4\": 2, \"5\": 3, \"6\": 1, \"7\": 2, \"8\": 2, \"9\": 0, \"10\": 2, \"11\": 20, \"12\": 14, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-12\": 8, \"2024-01\": 44}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":85,
@@ -1181,7 +1619,13 @@
     "severity_norm":0.0442,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 206, \"pct\": 0.6936}, \"NO PARKING\": {\"count\": 80, \"pct\": 0.2694}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 206, \"pct\": 0.6936}, \"NO PARKING\": {\"count\": 80, \"pct\": 0.2694}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 12, \"Wednesday\": 63, \"Thursday\": 1, \"Friday\": 84, \"Saturday\": 34, \"Sunday\": 24}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 38, \"4\": 27, \"5\": 31, \"6\": 0, \"7\": 0, \"8\": 0, \"9\": 26, \"10\": 22, \"11\": 58, \"12\": 13, \"13\": 0, \"14\": 3, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 53, \"2023-12\": 96, \"2024-01\": 69}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":70,
@@ -1197,7 +1641,13 @@
     "severity_norm":0.342,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 69, \"pct\": 0.5798}, \"WRONG PARKING\": {\"count\": 33, \"pct\": 0.2773}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.1261}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 69, \"pct\": 0.5798}, \"WRONG PARKING\": {\"count\": 33, \"pct\": 0.2773}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.1261}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 32, \"Wednesday\": 14, \"Thursday\": 17, \"Friday\": 6, \"Saturday\": 3, \"Sunday\": 1}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 5, \"3\": 8, \"4\": 8, \"5\": 11, \"6\": 5, \"7\": 8, \"8\": 8, \"9\": 10, \"10\": 8, \"11\": 2, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-11\": 18, \"2023-12\": 19, \"2024-01\": 24, \"2024-02\": 10, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":53,
@@ -1213,7 +1663,13 @@
     "severity_norm":0.3753,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 96, \"pct\": 0.4615}, \"NO PARKING\": {\"count\": 89, \"pct\": 0.4279}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0625}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 96, \"pct\": 0.4615}, \"NO PARKING\": {\"count\": 89, \"pct\": 0.4279}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0625}}",
+    "day_of_week_distribution":"{\"Monday\": 11, \"Tuesday\": 23, \"Wednesday\": 23, \"Thursday\": 26, \"Friday\": 40, \"Saturday\": 26, \"Sunday\": 34}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 8, \"2\": 10, \"3\": 25, \"4\": 18, \"5\": 18, \"6\": 32, \"7\": 5, \"8\": 6, \"9\": 1, \"10\": 21, \"11\": 19, \"12\": 14, \"13\": 6, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":6,
+    "monthly_trend":"{\"2023-11\": 57, \"2023-12\": 97, \"2024-01\": 28, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":69,
@@ -1229,7 +1685,13 @@
     "severity_norm":0.0,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 73, \"pct\": 0.6033}, \"WRONG PARKING\": {\"count\": 47, \"pct\": 0.3884}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 73, \"pct\": 0.6033}, \"WRONG PARKING\": {\"count\": 47, \"pct\": 0.3884}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 44, \"Wednesday\": 24, \"Thursday\": 35, \"Friday\": 9, \"Saturday\": 2, \"Sunday\": 6}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 21, \"3\": 25, \"4\": 1, \"5\": 0, \"6\": 0, \"7\": 0, \"8\": 0, \"9\": 0, \"10\": 48, \"11\": 25, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":10,
+    "monthly_trend":"{\"2023-11\": 10, \"2023-12\": 10, \"2024-01\": 100}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":80,
@@ -1245,7 +1707,13 @@
     "severity_norm":0.4015,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.2857}, \"WRONG PARKING\": {\"count\": 63, \"pct\": 0.2812}, \"PARKING IN A MAIN ROAD\": {\"count\": 30, \"pct\": 0.1339}, \"PARKING ON FOOTPATH\": {\"count\": 27, \"pct\": 0.1205}, \"PARKING OPPOSITE TO ANOTHER PARKED VEHICLE\": {\"count\": 12, \"pct\": 0.0536}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.2857}, \"WRONG PARKING\": {\"count\": 63, \"pct\": 0.2812}, \"PARKING IN A MAIN ROAD\": {\"count\": 30, \"pct\": 0.1339}, \"PARKING ON FOOTPATH\": {\"count\": 27, \"pct\": 0.1205}, \"PARKING OPPOSITE TO ANOTHER PARKED VEHICLE\": {\"count\": 12, \"pct\": 0.0536}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 9, \"Wednesday\": 1, \"Thursday\": 4, \"Friday\": 16, \"Saturday\": 26, \"Sunday\": 22}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 14, \"3\": 4, \"4\": 1, \"5\": 5, \"6\": 3, \"7\": 2, \"8\": 9, \"9\": 17, \"10\": 3, \"11\": 1, \"12\": 10, \"13\": 11, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 29, \"2023-12\": 8, \"2024-01\": 42, \"2024-03\": 1}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":78,
@@ -1261,7 +1729,13 @@
     "severity_norm":0.0104,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 114, \"pct\": 0.8702}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0992}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 114, \"pct\": 0.8702}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0992}}",
+    "day_of_week_distribution":"{\"Monday\": 9, \"Tuesday\": 23, \"Wednesday\": 36, \"Thursday\": 24, \"Friday\": 0, \"Saturday\": 16, \"Sunday\": 10}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 0, \"4\": 16, \"5\": 6, \"6\": 0, \"7\": 10, \"8\": 23, \"9\": 21, \"10\": 10, \"11\": 1, \"12\": 1, \"13\": 4, \"14\": 25, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":14,
+    "monthly_trend":"{\"2023-11\": 21, \"2023-12\": 25, \"2024-01\": 65, \"2024-02\": 2, \"2024-03\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":28,
@@ -1277,7 +1751,13 @@
     "severity_norm":0.3622,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 88, \"pct\": 0.4055}, \"NO PARKING\": {\"count\": 58, \"pct\": 0.2673}, \"PARKING IN A MAIN ROAD\": {\"count\": 55, \"pct\": 0.2535}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 88, \"pct\": 0.4055}, \"NO PARKING\": {\"count\": 58, \"pct\": 0.2673}, \"PARKING IN A MAIN ROAD\": {\"count\": 55, \"pct\": 0.2535}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 7, \"Wednesday\": 23, \"Thursday\": 30, \"Friday\": 35, \"Saturday\": 28, \"Sunday\": 20}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 8, \"3\": 3, \"4\": 6, \"5\": 2, \"6\": 4, \"7\": 2, \"8\": 0, \"9\": 3, \"10\": 6, \"11\": 27, \"12\": 55, \"13\": 28, \"14\": 1, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":12,
+    "monthly_trend":"{\"2023-11\": 62, \"2023-12\": 43, \"2024-01\": 23, \"2024-02\": 1, \"2024-03\": 16}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":48,
@@ -1293,7 +1773,13 @@
     "severity_norm":0.4,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 51, \"pct\": 0.5667}, \"NO PARKING\": {\"count\": 13, \"pct\": 0.1444}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 8, \"pct\": 0.0889}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 7, \"pct\": 0.0778}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 51, \"pct\": 0.5667}, \"NO PARKING\": {\"count\": 13, \"pct\": 0.1444}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 8, \"pct\": 0.0889}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 7, \"pct\": 0.0778}}",
+    "day_of_week_distribution":"{\"Monday\": 10, \"Tuesday\": 9, \"Wednesday\": 8, \"Thursday\": 14, \"Friday\": 10, \"Saturday\": 8, \"Sunday\": 4}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 6, \"2\": 1, \"3\": 3, \"4\": 6, \"5\": 3, \"6\": 9, \"7\": 3, \"8\": 1, \"9\": 11, \"10\": 4, \"11\": 6, \"12\": 4, \"13\": 3, \"14\": 3, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":9,
+    "monthly_trend":"{\"2023-11\": 11, \"2023-12\": 18, \"2024-01\": 22, \"2024-02\": 1, \"2024-03\": 11}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":40,
@@ -1309,7 +1795,13 @@
     "severity_norm":0.2372,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 91, \"pct\": 0.7109}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.2734}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 91, \"pct\": 0.7109}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.2734}}",
+    "day_of_week_distribution":"{\"Monday\": 59, \"Tuesday\": 5, \"Wednesday\": 2, \"Thursday\": 7, \"Friday\": 7, \"Saturday\": 13, \"Sunday\": 33}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 3, \"3\": 2, \"4\": 0, \"5\": 3, \"6\": 7, \"7\": 7, \"8\": 6, \"9\": 14, \"10\": 13, \"11\": 5, \"12\": 23, \"13\": 27, \"14\": 15, \"15\": 1, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":13,
+    "monthly_trend":"{\"2023-11\": 42, \"2023-12\": 31, \"2024-01\": 47, \"2024-02\": 3, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":47,
@@ -1325,7 +1817,13 @@
     "severity_norm":0.4416,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 105, \"pct\": 0.5198}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.2228}, \"PARKING IN A MAIN ROAD\": {\"count\": 40, \"pct\": 0.198}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 105, \"pct\": 0.5198}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.2228}, \"PARKING IN A MAIN ROAD\": {\"count\": 40, \"pct\": 0.198}}",
+    "day_of_week_distribution":"{\"Monday\": 20, \"Tuesday\": 18, \"Wednesday\": 30, \"Thursday\": 19, \"Friday\": 36, \"Saturday\": 22, \"Sunday\": 3}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 3, \"1\": 0, \"2\": 11, \"3\": 51, \"4\": 26, \"5\": 15, \"6\": 2, \"7\": 2, \"8\": 1, \"9\": 0, \"10\": 10, \"11\": 14, \"12\": 1, \"13\": 12, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 65, \"2023-12\": 44, \"2024-01\": 28, \"2024-02\": 8, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":88,
@@ -1341,7 +1839,13 @@
     "severity_norm":0.9414,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 31, \"pct\": 0.3924}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.3165}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2911}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 31, \"pct\": 0.3924}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.3165}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2911}}",
+    "day_of_week_distribution":"{\"Monday\": 11, \"Tuesday\": 1, \"Wednesday\": 1, \"Thursday\": 18, \"Friday\": 1, \"Saturday\": 1, \"Sunday\": 17}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 9, \"1\": 6, \"2\": 13, \"3\": 3, \"4\": 8, \"5\": 2, \"6\": 1, \"7\": 0, \"8\": 1, \"9\": 1, \"10\": 0, \"11\": 1, \"12\": 5, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 25, \"2023-12\": 20, \"2024-01\": 2, \"2024-02\": 1, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":16,
@@ -1357,7 +1861,13 @@
     "severity_norm":0.1324,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 104, \"pct\": 0.8814}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0678}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 104, \"pct\": 0.8814}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0678}}",
+    "day_of_week_distribution":"{\"Monday\": 37, \"Tuesday\": 1, \"Wednesday\": 11, \"Thursday\": 14, \"Friday\": 2, \"Saturday\": 16, \"Sunday\": 31}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 11, \"2\": 17, \"3\": 7, \"4\": 4, \"5\": 6, \"6\": 4, \"7\": 0, \"8\": 21, \"9\": 5, \"10\": 3, \"11\": 19, \"12\": 15, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":8,
+    "monthly_trend":"{\"2023-11\": 8, \"2023-12\": 92, \"2024-01\": 8, \"2024-03\": 4}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":54,
@@ -1373,7 +1883,13 @@
     "severity_norm":0.1184,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5333}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.45}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5333}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.45}}",
+    "day_of_week_distribution":"{\"Monday\": 9, \"Tuesday\": 21, \"Wednesday\": 15, \"Thursday\": 7, \"Friday\": 28, \"Saturday\": 31, \"Sunday\": 7}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 3, \"1\": 6, \"2\": 10, \"3\": 13, \"4\": 2, \"5\": 4, \"6\": 4, \"7\": 3, \"8\": 15, \"9\": 4, \"10\": 11, \"11\": 16, \"12\": 11, \"13\": 16, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 30, \"2023-12\": 34, \"2024-01\": 36, \"2024-03\": 18}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":90,
@@ -1389,7 +1905,13 @@
     "severity_norm":0.4282,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 57, \"pct\": 0.9661}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 57, \"pct\": 0.9661}}",
+    "day_of_week_distribution":"{\"Monday\": 14, \"Tuesday\": 3, \"Wednesday\": 0, \"Thursday\": 33, \"Friday\": 8, \"Saturday\": 0, \"Sunday\": 0}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 12, \"4\": 2, \"5\": 1, \"6\": 5, \"7\": 1, \"8\": 0, \"9\": 1, \"10\": 0, \"11\": 18, \"12\": 2, \"13\": 15, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":11,
+    "monthly_trend":"{\"2023-11\": 21, \"2023-12\": 37}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":73,
@@ -1405,7 +1927,13 @@
     "severity_norm":0.298,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 82, \"pct\": 0.402}, \"WRONG PARKING\": {\"count\": 56, \"pct\": 0.2745}, \"PARKING IN A MAIN ROAD\": {\"count\": 27, \"pct\": 0.1324}, \"PARKING ON FOOTPATH\": {\"count\": 21, \"pct\": 0.1029}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 11, \"pct\": 0.0539}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 82, \"pct\": 0.402}, \"WRONG PARKING\": {\"count\": 56, \"pct\": 0.2745}, \"PARKING IN A MAIN ROAD\": {\"count\": 27, \"pct\": 0.1324}, \"PARKING ON FOOTPATH\": {\"count\": 21, \"pct\": 0.1029}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 11, \"pct\": 0.0539}}",
+    "day_of_week_distribution":"{\"Monday\": 5, \"Tuesday\": 8, \"Wednesday\": 7, \"Thursday\": 33, \"Friday\": 21, \"Saturday\": 57, \"Sunday\": 5}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 1, \"1\": 3, \"2\": 3, \"3\": 6, \"4\": 39, \"5\": 4, \"6\": 0, \"7\": 9, \"8\": 6, \"9\": 6, \"10\": 6, \"11\": 3, \"12\": 12, \"13\": 7, \"14\": 15, \"15\": 2, \"16\": 11, \"17\": 3, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 9, \"2023-12\": 44, \"2024-01\": 80, \"2024-02\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":38,
@@ -1421,7 +1949,13 @@
     "severity_norm":0.3578,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 82, \"pct\": 0.4339}, \"PARKING ON FOOTPATH\": {\"count\": 33, \"pct\": 0.1746}, \"NO PARKING\": {\"count\": 28, \"pct\": 0.1481}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.1164}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0529}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 82, \"pct\": 0.4339}, \"PARKING ON FOOTPATH\": {\"count\": 33, \"pct\": 0.1746}, \"NO PARKING\": {\"count\": 28, \"pct\": 0.1481}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.1164}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0529}}",
+    "day_of_week_distribution":"{\"Monday\": 3, \"Tuesday\": 9, \"Wednesday\": 7, \"Thursday\": 4, \"Friday\": 26, \"Saturday\": 41, \"Sunday\": 6}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 35, \"3\": 15, \"4\": 2, \"5\": 4, \"6\": 4, \"7\": 10, \"8\": 2, \"9\": 0, \"10\": 2, \"11\": 12, \"12\": 6, \"13\": 4, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 13, \"2023-12\": 37, \"2024-01\": 46}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":64,
@@ -1437,7 +1971,13 @@
     "severity_norm":0.4589,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 77, \"pct\": 0.9506}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 77, \"pct\": 0.9506}}",
+    "day_of_week_distribution":"{\"Monday\": 1, \"Tuesday\": 21, \"Wednesday\": 12, \"Thursday\": 13, \"Friday\": 15, \"Saturday\": 11, \"Sunday\": 4}",
+    "peak_day":"Tuesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 0, \"3\": 12, \"4\": 1, \"5\": 8, \"6\": 38, \"7\": 1, \"8\": 3, \"9\": 1, \"10\": 5, \"11\": 5, \"12\": 1, \"13\": 2, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":6,
+    "monthly_trend":"{\"2023-11\": 4, \"2023-12\": 28, \"2024-01\": 40, \"2024-02\": 3, \"2024-03\": 2}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":86,
@@ -1453,7 +1993,13 @@
     "severity_norm":0.6753,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 31, \"pct\": 0.6889}, \"NO PARKING\": {\"count\": 12, \"pct\": 0.2667}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 31, \"pct\": 0.6889}, \"NO PARKING\": {\"count\": 12, \"pct\": 0.2667}}",
+    "day_of_week_distribution":"{\"Monday\": 1, \"Tuesday\": 0, \"Wednesday\": 13, \"Thursday\": 8, \"Friday\": 3, \"Saturday\": 2, \"Sunday\": 16}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 3, \"3\": 14, \"4\": 2, \"5\": 10, \"6\": 0, \"7\": 1, \"8\": 3, \"9\": 1, \"10\": 1, \"11\": 0, \"12\": 2, \"13\": 5, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 31, \"2023-12\": 8, \"2024-01\": 4}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":67,
@@ -1469,7 +2015,13 @@
     "severity_norm":0.0418,
     "dominant_vehicle_type":"MOTOR CYCLE",
     "dominant_violation_type":"PARKING ON FOOTPATH",
-    "violation_type_breakdown":"{\"PARKING ON FOOTPATH\": {\"count\": 185, \"pct\": 0.4048}, \"WRONG PARKING\": {\"count\": 159, \"pct\": 0.3479}, \"NO PARKING\": {\"count\": 72, \"pct\": 0.1575}}"
+    "violation_type_breakdown":"{\"PARKING ON FOOTPATH\": {\"count\": 185, \"pct\": 0.4048}, \"WRONG PARKING\": {\"count\": 159, \"pct\": 0.3479}, \"NO PARKING\": {\"count\": 72, \"pct\": 0.1575}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 58, \"Wednesday\": 36, \"Thursday\": 45, \"Friday\": 69, \"Saturday\": 3, \"Sunday\": 2}",
+    "peak_day":"Friday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 6, \"3\": 16, \"4\": 67, \"5\": 7, \"6\": 1, \"7\": 2, \"8\": 0, \"9\": 1, \"10\": 38, \"11\": 7, \"12\": 61, \"13\": 0, \"14\": 1, \"15\": 3, \"16\": 0, \"17\": 1, \"18\": 2, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 6, \"2023-12\": 81, \"2024-01\": 100, \"2024-02\": 15, \"2024-03\": 11}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":83,
@@ -1485,7 +2037,13 @@
     "severity_norm":0.3039,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 62, \"pct\": 0.5041}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.439}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 62, \"pct\": 0.5041}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.439}}",
+    "day_of_week_distribution":"{\"Monday\": 13, \"Tuesday\": 8, \"Wednesday\": 15, \"Thursday\": 25, \"Friday\": 13, \"Saturday\": 12, \"Sunday\": 29}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 2, \"1\": 1, \"2\": 6, \"3\": 10, \"4\": 18, \"5\": 19, \"6\": 10, \"7\": 6, \"8\": 2, \"9\": 0, \"10\": 1, \"11\": 12, \"12\": 8, \"13\": 11, \"14\": 9, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":5,
+    "monthly_trend":"{\"2023-11\": 30, \"2023-12\": 45, \"2024-01\": 31, \"2024-02\": 4, \"2024-03\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":91,
@@ -1501,7 +2059,13 @@
     "severity_norm":0.0852,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.918}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.918}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 1, \"Wednesday\": 5, \"Thursday\": 3, \"Friday\": 21, \"Saturday\": 28, \"Sunday\": 0}",
+    "peak_day":"Saturday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 2, \"4\": 31, \"5\": 0, \"6\": 0, \"7\": 0, \"8\": 0, \"9\": 1, \"10\": 1, \"11\": 19, \"12\": 0, \"13\": 3, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":4,
+    "monthly_trend":"{\"2023-11\": 32, \"2023-12\": 21, \"2024-01\": 5}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":33,
@@ -1517,7 +2081,13 @@
     "severity_norm":0.297,
     "dominant_vehicle_type":"MOTOR CYCLE",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.4643}, \"PARKING ON FOOTPATH\": {\"count\": 28, \"pct\": 0.25}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 14, \"pct\": 0.125}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0893}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0714}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.4643}, \"PARKING ON FOOTPATH\": {\"count\": 28, \"pct\": 0.25}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 14, \"pct\": 0.125}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0893}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0714}}",
+    "day_of_week_distribution":"{\"Monday\": 32, \"Tuesday\": 0, \"Wednesday\": 9, \"Thursday\": 9, \"Friday\": 2, \"Saturday\": 5, \"Sunday\": 0}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 30, \"3\": 3, \"4\": 4, \"5\": 6, \"6\": 1, \"7\": 4, \"8\": 0, \"9\": 1, \"10\": 0, \"11\": 7, \"12\": 1, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 27, \"2023-12\": 12, \"2024-01\": 15, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":98,
@@ -1533,7 +2103,13 @@
     "severity_norm":0.4786,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 11, \"pct\": 0.6471}, \"NO PARKING\": {\"count\": 5, \"pct\": 0.2941}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 1, \"pct\": 0.0588}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 11, \"pct\": 0.6471}, \"NO PARKING\": {\"count\": 5, \"pct\": 0.2941}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 1, \"pct\": 0.0588}}",
+    "day_of_week_distribution":"{\"Monday\": 3, \"Tuesday\": 2, \"Wednesday\": 0, \"Thursday\": 3, \"Friday\": 1, \"Saturday\": 1, \"Sunday\": 6}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 1, \"3\": 0, \"4\": 0, \"5\": 1, \"6\": 0, \"7\": 0, \"8\": 0, \"9\": 0, \"10\": 1, \"11\": 4, \"12\": 2, \"13\": 7, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":13,
+    "monthly_trend":"{\"2023-11\": 5, \"2023-12\": 3, \"2024-01\": 5, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":72,
@@ -1549,7 +2125,13 @@
     "severity_norm":0.3239,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 50, \"pct\": 0.7353}, \"NO PARKING\": {\"count\": 11, \"pct\": 0.1618}, \"PARKING IN A MAIN ROAD\": {\"count\": 5, \"pct\": 0.0735}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 50, \"pct\": 0.7353}, \"NO PARKING\": {\"count\": 11, \"pct\": 0.1618}, \"PARKING IN A MAIN ROAD\": {\"count\": 5, \"pct\": 0.0735}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 15, \"Wednesday\": 22, \"Thursday\": 8, \"Friday\": 8, \"Saturday\": 5, \"Sunday\": 1}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 10, \"3\": 6, \"4\": 0, \"5\": 7, \"6\": 6, \"7\": 0, \"8\": 0, \"9\": 1, \"10\": 2, \"11\": 6, \"12\": 19, \"13\": 4, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":12,
+    "monthly_trend":"{\"2023-11\": 12, \"2023-12\": 10, \"2024-01\": 17, \"2024-03\": 22}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":84,
@@ -1565,7 +2147,13 @@
     "severity_norm":0.3039,
     "dominant_vehicle_type":"CAR",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 70, \"pct\": 0.6667}, \"NO PARKING\": {\"count\": 31, \"pct\": 0.2952}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 70, \"pct\": 0.6667}, \"NO PARKING\": {\"count\": 31, \"pct\": 0.2952}}",
+    "day_of_week_distribution":"{\"Monday\": 81, \"Tuesday\": 0, \"Wednesday\": 0, \"Thursday\": 1, \"Friday\": 0, \"Saturday\": 4, \"Sunday\": 14}",
+    "peak_day":"Monday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 18, \"3\": 28, \"4\": 24, \"5\": 6, \"6\": 10, \"7\": 2, \"8\": 0, \"9\": 1, \"10\": 0, \"11\": 0, \"12\": 7, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 3, \"17\": 1, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-12\": 15, \"2024-01\": 82, \"2024-03\": 3}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":10,
@@ -1581,7 +2169,13 @@
     "severity_norm":0.0558,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"NO PARKING",
-    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 171, \"pct\": 0.9293}}"
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 171, \"pct\": 0.9293}}",
+    "day_of_week_distribution":"{\"Monday\": 2, \"Tuesday\": 44, \"Wednesday\": 38, \"Thursday\": 45, \"Friday\": 28, \"Saturday\": 13, \"Sunday\": 5}",
+    "peak_day":"Thursday",
+    "hour_distribution":"{\"0\": 0, \"1\": 0, \"2\": 79, \"3\": 46, \"4\": 35, \"5\": 2, \"6\": 2, \"7\": 4, \"8\": 0, \"9\": 0, \"10\": 0, \"11\": 7, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":2,
+    "monthly_trend":"{\"2023-11\": 52, \"2023-12\": 93, \"2024-01\": 30}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":99,
@@ -1597,7 +2191,13 @@
     "severity_norm":0.1327,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"WRONG PARKING",
-    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 47, \"pct\": 0.5402}, \"NO PARKING\": {\"count\": 16, \"pct\": 0.1839}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1379}}"
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 47, \"pct\": 0.5402}, \"NO PARKING\": {\"count\": 16, \"pct\": 0.1839}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1379}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 0, \"Wednesday\": 0, \"Thursday\": 23, \"Friday\": 0, \"Saturday\": 7, \"Sunday\": 24}",
+    "peak_day":"Sunday",
+    "hour_distribution":"{\"0\": 0, \"1\": 23, \"2\": 0, \"3\": 0, \"4\": 0, \"5\": 4, \"6\": 20, \"7\": 0, \"8\": 0, \"9\": 7, \"10\": 0, \"11\": 0, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":1,
+    "monthly_trend":"{\"2023-12\": 31, \"2024-01\": 23}",
+    "trend_direction":"decreasing"
   },
   {
     "hotspot_id":62,
@@ -1613,6 +2213,12 @@
     "severity_norm":0.0692,
     "dominant_vehicle_type":"SCOOTER",
     "dominant_violation_type":"PARKING IN A MAIN ROAD",
-    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 66, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.5}}"
+    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 66, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.5}}",
+    "day_of_week_distribution":"{\"Monday\": 0, \"Tuesday\": 11, \"Wednesday\": 16, \"Thursday\": 16, \"Friday\": 8, \"Saturday\": 7, \"Sunday\": 8}",
+    "peak_day":"Wednesday",
+    "hour_distribution":"{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 17, \"4\": 12, \"5\": 16, \"6\": 10, \"7\": 7, \"8\": 0, \"9\": 0, \"10\": 1, \"11\": 0, \"12\": 0, \"13\": 0, \"14\": 0, \"15\": 0, \"16\": 0, \"17\": 0, \"18\": 0, \"19\": 0, \"20\": 0, \"21\": 0, \"22\": 0, \"23\": 0}",
+    "peak_hour":3,
+    "monthly_trend":"{\"2023-11\": 9, \"2023-12\": 8, \"2024-01\": 49}",
+    "trend_direction":"decreasing"
   }
 ]

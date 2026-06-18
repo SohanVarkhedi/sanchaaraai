@@ -148,6 +148,30 @@ Status: todo / doing / done
 
 ---
 
+## Temporal Pattern Analysis (post Phase 7 feature)
+
+- [x] profiled city-wide day_of_week: no weekday/weekend cliff; Sun/Thu highest, Mon lowest; weekend avg/day marginally exceeds weekday
+- [x] confirmed actual date range: Nov 10 2023 – Mar 29 2024 IST (not Apr 8 as previously documented); decisions.md corrected
+- [x] identified Feb/Mar 2024 enforcement reporting gap: 1,719 and 7,038 city-wide records vs ~38k/month in Dec-Jan
+- [x] DOW_ORDER and PARTIAL_MONTHS constants added to hotspot_engine.py
+- [x] build_hotspots() extended with midpoint and half_days parameters; dt_ist computed in run() and passed through
+- [x] cluster loop: day_of_week_distribution, peak_day, hour_distribution, peak_hour, monthly_trend, trend_direction computed per cluster
+- [x] trend_direction: second-half vs first-half daily rate split at Jan 19 2024 (dataset midpoint); >10% change → increasing/decreasing; else stable; 99/101 decreasing due to Feb-Mar gap
+- [x] all 6 fields added to handoff JSON; dict fields serialized as JSON strings; 0 nulls across 101 hotspots
+- [x] hotspots.json regenerated; rankings and scoring unchanged (temporal fields don't affect impact_score)
+- [x] hotspot #2: peak_day=Sunday, peak_hour=10, trend=decreasing; monthly_trend confirms Nov-Jan strong, Feb-Mar sparse
+- [x] app.py: backward-compat defaults for all 6 new fields in load_hotspots()
+- [x] page_temporal() added: hotspot selectbox (defaults rank 1), metric cards, plotly bar charts for dow/hour/monthly
+- [x] day chart: peak day bar highlighted red; others blue-grey
+- [x] hour chart: morning rush hours (7-11 IST) highlighted amber; caption warns evening sparseness is enforcement timing, not congestion absence
+- [x] monthly chart: partial months (Nov 2023, Mar 2024) shown grey with asterisk; trend_direction badge with directional arrow; caption warns Feb-Mar sparseness is reporting gap
+- [x] Temporal Patterns added as 4th nav item (after Simulator); station filter applies to hotspot selectbox
+- [x] i18n: 12 new keys (nav_temporal, temporal_header, select_hotspot, peak_day_label, peak_hour_label, trend_label, trend_increasing, trend_decreasing, trend_stable, day_chart_title, hour_chart_title, month_chart_title) — en + kn first draft
+- [x] plotly>=5.0.0 added to requirements.txt
+- [x] decisions.md: date range corrected; temporal fields documented; trend_direction formula; partial months; city-wide dow finding
+
+---
+
 ## Phase 7: Deploy + Polish
 
 - [x] confirmed live on Streamlit Cloud at latest commit
