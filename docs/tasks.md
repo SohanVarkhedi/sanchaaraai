@@ -68,6 +68,15 @@ Status: todo / doing / done
 
 ---
 
+## Language Toggle (post Phase 5 feature)
+
+- [x] src/i18n.py with translations dict and t(key, lang) helper
+- [x] language selector in sidebar (English / ಕನ್ನಡ), persisted via session_state
+- [x] all keys in the provided starter set wired into app.py
+- [x] data values, place names, and dynamic tooltip text left in English
+
+---
+
 ## Phase 7: Deploy + Polish
 
 - [ ] redeploy to Streamlit Cloud with real data wired in (B)

@@ -4,6 +4,7 @@ import folium
 import streamlit as st
 from streamlit_folium import st_folium
 from src.hotspot_engine import simulate_allocation, OFFICER_THROUGHPUT
+from src.i18n import t
 
 st.set_page_config(
     page_title="ParkPulse AI",
@@ -76,24 +77,24 @@ def _build_map(df: pd.DataFrame) -> folium.Map:
     return m
 
 
-def page_map(df: pd.DataFrame) -> None:
-    st.header("Hotspot Map")
+def page_map(df: pd.DataFrame, lang: str) -> None:
+    st.header(t("map_header", lang))
     st.caption(
         "101 parking violation hotspots detected via DBSCAN clustering on 115,400 approved records "
         "(Nov 2023 - Apr 2024). Marker size and color scale with impact score."
     )
 
     col_a, col_b, col_c = st.columns(3)
-    col_a.metric("Hotspots detected", len(df))
-    col_b.metric("Top hotspot score", f"{df['impact_score'].max():.3f}")
-    col_c.metric("Total violations mapped", f"{df['violation_count'].sum():,}")
+    col_a.metric(t("hotspots_detected", lang), len(df))
+    col_b.metric(t("top_hotspot_score", lang), f"{df['impact_score'].max():.3f}")
+    col_c.metric(t("total_violations_mapped", lang), f"{df['violation_count'].sum():,}")
 
     m = _build_map(df)
     st_folium(m, use_container_width=True, height=560, returned_objects=[])
 
 
-def page_priority_list(df: pd.DataFrame) -> None:
-    st.header("Priority List")
+def page_priority_list(df: pd.DataFrame, lang: str) -> None:
+    st.header(t("priority_list_header", lang))
     st.caption(
         "Hotspots ranked by impact score (0.6 x count_norm + 0.4 x rush_frac). "
         "Score breakdown columns show each component. "
@@ -122,7 +123,7 @@ def page_priority_list(df: pd.DataFrame) -> None:
             "count_norm": "Count Norm",
             "rush_frac": "Rush-Hr Frac",
             "violations_per_hour": "Viol/Hr",
-            "recommended_officers": "Officers Rec.",
+            "recommended_officers": t("recommended_officers", lang),
         }
     )
 
@@ -135,33 +136,13 @@ def page_priority_list(df: pd.DataFrame) -> None:
     st.caption(
         "Count Norm: log-normalized violation volume (0-1). Rush-Hr Frac: share of violations "
         "during IST 7-11 or 17-20. Viol/Hr: cluster violations / 702 enforcement hours (140 days x 5 hrs/day). "
-        "Officers Rec. assumes 4 violations/officer/hour -- labeled as an assumption, not a measurement."
+        f"{t('recommended_officers', lang)} assumes 4 violations/officer/hour -- labeled as an assumption, not a measurement."
     )
 
 
-def page_simulator(df: pd.DataFrame) -> None:
-    st.header("Resource Simulator")
-    st.caption(
-        "Allocate available officers top-down by impact score until the pool is exhausted. "
-        "Shows which hotspots are covered, partially covered, or left uncovered. "
-        "No estimated improvement percentages -- coverage and gaps only."
-    )
-
-    col_left, col_right = st.columns([1, 3])
-    with col_left:
-        st.subheader("Available Resources")
-        officers = st.number_input(
-            "Officers available", min_value=1, max_value=500, value=30, step=1
-        )
-        trucks = st.number_input(
-            "Tow trucks available", min_value=0, max_value=100, value=5, step=1
-        )
-        st.caption("Officers allocated greedily from rank 1 downward. Tow trucks assigned 1 per covered hotspot.")
-
-    result = simulate_allocation(df, int(officers), int(trucks))
-
-    def _display(raw: pd.DataFrame) -> pd.DataFrame:
-        return raw.rename(
+def _display_sim(raw: pd.DataFrame) -> pd.DataFrame:
+    return (
+        raw.rename(
             columns={
                 "rank": "Rank",
                 "hotspot_id": "Hotspot ID",
@@ -172,7 +153,32 @@ def page_simulator(df: pd.DataFrame) -> None:
                 "tow_truck": "Tow Truck",
                 "status": "Status",
             }
-        ).assign(**{"Tow Truck": lambda d: d["Tow Truck"].map({True: "Yes", False: "No"})}).set_index("Rank")
+        )
+        .assign(**{"Tow Truck": lambda d: d["Tow Truck"].map({True: "Yes", False: "No"})})
+        .set_index("Rank")
+    )
+
+
+def page_simulator(df: pd.DataFrame, lang: str) -> None:
+    st.header(t("simulator_header", lang))
+    st.caption(
+        "Allocate available officers top-down by impact score until the pool is exhausted. "
+        "Shows which hotspots are covered, partially covered, or left uncovered. "
+        "No estimated improvement percentages -- coverage and gaps only."
+    )
+
+    col_left, col_right = st.columns([1, 3])
+    with col_left:
+        st.subheader("Available Resources")
+        officers = st.number_input(
+            t("officers_available", lang), min_value=1, max_value=500, value=30, step=1
+        )
+        trucks = st.number_input(
+            t("tow_trucks_available", lang), min_value=0, max_value=100, value=5, step=1
+        )
+        st.caption("Officers allocated greedily from rank 1 downward. Tow trucks assigned 1 per covered hotspot.")
+
+    result = simulate_allocation(df, int(officers), int(trucks))
 
     covered = result[result["status"] == "Covered"]
     partial = result[result["status"] == "Partial"]
@@ -180,9 +186,9 @@ def page_simulator(df: pd.DataFrame) -> None:
 
     with col_right:
         s1, s2, s3, s4 = st.columns(4)
-        s1.metric("Covered", len(covered))
-        s2.metric("Partial", len(partial))
-        s3.metric("Uncovered", len(uncovered))
+        s1.metric(t("covered", lang), len(covered))
+        s2.metric(t("partial", lang), len(partial))
+        s3.metric(t("uncovered", lang), len(uncovered))
         s4.metric(
             "Officers deployed",
             int(result["officers_assigned"].sum()),
@@ -197,25 +203,45 @@ def page_simulator(df: pd.DataFrame) -> None:
 
         if not covered.empty:
             st.subheader("Covered hotspots")
-            st.dataframe(_display(covered), use_container_width=True)
+            st.dataframe(_display_sim(covered), use_container_width=True)
 
         if not partial.empty:
             st.subheader("Partially covered (officers ran out mid-allocation)")
-            st.dataframe(_display(partial), use_container_width=True)
+            st.dataframe(_display_sim(partial), use_container_width=True)
 
         if not uncovered.empty:
             st.subheader("Uncovered hotspots")
             st.dataframe(
-                _display(uncovered)[["Hotspot ID", "Impact Score", "Violations", "Officers Needed"]],
+                _display_sim(uncovered)[["Hotspot ID", "Impact Score", "Violations", "Officers Needed"]],
                 use_container_width=True,
             )
 
 
 def main() -> None:
-    st.sidebar.title("PARKPULSE AI")
-    st.sidebar.caption("Decision Support System\nParking-Induced Congestion -- Bangalore")
+    if "lang" not in st.session_state:
+        st.session_state.lang = "en"
+
+    st.sidebar.title(t("app_title", st.session_state.lang))
+    st.sidebar.caption(t("app_subtitle", st.session_state.lang))
     st.sidebar.divider()
-    page = st.sidebar.radio("Navigate", ["Map", "Priority List", "Simulator"])
+
+    lang_choice = st.sidebar.selectbox(
+        t("language_toggle", st.session_state.lang),
+        options=["English", "ಕನ್ನಡ"],
+        index=0 if st.session_state.lang == "en" else 1,
+    )
+    st.session_state.lang = "en" if lang_choice == "English" else "kn"
+    lang = st.session_state.lang
+
+    st.sidebar.divider()
+
+    nav_keys = ["nav_map", "nav_priority_list", "nav_simulator"]
+    page_key = st.sidebar.radio(
+        "Navigate",
+        nav_keys,
+        format_func=lambda k: t(k, lang),
+    )
+
     st.sidebar.divider()
     st.sidebar.caption(
         "Data: 115,400 approved parking violations\n"
@@ -226,12 +252,12 @@ def main() -> None:
 
     df = load_hotspots()
 
-    if page == "Map":
-        page_map(df)
-    elif page == "Priority List":
-        page_priority_list(df)
+    if page_key == "nav_map":
+        page_map(df, lang)
+    elif page_key == "nav_priority_list":
+        page_priority_list(df, lang)
     else:
-        page_simulator(df)
+        page_simulator(df, lang)
 
 
 main()
