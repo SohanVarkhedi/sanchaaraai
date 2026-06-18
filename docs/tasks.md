@@ -33,12 +33,12 @@ Status: todo / doing / done
 
 ## Phase 3: Hotspot Detection + Scoring (A)
 
-- [ ] run DBSCAN on lat/lon, tune eps and min_samples against real data
-- [ ] compute violation density per cluster
-- [ ] compute rush-hour concentration (% of violations in 8-10am, 5-8pm)
-- [ ] build composite impact score with explainable breakdown
-- [ ] compute violations_per_hour and recommended_officers per hotspot
-- [ ] output handoff JSON: hotspot_id, lat, lon, impact_score, score_breakdown, violations_per_hour, recommended_officers
+- [x] run DBSCAN on lat/lon, tune eps and min_samples against real data
+- [x] compute violation density per cluster
+- [x] compute rush-hour concentration (% of violations in 8-10am, 5-8pm)
+- [x] build composite impact score with explainable breakdown
+- [x] compute violations_per_hour and recommended_officers per hotspot
+- [x] output handoff JSON: hotspot_id, lat, lon, impact_score, score_breakdown, violations_per_hour, recommended_officers
 
 ---
 

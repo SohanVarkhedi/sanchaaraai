@@ -90,3 +90,44 @@ Both windows are flagged in `is_rush_hour` for completeness, but Phase 3 scoring
 
 **violation_type kept as a list per row, not exploded**
 Each row is one enforcement event (one vehicle stop). A single event can have multiple violation subtypes stored as a JSON array string. Parsed with `json.loads()` into a Python list and stored in `violation_type_list`. Not exploded into multiple rows because that would inflate violation counts in Phase 3 density calculations. One row = one event.
+
+---
+
+**DBSCAN parameters: eps=0.003, min_samples=50**
+Tuning grid tested eps in [0.001, 0.002, 0.003, 0.005] and min_samples in [20, 50, 100].
+Chosen: eps=0.003 (~333m radius), min_samples=50.
+Rationale: produces 101 clusters with 3.7% noise (4,320 points discarded).
+101 hotspots is an actionable number for a city -- not so granular officers can't use it, not so coarse it merges neighborhoods.
+333m captures a typical city block + surrounding streets, which matches how parking pressure zones form.
+min_samples=50 means a minimum of 50 real violation events to qualify as a hotspot.
+eps=0.005 (45 clusters) merged distinct city zones. eps=0.001 (180+ clusters) split single blocks into fragments.
+
+---
+
+**Central Bangalore forms one giant cluster (hotspot_id=2, 50,623 violations)**
+DBSCAN can "chain" through continuously dense areas into one large cluster. The MG Road / Cubbon Park commercial core has uniform high violation density, so it connects into one cluster containing 44% of all approved violations. This is an honest finding, not a bug -- downtown Bangalore is overwhelmingly the highest-pressure zone. The centroid (12.978, 77.588) is the average location, not a single point. Flagged in the app display. Not splitting it further to avoid arbitrary parameter-hacking.
+
+---
+
+**Impact score formula: 0.6 * count_norm + 0.4 * rush_frac**
+Two components:
+- count_norm: log1p(violation_count) normalized to [0,1] across all hotspots. Log transform prevents the giant downtown cluster from making all others score near zero.
+- rush_frac: fraction of a hotspot's violations that fall during is_rush_hour (IST 7-11 or 17-20). Measures how concentrated the hotspot is during congestion windows.
+Weights 0.6/0.4: volume matters slightly more than timing, but timing is a meaningful congestion signal.
+No vehicle severity component -- deferred per earlier decision.
+
+---
+
+**violations_per_hour: cluster_violations / (span_days * 5)**
+span_days computed from actual data: 140.3 days (Nov 9 2023 to Apr 8 2024).
+5 enforcement hours/day is observed from the IST hour distribution (IST 7-12 is the dominant enforcement window).
+Total enforcement hours = 140.3 * 5 = 702 hours.
+violations_per_hour = violation_count / 702.
+This is the average rate at which violations occurred per hour of enforcement activity over the full dataset period. It is NOT a peak-hour rate; it is a whole-dataset average.
+
+---
+
+**recommended_officers: ceil(violations_per_hour / 4)**
+Officer throughput assumption: 1 officer can process 4 violations per hour (write ticket, document, coordinate tow if needed). THIS IS AN ASSUMPTION. No measured data supports this number. It must be labeled as such in the UI.
+Formula: recommended_officers = ceil(violations_per_hour / 4), minimum 1.
+Result: top hotspot (downtown, 72 vph) needs 19 officers. Most others need 1-3.
