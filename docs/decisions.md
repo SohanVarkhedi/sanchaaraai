@@ -135,3 +135,11 @@ This is the average rate at which violations occurred per hour of enforcement ac
 Officer throughput assumption: 1 officer can process 4 violations per hour (write ticket, document, coordinate tow if needed). THIS IS AN ASSUMPTION. No measured data supports this number. It must be labeled as such in the UI.
 Formula: recommended_officers = ceil(violations_per_hour / 4), minimum 1.
 Result: top hotspot (downtown, 72 vph) needs 19 officers. Most others need 1-3.
+
+---
+
+**Simulator scope follows the station filter (fix applied post-launch)**
+Original implementation passed the unfiltered city-wide df to page_simulator even when a station was selected. Fixed to pass filtered_df consistently.
+When "All stations" is selected, the simulator allocates officers across all 101 city-wide hotspots (unchanged behavior).
+When a specific station is selected, the simulator allocates only among that station's hotspots, representing that station's own officer pool deployed within its own jurisdiction. This is the more realistic use case for an individual station-level commander, not a bug in the filter, which is why it is the correct fix rather than just a consistency patch.
+The default of 30 officers is kept as-is: it is illustrative and the user is expected to adjust it. No per-station staffing figure is invented.

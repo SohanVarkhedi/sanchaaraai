@@ -236,7 +236,9 @@ def page_simulator(df: pd.DataFrame, lang: str) -> None:
     st.caption(
         "Allocate available officers top-down by impact score until the pool is exhausted. "
         "Shows which hotspots are covered, partially covered, or left uncovered. "
-        "No estimated improvement percentages -- coverage and gaps only."
+        "No estimated improvement percentages -- coverage and gaps only. "
+        "Scope follows the station filter in the sidebar: select a station to simulate "
+        "that station's own officer pool across its jurisdiction's hotspots only."
     )
 
     col_left, col_right = st.columns([1, 3])
@@ -370,7 +372,7 @@ def main() -> None:
     elif page_key == "nav_priority_list":
         page_priority_list(filtered_df, lang)
     else:
-        page_simulator(df, lang)
+        page_simulator(filtered_df, lang)
 
 
 main()

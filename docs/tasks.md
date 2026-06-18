@@ -85,6 +85,17 @@ Status: todo / doing / done
 
 ---
 
+## Simulator Station Filter Fix (post Phase 7 bugfix)
+
+- [x] page_simulator now receives filtered_df instead of df, so station selection scopes the sim to that station's hotspots
+- [x] simulator caption updated to state that scope follows the sidebar station filter
+- [x] verified: All stations / 30 officers shows city-wide 4 covered / 97 uncovered (unchanged from pre-fix)
+- [x] verified: Jayanagara / 30 officers shows 3 covered / 0 uncovered (3 hotspots, all rec'd=1 officer each)
+- [x] verified: Jayanagara / 2 officers shows 2 covered / 1 uncovered (greedy rank-order correct)
+- [x] decisions.md updated with rationale: station-level simulation is the realistic use case for a station commander
+
+---
+
 ## Police Station Filter + Junction Name (post Phase 7 feature)
 
 - [x] build_hotspots(): compute mode police_station, mode junction_name, station_count per cluster
