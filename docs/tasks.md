@@ -85,6 +85,23 @@ Status: todo / doing / done
 
 ---
 
+## Violation Type Breakdown (post Phase 7 feature)
+
+- [x] profiled violation_type_list: 22 distinct types, 133,376 total entries, 0 nulls. WRONG PARKING 45.1%, NO PARKING 42.9%, PARKING IN A MAIN ROAD 6.4%; remaining 19 types <3% each.
+- [x] build_hotspots(): explodes violation_type_list per cluster, counts per type, filters to >=5% share, caps at top 5
+- [x] dominant_violation_type: mode violation type per cluster; 0 nulls across all 101 hotspots
+- [x] violation_type_breakdown: dict of {type: {count, pct}} serialized as JSON string in handoff
+- [x] hotspots.json regenerated; rankings unchanged (breakdown doesn't affect scoring)
+- [x] app.py: backward-compat defaults for both new fields in load_hotspots()
+- [x] map popup: dominant_violation_type line added
+- [x] Priority List: Top Violation column added (dom_viol_col via i18n); caption formula corrected
+- [x] Priority List: violation breakdown expander below table shows top-ranked hotspot's breakdown
+- [x] station filter: expander correctly updates to filtered top hotspot (verified Jayanagara)
+- [x] i18n: col_dominant_violation, violation_breakdown_title (en + kn first draft)
+- [x] decisions.md handoff schema updated
+
+---
+
 ## Vehicle Severity Component (post Phase 7 feature)
 
 - [x] profiled vehicle_type: 22 distinct values, 0 nulls, 0 blanks; all mapped (0 rows defaulted to 0.5)

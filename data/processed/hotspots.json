@@ -11,7 +11,9 @@
     "junction_name":"No Junction",
     "station_count":21,
     "severity_norm":0.3988,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 26589, \"pct\": 0.4872}, \"NO PARKING\": {\"count\": 24376, \"pct\": 0.4467}}"
   },
   {
     "hotspot_id":3,
@@ -25,7 +27,9 @@
     "junction_name":"No Junction",
     "station_count":8,
     "severity_norm":0.3215,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 10430, \"pct\": 0.553}, \"NO PARKING\": {\"count\": 7390, \"pct\": 0.3918}}"
   },
   {
     "hotspot_id":6,
@@ -39,7 +43,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.4487,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 3980, \"pct\": 0.3713}, \"WRONG PARKING\": {\"count\": 3811, \"pct\": 0.3556}, \"PARKING IN A MAIN ROAD\": {\"count\": 2005, \"pct\": 0.1871}}"
   },
   {
     "hotspot_id":9,
@@ -53,7 +59,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.5676,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1789, \"pct\": 0.631}, \"WRONG PARKING\": {\"count\": 490, \"pct\": 0.1728}, \"PARKING IN A MAIN ROAD\": {\"count\": 337, \"pct\": 0.1189}}"
   },
   {
     "hotspot_id":25,
@@ -67,7 +75,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.637,
-    "dominant_vehicle_type":"MAXI-CAB"
+    "dominant_vehicle_type":"MAXI-CAB",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1582, \"pct\": 0.7774}, \"NO PARKING\": {\"count\": 207, \"pct\": 0.1017}, \"PARKING IN A MAIN ROAD\": {\"count\": 162, \"pct\": 0.0796}}"
   },
   {
     "hotspot_id":14,
@@ -81,7 +91,9 @@
     "junction_name":"BTP189 - New Diagonal Road, Jayanagar",
     "station_count":5,
     "severity_norm":0.3613,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1436, \"pct\": 0.6563}, \"WRONG PARKING\": {\"count\": 536, \"pct\": 0.245}}"
   },
   {
     "hotspot_id":11,
@@ -95,7 +107,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.8144,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1024, \"pct\": 0.4406}, \"WRONG PARKING\": {\"count\": 812, \"pct\": 0.3494}, \"PARKING IN A MAIN ROAD\": {\"count\": 356, \"pct\": 0.1532}}"
   },
   {
     "hotspot_id":43,
@@ -109,7 +123,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.5663,
-    "dominant_vehicle_type":"PASSENGER AUTO"
+    "dominant_vehicle_type":"PASSENGER AUTO",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 914, \"pct\": 0.3655}, \"NO PARKING\": {\"count\": 797, \"pct\": 0.3187}, \"PARKING IN A MAIN ROAD\": {\"count\": 569, \"pct\": 0.2275}}"
   },
   {
     "hotspot_id":19,
@@ -123,7 +139,9 @@
     "junction_name":"No Junction",
     "station_count":4,
     "severity_norm":0.36,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 1086, \"pct\": 0.5644}, \"WRONG PARKING\": {\"count\": 697, \"pct\": 0.3623}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 102, \"pct\": 0.053}}"
   },
   {
     "hotspot_id":20,
@@ -137,7 +155,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":1.0,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5628}, \"PARKING IN A MAIN ROAD\": {\"count\": 149, \"pct\": 0.3744}}"
   },
   {
     "hotspot_id":49,
@@ -151,7 +171,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5201,
-    "dominant_vehicle_type":"PASSENGER AUTO"
+    "dominant_vehicle_type":"PASSENGER AUTO",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 238, \"pct\": 0.4312}, \"WRONG PARKING\": {\"count\": 141, \"pct\": 0.2554}, \"PARKING IN A MAIN ROAD\": {\"count\": 85, \"pct\": 0.154}}"
   },
   {
     "hotspot_id":46,
@@ -165,7 +187,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.236,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 678, \"pct\": 0.5424}, \"NO PARKING\": {\"count\": 404, \"pct\": 0.3232}, \"PARKING ON FOOTPATH\": {\"count\": 95, \"pct\": 0.076}}"
   },
   {
     "hotspot_id":4,
@@ -179,7 +203,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.446,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 1147, \"pct\": 0.5623}, \"NO PARKING\": {\"count\": 665, \"pct\": 0.326}, \"PARKING IN A MAIN ROAD\": {\"count\": 185, \"pct\": 0.0907}}"
   },
   {
     "hotspot_id":30,
@@ -193,7 +219,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.7885,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 395, \"pct\": 0.6049}, \"PARKING IN A MAIN ROAD\": {\"count\": 153, \"pct\": 0.2343}, \"WRONG PARKING\": {\"count\": 77, \"pct\": 0.1179}}"
   },
   {
     "hotspot_id":17,
@@ -207,7 +235,9 @@
     "junction_name":"BTP135 - UCO Bank Junction",
     "station_count":4,
     "severity_norm":0.3963,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 819, \"pct\": 0.4718}, \"WRONG PARKING\": {\"count\": 535, \"pct\": 0.3082}, \"PARKING IN A MAIN ROAD\": {\"count\": 348, \"pct\": 0.2005}}"
   },
   {
     "hotspot_id":23,
@@ -221,7 +251,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.8233,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 231, \"pct\": 0.5203}, \"NO PARKING\": {\"count\": 157, \"pct\": 0.3536}, \"PARKING IN A MAIN ROAD\": {\"count\": 41, \"pct\": 0.0923}}"
   },
   {
     "hotspot_id":5,
@@ -235,7 +267,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.3529,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 822, \"pct\": 0.5021}, \"WRONG PARKING\": {\"count\": 705, \"pct\": 0.4307}}"
   },
   {
     "hotspot_id":1,
@@ -249,7 +283,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.6353,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 418, \"pct\": 0.4805}, \"WRONG PARKING\": {\"count\": 237, \"pct\": 0.2724}, \"PARKING IN A MAIN ROAD\": {\"count\": 166, \"pct\": 0.1908}}"
   },
   {
     "hotspot_id":45,
@@ -263,7 +299,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4868,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 147, \"pct\": 0.525}, \"WRONG PARKING\": {\"count\": 120, \"pct\": 0.4286}}"
   },
   {
     "hotspot_id":21,
@@ -277,7 +315,9 @@
     "junction_name":"No Junction",
     "station_count":4,
     "severity_norm":0.8209,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 864, \"pct\": 0.9162}}"
   },
   {
     "hotspot_id":59,
@@ -291,7 +331,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.2249,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 731, \"pct\": 0.7877}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 74, \"pct\": 0.0797}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 49, \"pct\": 0.0528}, \"DOUBLE PARKING\": {\"count\": 48, \"pct\": 0.0517}}"
   },
   {
     "hotspot_id":0,
@@ -305,7 +347,9 @@
     "junction_name":"BTP137 - Madiwala Traffic PS Junction",
     "station_count":2,
     "severity_norm":0.7751,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 228, \"pct\": 0.7972}, \"WRONG PARKING\": {\"count\": 34, \"pct\": 0.1189}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.0524}}"
   },
   {
     "hotspot_id":29,
@@ -319,7 +363,9 @@
     "junction_name":"BTP096 - Gali Anjaneya Temple",
     "station_count":1,
     "severity_norm":0.5184,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 483, \"pct\": 0.4132}, \"NO PARKING\": {\"count\": 405, \"pct\": 0.3464}, \"PARKING IN A MAIN ROAD\": {\"count\": 196, \"pct\": 0.1677}}"
   },
   {
     "hotspot_id":34,
@@ -333,7 +379,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.4991,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 343, \"pct\": 0.3841}, \"NO PARKING\": {\"count\": 277, \"pct\": 0.3102}, \"PARKING IN A MAIN ROAD\": {\"count\": 119, \"pct\": 0.1333}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 78, \"pct\": 0.0873}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 58, \"pct\": 0.0649}}"
   },
   {
     "hotspot_id":42,
@@ -347,7 +395,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.3931,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 100, \"pct\": 0.4367}, \"NO PARKING\": {\"count\": 87, \"pct\": 0.3799}, \"PARKING IN A MAIN ROAD\": {\"count\": 34, \"pct\": 0.1485}}"
   },
   {
     "hotspot_id":35,
@@ -361,7 +411,9 @@
     "junction_name":"BTP108 - Tagore Park Junction",
     "station_count":1,
     "severity_norm":0.3,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 589, \"pct\": 0.4836}, \"NO PARKING\": {\"count\": 580, \"pct\": 0.4762}}"
   },
   {
     "hotspot_id":26,
@@ -375,7 +427,9 @@
     "junction_name":"BTP208 - Havanur Circle",
     "station_count":3,
     "severity_norm":0.4139,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 243, \"pct\": 0.7967}, \"NO PARKING\": {\"count\": 48, \"pct\": 0.1574}}"
   },
   {
     "hotspot_id":36,
@@ -389,7 +443,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.7341,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 189, \"pct\": 0.3474}, \"WRONG PARKING\": {\"count\": 135, \"pct\": 0.2482}, \"PARKING IN A MAIN ROAD\": {\"count\": 88, \"pct\": 0.1618}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 47, \"pct\": 0.0864}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 31, \"pct\": 0.057}}"
   },
   {
     "hotspot_id":75,
@@ -403,7 +459,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5861,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 75, \"pct\": 0.3927}, \"WRONG PARKING\": {\"count\": 44, \"pct\": 0.2304}, \"PARKING IN A MAIN ROAD\": {\"count\": 32, \"pct\": 0.1675}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 24, \"pct\": 0.1257}}"
   },
   {
     "hotspot_id":55,
@@ -417,7 +475,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.9721,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 196, \"pct\": 0.827}, \"WRONG PARKING\": {\"count\": 28, \"pct\": 0.1181}}"
   },
   {
     "hotspot_id":74,
@@ -431,7 +491,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.6118,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 194, \"pct\": 0.7433}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.1341}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 21, \"pct\": 0.0805}}"
   },
   {
     "hotspot_id":15,
@@ -445,7 +507,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4275,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 154, \"pct\": 0.8701}, \"NO PARKING\": {\"count\": 22, \"pct\": 0.1243}}"
   },
   {
     "hotspot_id":24,
@@ -459,7 +523,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.5152,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 440, \"pct\": 0.5263}, \"NO PARKING\": {\"count\": 282, \"pct\": 0.3373}}"
   },
   {
     "hotspot_id":77,
@@ -473,7 +539,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.7504,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 97, \"pct\": 0.4732}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.4537}}"
   },
   {
     "hotspot_id":92,
@@ -487,7 +555,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.7166,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 29, \"pct\": 0.4915}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.3559}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1186}}"
   },
   {
     "hotspot_id":56,
@@ -501,7 +571,9 @@
     "junction_name":"BTP115 - Sahasra Hospital, Jayanagar",
     "station_count":4,
     "severity_norm":0.3894,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 347, \"pct\": 0.5651}, \"WRONG PARKING\": {\"count\": 209, \"pct\": 0.3404}}"
   },
   {
     "hotspot_id":22,
@@ -515,7 +587,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5293,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 91, \"pct\": 0.6594}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1304}, \"WRONG PARKING\": {\"count\": 13, \"pct\": 0.0942}}"
   },
   {
     "hotspot_id":37,
@@ -529,7 +603,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.3874,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 208, \"pct\": 0.6562}, \"WRONG PARKING\": {\"count\": 101, \"pct\": 0.3186}}"
   },
   {
     "hotspot_id":7,
@@ -543,7 +619,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.3462,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 134, \"pct\": 0.6634}, \"WRONG PARKING\": {\"count\": 62, \"pct\": 0.3069}}"
   },
   {
     "hotspot_id":81,
@@ -557,7 +635,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.2847,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 224, \"pct\": 0.5849}, \"WRONG PARKING\": {\"count\": 87, \"pct\": 0.2272}, \"PARKING IN A MAIN ROAD\": {\"count\": 37, \"pct\": 0.0966}}"
   },
   {
     "hotspot_id":39,
@@ -571,7 +651,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.5411,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 202, \"pct\": 0.867}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.103}}"
   },
   {
     "hotspot_id":58,
@@ -585,7 +667,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.1955,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 148, \"pct\": 0.8409}, \"WRONG PARKING\": {\"count\": 24, \"pct\": 0.1364}}"
   },
   {
     "hotspot_id":87,
@@ -599,7 +683,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3907,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 43, \"pct\": 0.3496}, \"WRONG PARKING\": {\"count\": 37, \"pct\": 0.3008}, \"PARKING IN A MAIN ROAD\": {\"count\": 35, \"pct\": 0.2846}}"
   },
   {
     "hotspot_id":93,
@@ -613,7 +699,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3837,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"PARKING IN A MAIN ROAD",
+    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 130, \"pct\": 0.4422}, \"NO PARKING\": {\"count\": 83, \"pct\": 0.2823}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.2245}}"
   },
   {
     "hotspot_id":52,
@@ -627,7 +715,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3588,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 346, \"pct\": 0.7775}, \"NO PARKING\": {\"count\": 78, \"pct\": 0.1753}}"
   },
   {
     "hotspot_id":82,
@@ -641,7 +731,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4552,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 39, \"pct\": 0.6094}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.3281}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.0625}}"
   },
   {
     "hotspot_id":27,
@@ -655,7 +747,9 @@
     "junction_name":"BTP132 - Anepalya Junction",
     "station_count":3,
     "severity_norm":0.5747,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 55, \"pct\": 0.7333}, \"WRONG PARKING\": {\"count\": 17, \"pct\": 0.2267}}"
   },
   {
     "hotspot_id":63,
@@ -669,7 +763,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4986,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 58, \"pct\": 0.6591}, \"WRONG PARKING\": {\"count\": 26, \"pct\": 0.2955}}"
   },
   {
     "hotspot_id":31,
@@ -683,7 +779,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4979,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 44, \"pct\": 0.4074}, \"WRONG PARKING\": {\"count\": 31, \"pct\": 0.287}, \"PARKING IN A MAIN ROAD\": {\"count\": 21, \"pct\": 0.1944}}"
   },
   {
     "hotspot_id":44,
@@ -697,7 +795,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5599,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5818}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.2}, \"WRONG PARKING\": {\"count\": 16, \"pct\": 0.1455}, \"PARKING ON FOOTPATH\": {\"count\": 6, \"pct\": 0.0545}}"
   },
   {
     "hotspot_id":71,
@@ -711,7 +811,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3996,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 86, \"pct\": 0.585}, \"NO PARKING\": {\"count\": 34, \"pct\": 0.2313}, \"PARKING IN A MAIN ROAD\": {\"count\": 18, \"pct\": 0.1224}}"
   },
   {
     "hotspot_id":12,
@@ -725,7 +827,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.1969,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 138, \"pct\": 0.5679}, \"WRONG PARKING\": {\"count\": 73, \"pct\": 0.3004}, \"PARKING IN A MAIN ROAD\": {\"count\": 17, \"pct\": 0.07}}"
   },
   {
     "hotspot_id":89,
@@ -739,7 +843,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4413,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.4206}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.2336}, \"WRONG PARKING\": {\"count\": 21, \"pct\": 0.1963}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 9, \"pct\": 0.0841}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 6, \"pct\": 0.0561}}"
   },
   {
     "hotspot_id":18,
@@ -753,7 +859,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3153,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 326, \"pct\": 0.5497}, \"NO PARKING\": {\"count\": 228, \"pct\": 0.3845}}"
   },
   {
     "hotspot_id":68,
@@ -767,7 +875,9 @@
     "junction_name":"BTP216 - Yediyur Junction",
     "station_count":2,
     "severity_norm":0.6412,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 61, \"pct\": 0.5648}, \"WRONG PARKING\": {\"count\": 45, \"pct\": 0.4167}}"
   },
   {
     "hotspot_id":50,
@@ -781,7 +891,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4018,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 339, \"pct\": 0.6753}, \"NO PARKING\": {\"count\": 112, \"pct\": 0.2231}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 28, \"pct\": 0.0558}}"
   },
   {
     "hotspot_id":66,
@@ -795,7 +907,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.7287,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.9333}, \"WRONG PARKING\": {\"count\": 3, \"pct\": 0.05}}"
   },
   {
     "hotspot_id":76,
@@ -809,7 +923,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4846,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 29, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.3966}, \"PARKING IN A MAIN ROAD\": {\"count\": 4, \"pct\": 0.069}}"
   },
   {
     "hotspot_id":79,
@@ -823,7 +939,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.8278,
-    "dominant_vehicle_type":"MAXI-CAB"
+    "dominant_vehicle_type":"MAXI-CAB",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 199, \"pct\": 0.9343}}"
   },
   {
     "hotspot_id":8,
@@ -837,7 +955,9 @@
     "junction_name":"No Junction",
     "station_count":3,
     "severity_norm":0.3909,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 229, \"pct\": 0.7003}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.1376}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 22, \"pct\": 0.0673}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.0673}}"
   },
   {
     "hotspot_id":100,
@@ -851,7 +971,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.6177,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 11, \"pct\": 0.9167}, \"WRONG PARKING\": {\"count\": 1, \"pct\": 0.0833}}"
   },
   {
     "hotspot_id":65,
@@ -865,7 +987,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.1594,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 94, \"pct\": 0.9038}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0577}}"
   },
   {
     "hotspot_id":32,
@@ -879,7 +1003,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.6407,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 63, \"pct\": 0.3706}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 29, \"pct\": 0.1706}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.1353}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 22, \"pct\": 0.1294}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 22, \"pct\": 0.1294}}"
   },
   {
     "hotspot_id":13,
@@ -893,7 +1019,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.2478,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 432, \"pct\": 0.9664}}"
   },
   {
     "hotspot_id":51,
@@ -907,7 +1035,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4003,
-    "dominant_vehicle_type":"MOTOR CYCLE"
+    "dominant_vehicle_type":"MOTOR CYCLE",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 145, \"pct\": 0.5273}, \"NO PARKING\": {\"count\": 93, \"pct\": 0.3382}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 33, \"pct\": 0.12}}"
   },
   {
     "hotspot_id":94,
@@ -921,7 +1051,9 @@
     "junction_name":"BTP221 - 15th Cross, 24th Main, JP Nagar",
     "station_count":1,
     "severity_norm":0.5058,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.5843}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2584}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1348}}"
   },
   {
     "hotspot_id":97,
@@ -935,7 +1067,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5822,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 41, \"pct\": 0.3534}, \"NO PARKING\": {\"count\": 21, \"pct\": 0.181}, \"PARKING IN A MAIN ROAD\": {\"count\": 20, \"pct\": 0.1724}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 12, \"pct\": 0.1034}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 7, \"pct\": 0.0603}}"
   },
   {
     "hotspot_id":60,
@@ -949,7 +1083,9 @@
     "junction_name":"BTP222 - Delmia Circle",
     "station_count":1,
     "severity_norm":0.5063,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 50, \"pct\": 0.7143}, \"WRONG PARKING\": {\"count\": 11, \"pct\": 0.1571}, \"PARKING IN A MAIN ROAD\": {\"count\": 7, \"pct\": 0.1}}"
   },
   {
     "hotspot_id":95,
@@ -963,7 +1099,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.5782,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 45, \"pct\": 0.8491}, \"WRONG PARKING\": {\"count\": 5, \"pct\": 0.0943}}"
   },
   {
     "hotspot_id":57,
@@ -977,7 +1115,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.663,
-    "dominant_vehicle_type":"MAXI-CAB"
+    "dominant_vehicle_type":"MAXI-CAB",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 127, \"pct\": 0.4811}, \"PARKING IN A MAIN ROAD\": {\"count\": 79, \"pct\": 0.2992}, \"WRONG PARKING\": {\"count\": 41, \"pct\": 0.1553}}"
   },
   {
     "hotspot_id":61,
@@ -991,7 +1131,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4356,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 92, \"pct\": 0.8142}, \"WRONG PARKING\": {\"count\": 20, \"pct\": 0.177}}"
   },
   {
     "hotspot_id":41,
@@ -1005,7 +1147,9 @@
     "junction_name":"BTP130 - GD Mara Junction",
     "station_count":2,
     "severity_norm":0.1915,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 83, \"pct\": 0.883}, \"WRONG PARKING\": {\"count\": 6, \"pct\": 0.0638}}"
   },
   {
     "hotspot_id":96,
@@ -1019,7 +1163,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.4561,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 35, \"pct\": 0.6364}, \"WRONG PARKING\": {\"count\": 18, \"pct\": 0.3273}}"
   },
   {
     "hotspot_id":85,
@@ -1033,7 +1179,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.0442,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 206, \"pct\": 0.6936}, \"NO PARKING\": {\"count\": 80, \"pct\": 0.2694}}"
   },
   {
     "hotspot_id":70,
@@ -1047,7 +1195,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.342,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 69, \"pct\": 0.5798}, \"WRONG PARKING\": {\"count\": 33, \"pct\": 0.2773}, \"PARKING IN A MAIN ROAD\": {\"count\": 15, \"pct\": 0.1261}}"
   },
   {
     "hotspot_id":53,
@@ -1061,7 +1211,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3753,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 96, \"pct\": 0.4615}, \"NO PARKING\": {\"count\": 89, \"pct\": 0.4279}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0625}}"
   },
   {
     "hotspot_id":69,
@@ -1075,7 +1227,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.0,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 73, \"pct\": 0.6033}, \"WRONG PARKING\": {\"count\": 47, \"pct\": 0.3884}}"
   },
   {
     "hotspot_id":80,
@@ -1089,7 +1243,9 @@
     "junction_name":"BTP202 - East End Main Road, Jayanagar",
     "station_count":2,
     "severity_norm":0.4015,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.2857}, \"WRONG PARKING\": {\"count\": 63, \"pct\": 0.2812}, \"PARKING IN A MAIN ROAD\": {\"count\": 30, \"pct\": 0.1339}, \"PARKING ON FOOTPATH\": {\"count\": 27, \"pct\": 0.1205}, \"PARKING OPPOSITE TO ANOTHER PARKED VEHICLE\": {\"count\": 12, \"pct\": 0.0536}}"
   },
   {
     "hotspot_id":78,
@@ -1103,7 +1259,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.0104,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 114, \"pct\": 0.8702}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 13, \"pct\": 0.0992}}"
   },
   {
     "hotspot_id":28,
@@ -1117,7 +1275,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3622,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 88, \"pct\": 0.4055}, \"NO PARKING\": {\"count\": 58, \"pct\": 0.2673}, \"PARKING IN A MAIN ROAD\": {\"count\": 55, \"pct\": 0.2535}}"
   },
   {
     "hotspot_id":48,
@@ -1131,7 +1291,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 51, \"pct\": 0.5667}, \"NO PARKING\": {\"count\": 13, \"pct\": 0.1444}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 8, \"pct\": 0.0889}, \"PARKING NEAR TRAFFIC LIGHT OR ZEBRA CROSS\": {\"count\": 7, \"pct\": 0.0778}}"
   },
   {
     "hotspot_id":40,
@@ -1145,7 +1307,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.2372,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 91, \"pct\": 0.7109}, \"NO PARKING\": {\"count\": 35, \"pct\": 0.2734}}"
   },
   {
     "hotspot_id":47,
@@ -1159,7 +1323,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4416,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 105, \"pct\": 0.5198}, \"NO PARKING\": {\"count\": 45, \"pct\": 0.2228}, \"PARKING IN A MAIN ROAD\": {\"count\": 40, \"pct\": 0.198}}"
   },
   {
     "hotspot_id":88,
@@ -1173,7 +1339,9 @@
     "junction_name":"BTP089 - Police Quarters, Sultan Road",
     "station_count":1,
     "severity_norm":0.9414,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 31, \"pct\": 0.3924}, \"PARKING IN A MAIN ROAD\": {\"count\": 25, \"pct\": 0.3165}, \"WRONG PARKING\": {\"count\": 23, \"pct\": 0.2911}}"
   },
   {
     "hotspot_id":16,
@@ -1187,7 +1355,9 @@
     "junction_name":"BTP155 - Katriguppe Junction",
     "station_count":1,
     "severity_norm":0.1324,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 104, \"pct\": 0.8814}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0678}}"
   },
   {
     "hotspot_id":54,
@@ -1201,7 +1371,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.1184,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 64, \"pct\": 0.5333}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.45}}"
   },
   {
     "hotspot_id":90,
@@ -1215,7 +1387,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4282,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 57, \"pct\": 0.9661}}"
   },
   {
     "hotspot_id":73,
@@ -1229,7 +1403,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.298,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 82, \"pct\": 0.402}, \"WRONG PARKING\": {\"count\": 56, \"pct\": 0.2745}, \"PARKING IN A MAIN ROAD\": {\"count\": 27, \"pct\": 0.1324}, \"PARKING ON FOOTPATH\": {\"count\": 21, \"pct\": 0.1029}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 11, \"pct\": 0.0539}}"
   },
   {
     "hotspot_id":38,
@@ -1243,7 +1419,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3578,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 82, \"pct\": 0.4339}, \"PARKING ON FOOTPATH\": {\"count\": 33, \"pct\": 0.1746}, \"NO PARKING\": {\"count\": 28, \"pct\": 0.1481}, \"PARKING IN A MAIN ROAD\": {\"count\": 22, \"pct\": 0.1164}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0529}}"
   },
   {
     "hotspot_id":64,
@@ -1257,7 +1435,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.4589,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 77, \"pct\": 0.9506}}"
   },
   {
     "hotspot_id":86,
@@ -1271,7 +1451,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.6753,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 31, \"pct\": 0.6889}, \"NO PARKING\": {\"count\": 12, \"pct\": 0.2667}}"
   },
   {
     "hotspot_id":67,
@@ -1285,7 +1467,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.0418,
-    "dominant_vehicle_type":"MOTOR CYCLE"
+    "dominant_vehicle_type":"MOTOR CYCLE",
+    "dominant_violation_type":"PARKING ON FOOTPATH",
+    "violation_type_breakdown":"{\"PARKING ON FOOTPATH\": {\"count\": 185, \"pct\": 0.4048}, \"WRONG PARKING\": {\"count\": 159, \"pct\": 0.3479}, \"NO PARKING\": {\"count\": 72, \"pct\": 0.1575}}"
   },
   {
     "hotspot_id":83,
@@ -1299,7 +1483,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.3039,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 62, \"pct\": 0.5041}, \"WRONG PARKING\": {\"count\": 54, \"pct\": 0.439}}"
   },
   {
     "hotspot_id":91,
@@ -1313,7 +1499,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.0852,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 56, \"pct\": 0.918}}"
   },
   {
     "hotspot_id":33,
@@ -1327,7 +1515,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.297,
-    "dominant_vehicle_type":"MOTOR CYCLE"
+    "dominant_vehicle_type":"MOTOR CYCLE",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 52, \"pct\": 0.4643}, \"PARKING ON FOOTPATH\": {\"count\": 28, \"pct\": 0.25}, \"PARKING NEAR ROAD CROSSING\": {\"count\": 14, \"pct\": 0.125}, \"PARKING NEAR BUSTOP\/SCHOOL\/HOSPITAL ETC\": {\"count\": 10, \"pct\": 0.0893}, \"WRONG PARKING\": {\"count\": 8, \"pct\": 0.0714}}"
   },
   {
     "hotspot_id":98,
@@ -1341,7 +1531,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.4786,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 11, \"pct\": 0.6471}, \"NO PARKING\": {\"count\": 5, \"pct\": 0.2941}, \"DEFECTIVE NUMBER PLATE\": {\"count\": 1, \"pct\": 0.0588}}"
   },
   {
     "hotspot_id":72,
@@ -1355,7 +1547,9 @@
     "junction_name":"BTP214 - 5th Main Chamrajpet  Junction",
     "station_count":1,
     "severity_norm":0.3239,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 50, \"pct\": 0.7353}, \"NO PARKING\": {\"count\": 11, \"pct\": 0.1618}, \"PARKING IN A MAIN ROAD\": {\"count\": 5, \"pct\": 0.0735}}"
   },
   {
     "hotspot_id":84,
@@ -1369,7 +1563,9 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.3039,
-    "dominant_vehicle_type":"CAR"
+    "dominant_vehicle_type":"CAR",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 70, \"pct\": 0.6667}, \"NO PARKING\": {\"count\": 31, \"pct\": 0.2952}}"
   },
   {
     "hotspot_id":10,
@@ -1383,7 +1579,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.0558,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"NO PARKING",
+    "violation_type_breakdown":"{\"NO PARKING\": {\"count\": 171, \"pct\": 0.9293}}"
   },
   {
     "hotspot_id":99,
@@ -1397,7 +1595,9 @@
     "junction_name":"No Junction",
     "station_count":1,
     "severity_norm":0.1327,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"WRONG PARKING",
+    "violation_type_breakdown":"{\"WRONG PARKING\": {\"count\": 47, \"pct\": 0.5402}, \"NO PARKING\": {\"count\": 16, \"pct\": 0.1839}, \"PARKING IN A MAIN ROAD\": {\"count\": 12, \"pct\": 0.1379}}"
   },
   {
     "hotspot_id":62,
@@ -1411,6 +1611,8 @@
     "junction_name":"No Junction",
     "station_count":2,
     "severity_norm":0.0692,
-    "dominant_vehicle_type":"SCOOTER"
+    "dominant_vehicle_type":"SCOOTER",
+    "dominant_violation_type":"PARKING IN A MAIN ROAD",
+    "violation_type_breakdown":"{\"PARKING IN A MAIN ROAD\": {\"count\": 66, \"pct\": 0.5}, \"WRONG PARKING\": {\"count\": 66, \"pct\": 0.5}}"
   }
 ]

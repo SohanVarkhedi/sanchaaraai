@@ -32,6 +32,8 @@ translations = {
     "all_stations": {"en": "All stations", "kn": "ಎಲ್ಲ ಠಾಣೆಗಳು"},
     "spans_multiple_stations": {"en": "Spans multiple stations", "kn": "ಬಹು ಠಾಣೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ"},
     "col_dominant_vehicle": {"en": "Top Vehicle", "kn": "ಪ್ರಮುಖ ವಾಹನ"},
+    "col_dominant_violation": {"en": "Top Violation", "kn": "ಪ್ರಮುಖ ಉಲ್ಲಂಘನೆ"},
+    "violation_breakdown_title": {"en": "Violation breakdown", "kn": "ಉಲ್ಲಂಘನೆ ವಿಶ್ಲೇಷಣೆ"},
 }
 
 

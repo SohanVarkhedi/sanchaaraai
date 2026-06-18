@@ -38,6 +38,14 @@ def load_hotspots() -> pd.DataFrame:
         df["severity_norm"] = breakdown.apply(lambda x: round(float(x.get("severity_norm", 0.5)), 3))
     if "dominant_vehicle_type" not in df.columns:
         df["dominant_vehicle_type"] = "OTHERS"
+    if "violation_type_breakdown" in df.columns:
+        df["violation_type_breakdown"] = df["violation_type_breakdown"].apply(
+            lambda x: json.loads(x) if isinstance(x, str) else (x if isinstance(x, dict) else {})
+        )
+    else:
+        df["violation_type_breakdown"] = [{} for _ in range(len(df))]
+    if "dominant_violation_type" not in df.columns:
+        df["dominant_violation_type"] = "UNKNOWN"
     return df.sort_values("impact_score", ascending=False).reset_index(drop=True)
 
 
@@ -82,6 +90,7 @@ def _build_map(df: pd.DataFrame, lang: str) -> folium.Map:
         station = row.get("police_station") or "Unknown"
         sc = int(row.get("station_count", 1))
         dom_veh = row.get("dominant_vehicle_type") or "Unknown"
+        dom_viol = row.get("dominant_violation_type") or "Unknown"
         station_html = (
             f"{station} <i style='color:#f0a;'>({t('spans_multiple_stations', lang)})</i>"
             if sc > 1 else station
@@ -91,6 +100,7 @@ def _build_map(df: pd.DataFrame, lang: str) -> folium.Map:
             f"Junction: {junction}<br>"
             f"Police station: {station_html}<br>"
             f"Dominant vehicle: {dom_veh}<br>"
+            f"Dominant violation: {dom_viol}<br>"
             f"Severity (norm): {float(row.get('severity_norm', 0.5)):.3f}<br>"
             f"Impact score: <b>{score:.3f}</b><br>"
             f"Violations: {int(row['violation_count']):,}<br>"
@@ -137,7 +147,7 @@ def page_map(df: pd.DataFrame, lang: str) -> None:
 def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     st.header(t("priority_list_header", lang))
     st.caption(
-        "Hotspots ranked by impact score (0.6 x count_norm + 0.4 x rush_frac). "
+        "Hotspots ranked by impact score (0.5 x count_norm + 0.3 x rush_frac + 0.2 x severity_norm). "
         "Rush-hour signal is morning-dominant (IST 7-12); evening data is sparse in this dataset."
     )
 
@@ -145,6 +155,7 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     viol_col = t("col_violations", lang)
     rec_col = t("col_officers_rec", lang)
     dom_veh_col = t("col_dominant_vehicle", lang)
+    dom_viol_col = t("col_dominant_violation", lang)
 
     display = df[
         [
@@ -153,6 +164,7 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
             "police_station",
             "station_count",
             "dominant_vehicle_type",
+            "dominant_violation_type",
             "impact_score",
             "violation_count",
             "count_norm",
@@ -176,6 +188,7 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
             "junction_name": "Junction",
             "police_station": "Police Station",
             "dominant_vehicle_type": dom_veh_col,
+            "dominant_violation_type": dom_viol_col,
             "impact_score": impact_col,
             "violation_count": viol_col,
             "count_norm": "Count Norm",       # technical abbreviation -- stays English
@@ -212,6 +225,23 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
         f"{rec_col}: ceil(Viol/Hr / 4) -- officer throughput of 4 vph is an assumption, not a measurement. "
         "Formula: 0.5 x Count Norm + 0.3 x Rush-Hr Frac + 0.2 x Sev Norm."
     )
+
+    top = df.iloc[0]
+    top_id = int(top["hotspot_id"])
+    top_breakdown = top.get("violation_type_breakdown", {})
+    if isinstance(top_breakdown, str):
+        top_breakdown = json.loads(top_breakdown)
+
+    with st.expander(f"{t('violation_breakdown_title', lang)} — Hotspot #{top_id} (rank 1)"):
+        if top_breakdown:
+            bd_df = pd.DataFrame(
+                [{"Violation Type": vt, "Count": v["count"], "Share": f"{v['pct'] * 100:.1f}%"}
+                 for vt, v in sorted(top_breakdown.items(), key=lambda x: -x[1]["count"])]
+            ).set_index("Violation Type")
+            st.dataframe(bd_df, use_container_width=True)
+            st.caption("Types below 5% share omitted; capped at top 5.")
+        else:
+            st.caption("No breakdown data available.")
 
 
 def _display_sim(raw: pd.DataFrame, lang: str) -> pd.DataFrame:

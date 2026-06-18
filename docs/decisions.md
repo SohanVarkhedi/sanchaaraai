@@ -38,6 +38,10 @@ junction_name: most frequent non-null junction_name within the cluster; falls ba
 station_count: integer count of distinct police_station values in the cluster. Used by the UI to flag clusters that span multiple jurisdictions (station_count > 1). The filter uses only police_station (the top station), not the full list.
 severity_norm: cluster's average SEVERITY_WEIGHTS score, normalized 0-1 across all hotspots. ASSUMPTION -- see severity weights entry below.
 dominant_vehicle_type: mode vehicle_type in the cluster; shown directly in the UI as a quick label.
+dominant_violation_type: mode violation type across all exploded violation_type_list entries in the cluster.
+violation_type_breakdown: JSON string mapping violation type → {count, pct} for types ≥5% share, capped at top 5.
+  count = occurrences after exploding violation_type_list; pct = count / total exploded entries in cluster.
+  Serialized as a JSON string in the handoff file (same pattern as score_breakdown).
 
 ---
 

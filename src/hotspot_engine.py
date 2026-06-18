@@ -1,3 +1,4 @@
+import itertools
 import json
 import math
 import numpy as np
@@ -78,6 +79,16 @@ def build_hotspots(
         avg_severity = round(float(sev_series.mean()), 4)
         dominant_vehicle_type = grp["vehicle_type"].mode().iloc[0]
 
+        vt_all = list(itertools.chain.from_iterable(grp["violation_type_list"]))
+        vt_counts = pd.Series(vt_all).value_counts()
+        vt_total = len(vt_all)
+        dominant_violation_type = str(vt_counts.index[0])
+        vt_filtered = vt_counts[vt_counts / vt_total >= 0.05].head(5)
+        violation_type_breakdown = {
+            str(vtype): {"count": int(cnt), "pct": round(int(cnt) / vt_total, 4)}
+            for vtype, cnt in vt_filtered.items()
+        }
+
         rows.append(
             {
                 "hotspot_id": int(cid),
@@ -92,6 +103,8 @@ def build_hotspots(
                 "station_count": station_count,
                 "avg_severity": avg_severity,
                 "dominant_vehicle_type": dominant_vehicle_type,
+                "dominant_violation_type": dominant_violation_type,
+                "violation_type_breakdown": violation_type_breakdown,
             }
         )
 
@@ -225,9 +238,11 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
         ["hotspot_id", "lat", "lon", "impact_score",
          "score_breakdown", "violations_per_hour", "recommended_officers",
          "police_station", "junction_name", "station_count",
-         "severity_norm", "dominant_vehicle_type"]
+         "severity_norm", "dominant_vehicle_type",
+         "dominant_violation_type", "violation_type_breakdown"]
     ].copy()
     handoff["score_breakdown"] = handoff["score_breakdown"].apply(json.dumps)
+    handoff["violation_type_breakdown"] = handoff["violation_type_breakdown"].apply(json.dumps)
     handoff.to_json(OUT_JSON, orient="records", indent=2)
 
     print(f"\nSaved {len(hs)} hotspots to data/processed/")
