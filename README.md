@@ -2,9 +2,6 @@
 
 A decision support system that turns parking violation records into ranked enforcement hotspots, officer allocation recommendations, and a resource simulator -- so police can do more with limited staff.
 
-## Pitch
-
-How can AI-driven parking intelligence detect illegal parking hotspots and quantify their impact on traffic flow to enable targeted enforcement? ParkPulse AI answers that question directly: it clusters 115,400 real Bangalore enforcement records into 101 geographic hotspots, scores each by its parking-induced congestion pressure (violation volume × rush-hour concentration × vehicle severity), and simulates how a limited officer pool should be allocated to maximize coverage of the highest-impact zones. Built on real data (Nov 2023 - Apr 2024) with a fully explainable impact score and honest gap reporting -- no fabricated improvement percentages anywhere in the output.
 
 ## Problem
 
