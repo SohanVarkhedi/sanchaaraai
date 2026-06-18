@@ -45,3 +45,18 @@ No output like "28% improvement" unless there is real math behind it. Simulator 
 
 **Officer throughput assumption**
 Needs to be set in Phase 5 based on realistic field data or a stated assumption. Example: 1 officer can process 3 violations per hour. This number must be documented and labeled as an assumption, not presented as a measurement.
+
+---
+
+**Map tile: CartoDB dark_matter**
+Used in the skeleton app and will carry through to production. Matches the dark theme, requires no API key, and renders clearly on Streamlit Cloud.
+
+---
+
+**streamlit-folium for map rendering**
+Folium generates Leaflet HTML. streamlit-folium embeds it inside a Streamlit iframe component. No alternative needed; this is the standard pairing.
+
+---
+
+**app.py at repo root, not inside src/**
+Streamlit Cloud expects the entry point at the root by default. src/ is reserved for importable modules (data loading, clustering, scoring). Keeps the deploy config simple.

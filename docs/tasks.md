@@ -14,9 +14,9 @@ Status: todo / doing / done
 
 ## Phase 1: Repo Setup + Deploy Skeleton
 
-- [ ] repo structure: src/, app.py, requirements.txt (Both)
-- [ ] hello world Streamlit app running locally (B)
-- [ ] push to GitHub (Both)
+- [x] repo structure: src/, app.py, requirements.txt (Both)
+- [x] hello world Streamlit app running locally (B)
+- [x] push to GitHub (Both)
 - [ ] deploy to Streamlit Cloud and confirm live link works (B)
 
 ---
