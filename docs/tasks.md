@@ -54,9 +54,9 @@ Status: todo / doing / done
 
 ## Phase 5: Decision Layer
 
-- [ ] officer recommendation formula: violations_per_hour / officer_throughput_per_hour (A)
-- [ ] simulator allocation: greedy fill from top-ranked hotspot down until officers exhausted (A)
-- [ ] show uncovered hotspots honestly, no fake % improvement (A+B)
+- [x] officer recommendation formula: violations_per_hour / officer_throughput_per_hour (A)
+- [x] simulator allocation: greedy fill from top-ranked hotspot down until officers exhausted (A)
+- [x] show uncovered hotspots honestly, no fake % improvement (A+B)
 
 ---
 

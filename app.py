@@ -1,9 +1,9 @@
 import json
-import math
 import pandas as pd
 import folium
 import streamlit as st
 from streamlit_folium import st_folium
+from src.hotspot_engine import simulate_allocation, OFFICER_THROUGHPUT
 
 st.set_page_config(
     page_title="ParkPulse AI",
@@ -139,44 +139,6 @@ def page_priority_list(df: pd.DataFrame) -> None:
     )
 
 
-def _simulate(df: pd.DataFrame, officers: int, trucks: int) -> pd.DataFrame:
-    remaining_officers = officers
-    remaining_trucks = trucks
-    rows = []
-    for rank, (_, row) in enumerate(df.iterrows(), start=1):
-        needed = int(row["recommended_officers"])
-        if remaining_officers >= needed:
-            assigned = needed
-            remaining_officers -= needed
-            status = "Covered"
-        elif remaining_officers > 0:
-            assigned = remaining_officers
-            remaining_officers = 0
-            status = "Partial"
-        else:
-            assigned = 0
-            status = "Uncovered"
-
-        truck_assigned = False
-        if remaining_trucks > 0 and status != "Uncovered":
-            truck_assigned = True
-            remaining_trucks -= 1
-
-        rows.append(
-            {
-                "Rank": rank,
-                "Hotspot ID": int(row["hotspot_id"]),
-                "Impact Score": float(row["impact_score"]),
-                "Violations": int(row["violation_count"]),
-                "Officers Needed": needed,
-                "Officers Assigned": assigned,
-                "Tow Truck": "Yes" if truck_assigned else "No",
-                "Status": status,
-            }
-        )
-    return pd.DataFrame(rows)
-
-
 def page_simulator(df: pd.DataFrame) -> None:
     st.header("Resource Simulator")
     st.caption(
@@ -196,10 +158,25 @@ def page_simulator(df: pd.DataFrame) -> None:
         )
         st.caption("Officers allocated greedily from rank 1 downward. Tow trucks assigned 1 per covered hotspot.")
 
-    result = _simulate(df, int(officers), int(trucks))
-    covered = result[result["Status"] == "Covered"]
-    partial = result[result["Status"] == "Partial"]
-    uncovered = result[result["Status"] == "Uncovered"]
+    result = simulate_allocation(df, int(officers), int(trucks))
+
+    def _display(raw: pd.DataFrame) -> pd.DataFrame:
+        return raw.rename(
+            columns={
+                "rank": "Rank",
+                "hotspot_id": "Hotspot ID",
+                "impact_score": "Impact Score",
+                "violation_count": "Violations",
+                "officers_needed": "Officers Needed",
+                "officers_assigned": "Officers Assigned",
+                "tow_truck": "Tow Truck",
+                "status": "Status",
+            }
+        ).assign(**{"Tow Truck": lambda d: d["Tow Truck"].map({True: "Yes", False: "No"})}).set_index("Rank")
+
+    covered = result[result["status"] == "Covered"]
+    partial = result[result["status"] == "Partial"]
+    uncovered = result[result["status"] == "Uncovered"]
 
     with col_right:
         s1, s2, s3, s4 = st.columns(4)
@@ -208,23 +185,28 @@ def page_simulator(df: pd.DataFrame) -> None:
         s3.metric("Uncovered", len(uncovered))
         s4.metric(
             "Officers deployed",
-            int(result["Officers Assigned"].sum()),
-            delta=f"{officers - int(result['Officers Assigned'].sum())} unused",
+            int(result["officers_assigned"].sum()),
+            delta=f"{int(officers) - int(result['officers_assigned'].sum())} unused",
+        )
+
+        st.caption(
+            f"Assumption: 1 officer processes {OFFICER_THROUGHPUT} violations/hour. "
+            "Officers Needed = ceil(violations_per_hour / 4). "
+            "This throughput figure is an operational assumption, not a measured value."
         )
 
         if not covered.empty:
             st.subheader("Covered hotspots")
-            st.dataframe(covered.set_index("Rank"), use_container_width=True)
+            st.dataframe(_display(covered), use_container_width=True)
 
         if not partial.empty:
             st.subheader("Partially covered (officers ran out mid-allocation)")
-            st.dataframe(partial.set_index("Rank"), use_container_width=True)
+            st.dataframe(_display(partial), use_container_width=True)
 
         if not uncovered.empty:
             st.subheader("Uncovered hotspots")
             st.dataframe(
-                uncovered[["Rank", "Hotspot ID", "Impact Score", "Violations", "Officers Needed"]]
-                .set_index("Rank"),
+                _display(uncovered)[["Hotspot ID", "Impact Score", "Violations", "Officers Needed"]],
                 use_container_width=True,
             )
 

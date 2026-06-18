@@ -77,6 +77,46 @@ def build_hotspots(
     return hs.sort_values("impact_score", ascending=False).reset_index(drop=True)
 
 
+def simulate_allocation(
+    df: pd.DataFrame, available_officers: int, available_trucks: int
+) -> pd.DataFrame:
+    """
+    Greedy top-down officer allocation by impact_score rank.
+    df must be sorted by impact_score descending (as produced by run()).
+    Returns one row per hotspot with status: Covered / Partial / Uncovered.
+    Tow trucks are assigned one per covered or partially covered hotspot until exhausted.
+    """
+    remaining_officers = available_officers
+    remaining_trucks = available_trucks
+    rows = []
+    for rank, (_, row) in enumerate(df.iterrows(), start=1):
+        needed = int(row["recommended_officers"])
+        if remaining_officers >= needed:
+            assigned, remaining_officers, status = needed, remaining_officers - needed, "Covered"
+        elif remaining_officers > 0:
+            assigned, remaining_officers, status = remaining_officers, 0, "Partial"
+        else:
+            assigned, status = 0, "Uncovered"
+
+        truck_assigned = remaining_trucks > 0 and status != "Uncovered"
+        if truck_assigned:
+            remaining_trucks -= 1
+
+        rows.append(
+            {
+                "rank": rank,
+                "hotspot_id": int(row["hotspot_id"]),
+                "impact_score": float(row["impact_score"]),
+                "violation_count": int(row["violation_count"]),
+                "officers_needed": needed,
+                "officers_assigned": assigned,
+                "tow_truck": truck_assigned,
+                "status": status,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def run(eps: float, min_samples: int) -> pd.DataFrame:
     df = pd.read_parquet(PARQUET)
     print(f"Loaded {len(df):,} rows")
