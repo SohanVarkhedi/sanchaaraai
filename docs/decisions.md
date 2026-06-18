@@ -28,12 +28,16 @@ violation_type is stored as a JSON array per row (e.g. ["WRONG PARKING","NO PARK
 Person A outputs exactly:
 ```
 hotspot_id, lat, lon, impact_score, score_breakdown, violations_per_hour, recommended_officers,
-police_station, junction_name, station_count
+police_station, junction_name, station_count, severity_norm, dominant_vehicle_type
 ```
-score_breakdown is a dict or JSON string showing how much each factor contributed to impact_score.
+score_breakdown is a JSON string with keys:
+  violation_count, count_norm, rush_violations, rush_frac,
+  avg_severity, severity_norm, formula
 police_station: most frequent (mode) police station within the cluster's rows; single string.
 junction_name: most frequent non-null junction_name within the cluster; falls back to "Unnamed junction" if all rows are null.
 station_count: integer count of distinct police_station values in the cluster. Used by the UI to flag clusters that span multiple jurisdictions (station_count > 1). The filter uses only police_station (the top station), not the full list.
+severity_norm: cluster's average SEVERITY_WEIGHTS score, normalized 0-1 across all hotspots. ASSUMPTION -- see severity weights entry below.
+dominant_vehicle_type: mode vehicle_type in the cluster; shown directly in the UI as a quick label.
 
 ---
 
@@ -135,6 +139,26 @@ This is the average rate at which violations occurred per hour of enforcement ac
 Officer throughput assumption: 1 officer can process 4 violations per hour (write ticket, document, coordinate tow if needed). THIS IS AN ASSUMPTION. No measured data supports this number. It must be labeled as such in the UI.
 Formula: recommended_officers = ceil(violations_per_hour / 4), minimum 1.
 Result: top hotspot (downtown, 72 vph) needs 19 officers. Most others need 1-3.
+
+---
+
+**Vehicle severity weights: ASSUMPTION, not measured**
+Verified data first: profiled vehicle_type across all 115,400 clean rows. Found 22 distinct values, 0 nulls, 0 blanks. All 22 are explicitly mapped.
+Severity weights (0.0 = easiest to relocate, 1.0 = hardest / greatest lane blockage):
+  SCOOTER, MOTOR CYCLE, MOPED          → 0.2  (smallest footprint, easiest to move)
+  PASSENGER AUTO, GOODS AUTO           → 0.4  (three-wheelers, compact)
+  CAR, JEEP, OTHERS                    → 0.5  (baseline; OTHERS is unknown, neutral)
+  VAN, MAXI-CAB                        → 0.6  (larger passenger/goods carriers)
+  LGV, TEMPO                           → 0.65 (Light Goods Vehicle class)
+  SCHOOL VEHICLE                       → 0.7  (variable; van or bus)
+  MINI LORRY                           → 0.75 (between LGV and full lorry)
+  PRIVATE BUS, BUS (BMTC/KSRTC), TOURIST BUS, FACTORY BUS → 0.8 (full-size buses)
+  TRACTOR                              → 0.9  (large, slow, difficult to tow)
+  HGV, LORRY/GOODS VEHICLE, TANKER     → 1.0  (maximum severity)
+Any vehicle_type not in this map defaults to 0.5 at compute time (0 rows affected in current dataset).
+Impact score formula updated to: 0.5 × count_norm + 0.3 × rush_frac + 0.2 × severity_norm
+(was: 0.6 × count_norm + 0.4 × rush_frac before severity was added)
+severity_norm: per-cluster average of SEVERITY_WEIGHTS values, normalized 0-1 across all 101 hotspots.
 
 ---
 

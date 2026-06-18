@@ -85,6 +85,26 @@ Status: todo / doing / done
 
 ---
 
+## Vehicle Severity Component (post Phase 7 feature)
+
+- [x] profiled vehicle_type: 22 distinct values, 0 nulls, 0 blanks; all mapped (0 rows defaulted to 0.5)
+- [x] SEVERITY_WEIGHTS dict added to hotspot_engine.py with all 22 values, labeled ASSUMPTION
+- [x] build_hotspots(): computes avg_severity and dominant_vehicle_type per cluster
+- [x] severity_norm: avg_severity normalized 0-1 across all 101 hotspots
+- [x] impact_score formula updated: 0.5 * count_norm + 0.3 * rush_frac + 0.2 * severity_norm
+- [x] score_breakdown updated to include avg_severity, severity_norm, updated formula string
+- [x] dominant_vehicle_type added to handoff JSON as top-level field
+- [x] severity_norm added to handoff JSON as top-level field
+- [x] hotspots.json regenerated; top 3 hotspots (#2, #3, #6) unchanged; #9 rose +3, #25 rose +4; #46 fell from rank 5 to 12 (scooter-dominant), #59 fell from rank 8 to 21 (scooter-dominant)
+- [x] app.py: severity_norm and dominant_vehicle_type backward-compat defaults in load_hotspots()
+- [x] map popup: dominant_vehicle and severity_norm added
+- [x] Priority List: Top Vehicle (i18n) and Sev Norm (English literal) columns added; caption + formula updated
+- [x] methodology expander: impact score formula updated to include severity_norm
+- [x] i18n: col_dominant_vehicle (en + kn first draft)
+- [x] decisions.md: severity weights logged as ASSUMPTION, handoff schema updated
+
+---
+
 ## Simulator Station Filter Fix (post Phase 7 bugfix)
 
 - [x] page_simulator now receives filtered_df instead of df, so station selection scopes the sim to that station's hotspots

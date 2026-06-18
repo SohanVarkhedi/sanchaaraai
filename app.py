@@ -34,6 +34,10 @@ def load_hotspots() -> pd.DataFrame:
         df["junction_name"] = "Unnamed junction"
     if "station_count" not in df.columns:
         df["station_count"] = 1
+    if "severity_norm" not in df.columns:
+        df["severity_norm"] = breakdown.apply(lambda x: round(float(x.get("severity_norm", 0.5)), 3))
+    if "dominant_vehicle_type" not in df.columns:
+        df["dominant_vehicle_type"] = "OTHERS"
     return df.sort_values("impact_score", ascending=False).reset_index(drop=True)
 
 
@@ -77,6 +81,7 @@ def _build_map(df: pd.DataFrame, lang: str) -> folium.Map:
         junction = row.get("junction_name") or "Unnamed junction"
         station = row.get("police_station") or "Unknown"
         sc = int(row.get("station_count", 1))
+        dom_veh = row.get("dominant_vehicle_type") or "Unknown"
         station_html = (
             f"{station} <i style='color:#f0a;'>({t('spans_multiple_stations', lang)})</i>"
             if sc > 1 else station
@@ -85,6 +90,8 @@ def _build_map(df: pd.DataFrame, lang: str) -> folium.Map:
             f"<b>Hotspot #{int(row['hotspot_id'])}</b>{note}<br>"
             f"Junction: {junction}<br>"
             f"Police station: {station_html}<br>"
+            f"Dominant vehicle: {dom_veh}<br>"
+            f"Severity (norm): {float(row.get('severity_norm', 0.5)):.3f}<br>"
             f"Impact score: <b>{score:.3f}</b><br>"
             f"Violations: {int(row['violation_count']):,}<br>"
             f"Rush-hour share: {row['rush_frac']*100:.1f}%<br>"
@@ -137,6 +144,7 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     impact_col = t("col_impact_score", lang)
     viol_col = t("col_violations", lang)
     rec_col = t("col_officers_rec", lang)
+    dom_veh_col = t("col_dominant_vehicle", lang)
 
     display = df[
         [
@@ -144,10 +152,12 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
             "junction_name",
             "police_station",
             "station_count",
+            "dominant_vehicle_type",
             "impact_score",
             "violation_count",
             "count_norm",
             "rush_frac",
+            "severity_norm",
             "violations_per_hour",
             "recommended_officers",
         ]
@@ -165,10 +175,12 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
             "hotspot_id": "Hotspot ID",
             "junction_name": "Junction",
             "police_station": "Police Station",
+            "dominant_vehicle_type": dom_veh_col,
             "impact_score": impact_col,
             "violation_count": viol_col,
             "count_norm": "Count Norm",       # technical abbreviation -- stays English
             "rush_frac": "Rush-Hr Frac",      # technical abbreviation -- stays English
+            "severity_norm": "Sev Norm",      # technical abbreviation -- stays English
             "violations_per_hour": "Viol/Hr", # technical abbreviation -- stays English
             "recommended_officers": rec_col,
         }
@@ -182,6 +194,7 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
                 viol_col: "{:,.0f}",
                 "Count Norm": "{:.3f}",
                 "Rush-Hr Frac": "{:.3f}",
+                "Sev Norm": "{:.3f}",
                 "Viol/Hr": "{:.2f}",
                 rec_col: "{:.0f}",
             }
@@ -194,8 +207,10 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     st.caption(
         "Count Norm: log-normalized violation volume (0-1). "
         "Rush-Hr Frac: share of violations during IST 7-11 or 17-20. "
+        "Sev Norm: avg vehicle severity weight per cluster, normalized 0-1 (HGV/Lorry=1.0, Scooter=0.2). "
         "Viol/Hr: cluster violations / 702 enforcement hours (140 days x 5 hrs/day). "
-        f"{rec_col}: ceil(Viol/Hr / 4) -- officer throughput of 4 vph is an assumption, not a measurement."
+        f"{rec_col}: ceil(Viol/Hr / 4) -- officer throughput of 4 vph is an assumption, not a measurement. "
+        "Formula: 0.5 x Count Norm + 0.3 x Rush-Hr Frac + 0.2 x Sev Norm."
     )
 
 
@@ -304,10 +319,12 @@ filtered to 115,400 approved records. Source: police enforcement mobile app.
 **Clustering:** DBSCAN with eps = 0.003 (~333 m radius) and min 50 violations per cluster
 produces 101 hotspots. 4,320 points (3.7%) are treated as noise and excluded.
 
-**Impact score:** `0.6 × count_norm + 0.4 × rush_frac`.
+**Impact score:** `0.5 × count_norm + 0.3 × rush_frac + 0.2 × severity_norm`.
 count_norm is the log-normalized violation count (0-1 across all hotspots).
 rush_frac is the share of that hotspot's violations during rush hours (IST 7-11 or 17-20).
+severity_norm is the cluster's average vehicle severity weight, normalized 0-1 (HGV/Lorry/Tanker = 1.0, Scooter/Motorcycle = 0.2).
 Rush-hour signal is morning-dominant; evening data is sparse in this dataset.
+Severity weights are assumptions, not measurements — see docs/decisions.md.
 
 **Officer recommendation:** `ceil(violations_per_hour / 4)`.
 violations_per_hour = cluster total / 702 enforcement hours (140 days × 5 hrs/day).

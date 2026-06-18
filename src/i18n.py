@@ -31,6 +31,7 @@ translations = {
     "station_filter": {"en": "Filter by police station", "kn": "ಪೊಲೀಸ್ ಠಾಣೆಯಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಿ"},
     "all_stations": {"en": "All stations", "kn": "ಎಲ್ಲ ಠಾಣೆಗಳು"},
     "spans_multiple_stations": {"en": "Spans multiple stations", "kn": "ಬಹು ಠಾಣೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ"},
+    "col_dominant_vehicle": {"en": "Top Vehicle", "kn": "ಪ್ರಮುಖ ವಾಹನ"},
 }
 
 

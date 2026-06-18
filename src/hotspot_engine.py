@@ -9,11 +9,40 @@ PARQUET = Path("data/clean_violations.parquet")
 OUT_JSON = Path("data/processed/hotspots.json")
 OUT_PARQUET = Path("data/processed/hotspots.parquet")
 
-WEIGHT_COUNT = 0.6
-WEIGHT_RUSH = 0.4
+WEIGHT_COUNT = 0.5      # was 0.6 before severity component was added
+WEIGHT_RUSH = 0.3       # was 0.4 before severity component was added
+WEIGHT_SEVERITY = 0.2   # ASSUMPTION -- see docs/decisions.md for weight rationale
 
 OFFICER_THROUGHPUT = 4  # violations per officer per hour -- ASSUMPTION, not measured
 ENFORCEMENT_HOURS_PER_DAY = 5  # observed: IST 7-12 is dominant enforcement window
+
+# Vehicle severity weights: 0=easiest to relocate, 1=hardest. ASSUMPTION, not measured.
+# Larger/heavier vehicles score higher. All 22 distinct values found in the dataset are mapped.
+# Any unknown value defaults to 0.5 (neutral) at compute time via .fillna(0.5).
+SEVERITY_WEIGHTS: dict[str, float] = {
+    "SCOOTER":             0.2,
+    "MOTOR CYCLE":         0.2,
+    "MOPED":               0.2,
+    "PASSENGER AUTO":      0.4,
+    "GOODS AUTO":          0.4,
+    "CAR":                 0.5,
+    "JEEP":                0.5,
+    "OTHERS":              0.5,
+    "VAN":                 0.6,
+    "MAXI-CAB":            0.6,
+    "LGV":                 0.65,
+    "TEMPO":               0.65,
+    "SCHOOL VEHICLE":      0.7,
+    "MINI LORRY":          0.75,
+    "PRIVATE BUS":         0.8,
+    "BUS (BMTC/KSRTC)":   0.8,
+    "TOURIST BUS":         0.8,
+    "FACTORY BUS":         0.8,
+    "TRACTOR":             0.9,
+    "HGV":                 1.0,
+    "LORRY/GOODS VEHICLE": 1.0,
+    "TANKER":              1.0,
+}
 
 
 def tune_dbscan(coords: np.ndarray) -> None:
@@ -45,6 +74,10 @@ def build_hotspots(
         junc_series = grp["junction_name"].dropna()
         junction_name = junc_series.mode().iloc[0] if len(junc_series) > 0 else "Unnamed junction"
 
+        sev_series = grp["vehicle_type"].map(SEVERITY_WEIGHTS).fillna(0.5)
+        avg_severity = round(float(sev_series.mean()), 4)
+        dominant_vehicle_type = grp["vehicle_type"].mode().iloc[0]
+
         rows.append(
             {
                 "hotspot_id": int(cid),
@@ -57,6 +90,8 @@ def build_hotspots(
                 "police_station": police_station,
                 "junction_name": junction_name,
                 "station_count": station_count,
+                "avg_severity": avg_severity,
+                "dominant_vehicle_type": dominant_vehicle_type,
             }
         )
 
@@ -65,8 +100,18 @@ def build_hotspots(
     log_c = np.log1p(hs["violation_count"])
     hs["count_norm"] = ((log_c - log_c.min()) / (log_c.max() - log_c.min())).round(4)
 
+    sev = hs["avg_severity"]
+    sev_range = sev.max() - sev.min()
+    hs["severity_norm"] = (
+        ((sev - sev.min()) / sev_range).round(4)
+        if sev_range > 0
+        else pd.Series([0.5] * len(hs), index=hs.index)
+    )
+
     hs["impact_score"] = (
-        WEIGHT_COUNT * hs["count_norm"] + WEIGHT_RUSH * hs["rush_frac"]
+        WEIGHT_COUNT * hs["count_norm"]
+        + WEIGHT_RUSH * hs["rush_frac"]
+        + WEIGHT_SEVERITY * hs["severity_norm"]
     ).round(4)
 
     hs["recommended_officers"] = hs["violations_per_hour"].apply(
@@ -79,7 +124,13 @@ def build_hotspots(
             "count_norm": round(r["count_norm"], 4),
             "rush_violations": r["rush_violations"],
             "rush_frac": round(r["rush_frac"], 4),
-            "formula": f"{WEIGHT_COUNT} * count_norm + {WEIGHT_RUSH} * rush_frac",
+            "avg_severity": round(r["avg_severity"], 4),
+            "severity_norm": round(r["severity_norm"], 4),
+            "formula": (
+                f"{WEIGHT_COUNT} * count_norm"
+                f" + {WEIGHT_RUSH} * rush_frac"
+                f" + {WEIGHT_SEVERITY} * severity_norm"
+            ),
         },
         axis=1,
     )
@@ -131,6 +182,14 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
     df = pd.read_parquet(PARQUET)
     print(f"Loaded {len(df):,} rows")
 
+    unmapped_mask = ~df["vehicle_type"].isin(SEVERITY_WEIGHTS)
+    n_unmapped = int(unmapped_mask.sum())
+    if n_unmapped > 0:
+        print(f"WARNING: {n_unmapped:,} rows have vehicle_type not in SEVERITY_WEIGHTS (defaulted to 0.5):")
+        print(df.loc[unmapped_mask, "vehicle_type"].value_counts().to_string())
+    else:
+        print(f"Severity: all {df['vehicle_type'].nunique()} vehicle_type values mapped, 0 rows defaulted to 0.5")
+
     span_days = (
         df["created_datetime"].max() - df["created_datetime"].min()
     ).total_seconds() / 86400
@@ -165,7 +224,8 @@ def run(eps: float, min_samples: int) -> pd.DataFrame:
     handoff = hs[
         ["hotspot_id", "lat", "lon", "impact_score",
          "score_breakdown", "violations_per_hour", "recommended_officers",
-         "police_station", "junction_name", "station_count"]
+         "police_station", "junction_name", "station_count",
+         "severity_norm", "dominant_vehicle_type"]
     ].copy()
     handoff["score_breakdown"] = handoff["score_breakdown"].apply(json.dumps)
     handoff.to_json(OUT_JSON, orient="records", indent=2)
