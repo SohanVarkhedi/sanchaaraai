@@ -4,7 +4,7 @@ A decision support system that turns parking violation records into ranked enfor
 
 ## Pitch
 
-Traffic enforcement in Bangalore is reactive and spread thin -- officers are dispatched by intuition, not data, leaving the highest-impact parking violation zones chronically underserved. ParkPulse AI clusters 115,400 real enforcement records into 101 geographic hotspots, scores each by violation volume and rush-hour concentration, and simulates how a limited officer pool should be allocated to maximize coverage of the most dangerous zones. Built on real Bangalore data (Nov 2023 - Apr 2024) with a two-component explainable impact score and honest gap reporting -- no fabricated improvement percentages anywhere in the output.
+How can AI-driven parking intelligence detect illegal parking hotspots and quantify their impact on traffic flow to enable targeted enforcement? ParkPulse AI answers that question directly: it clusters 115,400 real Bangalore enforcement records into 101 geographic hotspots, scores each by its parking-induced congestion pressure (violation volume × rush-hour concentration × vehicle severity), and simulates how a limited officer pool should be allocated to maximize coverage of the highest-impact zones. Built on real data (Nov 2023 - Apr 2024) with a fully explainable impact score and honest gap reporting -- no fabricated improvement percentages anywhere in the output.
 
 ## Problem
 

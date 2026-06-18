@@ -129,8 +129,9 @@ def _build_map(df: pd.DataFrame, lang: str) -> folium.Map:
 def page_map(df: pd.DataFrame, lang: str) -> None:
     st.header(t("map_header", lang))
     st.caption(
-        "101 parking violation hotspots detected via DBSCAN clustering on 115,400 approved "
-        "records (Nov 2023 - Apr 2024). Click any marker for the full breakdown."
+        "101 zones where illegal parking is actively choking traffic flow, detected via DBSCAN "
+        "clustering on 115,400 approved records (Nov 2023 - Apr 2024). "
+        "Click any marker for the full breakdown."
     )
 
     col_a, col_b, col_c = st.columns(3)
@@ -147,7 +148,9 @@ def page_map(df: pd.DataFrame, lang: str) -> None:
 def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     st.header(t("priority_list_header", lang))
     st.caption(
-        "Hotspots ranked by impact score (0.5 x count_norm + 0.3 x rush_frac + 0.2 x severity_norm). "
+        "Zones ranked by parking-induced traffic disruption score (0.5 x count_norm + 0.3 x rush_frac + 0.2 x severity_norm). "
+        "Impact here means congestion pressure on the carriageway: high volume illegal parking during peak hours "
+        "is more likely to be actively blocking traffic than the same volume at 2am. "
         "Rush-hour signal is morning-dominant (IST 7-12); evening data is sparse in this dataset."
     )
 
@@ -353,6 +356,7 @@ produces 101 hotspots. 4,320 points (3.7%) are treated as noise and excluded.
 count_norm is the log-normalized violation count (0-1 across all hotspots).
 rush_frac is the share of that hotspot's violations during rush hours (IST 7-11 or 17-20).
 severity_norm is the cluster's average vehicle severity weight, normalized 0-1 (HGV/Lorry/Tanker = 1.0, Scooter/Motorcycle = 0.2).
+Rush-hour violation density is used as a proxy for congestion impact — a hotspot with high violations during peak hours is more likely to be actively blocking carriageways than one with the same volume at 2am.
 Rush-hour signal is morning-dominant; evening data is sparse in this dataset.
 Severity weights are assumptions, not measurements — see docs/decisions.md.
 
