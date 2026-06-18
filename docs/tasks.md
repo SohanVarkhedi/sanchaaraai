@@ -82,7 +82,12 @@ Status: todo / doing / done
 
 ## Phase 7: Deploy + Polish
 
-- [ ] redeploy to Streamlit Cloud with real data wired in (B)
-- [ ] visual polish: color scale on map, clean table formatting (B)
-- [ ] confirm demo flow works: map -> priority list -> simulator (Both)
-- [ ] write 3-sentence pitch (Both)
+- [x] confirmed live on Streamlit Cloud at latest commit
+- [x] map legend added: labeled HTML gradient bar (low to high impact, color + radius encoding explained)
+- [x] priority list table: commas on Violations, consistent decimal places on all numeric columns
+- [x] simulator tables: Violations formatted with commas, Impact Score to 3dp
+- [x] About this data expander in sidebar: dataset, clustering method, impact score formula, officer throughput assumption -- all in plain language
+- [x] st.info block on simulator left panel labels officer throughput assumption visibly
+- [x] README.md: dataset numbers corrected (298k raw / 115k approved), pydeck removed, Pitch section added
+- [x] 3-sentence pitch written in README.md under Pitch heading
+- [x] demo flow confirmed: Map (hotspot density story) -> Priority List (ranking + score breakdown) -> Simulator (allocation + coverage gaps)

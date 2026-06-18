@@ -16,6 +16,18 @@ HOTSPOTS_PATH = "data/processed/hotspots.json"
 BANGALORE_CENTER = [12.9716, 77.5946]
 CENTRAL_CLUSTER_ID = 2
 
+LEGEND_HTML = """
+<div style="display:flex;align-items:center;gap:12px;padding:6px 0 2px 0;font-size:0.82em;color:#bbb;">
+  <span>Low impact</span>
+  <div style="width:160px;height:10px;border-radius:5px;
+              background:linear-gradient(to right,#e8c855,#e80000);flex-shrink:0;"></div>
+  <span>High impact</span>
+  <span style="margin-left:18px;color:#888;">
+    Marker color and size both scale with impact score (radius&nbsp;=&nbsp;5&nbsp;+&nbsp;22&nbsp;&times;&nbsp;score)
+  </span>
+</div>
+"""
+
 
 @st.cache_data
 def load_hotspots() -> pd.DataFrame:
@@ -80,8 +92,8 @@ def _build_map(df: pd.DataFrame) -> folium.Map:
 def page_map(df: pd.DataFrame, lang: str) -> None:
     st.header(t("map_header", lang))
     st.caption(
-        "101 parking violation hotspots detected via DBSCAN clustering on 115,400 approved records "
-        "(Nov 2023 - Apr 2024). Marker size and color scale with impact score."
+        "101 parking violation hotspots detected via DBSCAN clustering on 115,400 approved "
+        "records (Nov 2023 - Apr 2024). Click any marker for the full breakdown."
     )
 
     col_a, col_b, col_c = st.columns(3)
@@ -89,17 +101,20 @@ def page_map(df: pd.DataFrame, lang: str) -> None:
     col_b.metric(t("top_hotspot_score", lang), f"{df['impact_score'].max():.3f}")
     col_c.metric(t("total_violations_mapped", lang), f"{df['violation_count'].sum():,}")
 
+    st.markdown("&nbsp;", unsafe_allow_html=True)
     m = _build_map(df)
     st_folium(m, use_container_width=True, height=560, returned_objects=[])
+    st.markdown(LEGEND_HTML, unsafe_allow_html=True)
 
 
 def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     st.header(t("priority_list_header", lang))
     st.caption(
         "Hotspots ranked by impact score (0.6 x count_norm + 0.4 x rush_frac). "
-        "Score breakdown columns show each component. "
         "Rush-hour signal is morning-dominant (IST 7-12); evening data is sparse in this dataset."
     )
+
+    rec_col = t("recommended_officers", lang)
 
     display = df[
         [
@@ -114,7 +129,6 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
     ].copy()
     display.index = range(1, len(display) + 1)
     display.index.name = "rank"
-
     display = display.rename(
         columns={
             "hotspot_id": "Hotspot ID",
@@ -123,20 +137,32 @@ def page_priority_list(df: pd.DataFrame, lang: str) -> None:
             "count_norm": "Count Norm",
             "rush_frac": "Rush-Hr Frac",
             "violations_per_hour": "Viol/Hr",
-            "recommended_officers": t("recommended_officers", lang),
+            "recommended_officers": rec_col,
         }
     )
 
-    st.dataframe(
-        display.style.background_gradient(subset=["Impact Score"], cmap="YlOrRd"),
-        use_container_width=True,
-        height=600,
+    styled = (
+        display.style
+        .format(
+            {
+                "Impact Score": "{:.4f}",
+                "Violations": "{:,.0f}",
+                "Count Norm": "{:.3f}",
+                "Rush-Hr Frac": "{:.3f}",
+                "Viol/Hr": "{:.2f}",
+                rec_col: "{:.0f}",
+            }
+        )
+        .background_gradient(subset=["Impact Score"], cmap="YlOrRd")
     )
 
+    st.dataframe(styled, use_container_width=True, height=600)
+
     st.caption(
-        "Count Norm: log-normalized violation volume (0-1). Rush-Hr Frac: share of violations "
-        "during IST 7-11 or 17-20. Viol/Hr: cluster violations / 702 enforcement hours (140 days x 5 hrs/day). "
-        f"{t('recommended_officers', lang)} assumes 4 violations/officer/hour -- labeled as an assumption, not a measurement."
+        "Count Norm: log-normalized violation volume (0-1). "
+        "Rush-Hr Frac: share of violations during IST 7-11 or 17-20. "
+        "Viol/Hr: cluster violations / 702 enforcement hours (140 days x 5 hrs/day). "
+        f"{rec_col}: ceil(Viol/Hr / 4) -- officer throughput of 4 vph is an assumption, not a measurement."
     )
 
 
@@ -159,6 +185,15 @@ def _display_sim(raw: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def _fmt_sim(df: pd.DataFrame) -> object:
+    fmt = {}
+    if "Violations" in df.columns:
+        fmt["Violations"] = "{:,.0f}"
+    if "Impact Score" in df.columns:
+        fmt["Impact Score"] = "{:.3f}"
+    return df.style.format(fmt)
+
+
 def page_simulator(df: pd.DataFrame, lang: str) -> None:
     st.header(t("simulator_header", lang))
     st.caption(
@@ -176,13 +211,20 @@ def page_simulator(df: pd.DataFrame, lang: str) -> None:
         trucks = st.number_input(
             t("tow_trucks_available", lang), min_value=0, max_value=100, value=5, step=1
         )
-        st.caption("Officers allocated greedily from rank 1 downward. Tow trucks assigned 1 per covered hotspot.")
+        st.caption(
+            "Officers allocated greedily from rank 1 downward. "
+            "Tow trucks assigned one per covered hotspot until exhausted."
+        )
+        st.info(
+            f"Throughput assumption: 1 officer = {OFFICER_THROUGHPUT} violations/hour. "
+            "This is an operational estimate, not a measured value.",
+        )
 
     result = simulate_allocation(df, int(officers), int(trucks))
-
     covered = result[result["status"] == "Covered"]
     partial = result[result["status"] == "Partial"]
     uncovered = result[result["status"] == "Uncovered"]
+    deployed = int(result["officers_assigned"].sum())
 
     with col_right:
         s1, s2, s3, s4 = st.columns(4)
@@ -191,30 +233,47 @@ def page_simulator(df: pd.DataFrame, lang: str) -> None:
         s3.metric(t("uncovered", lang), len(uncovered))
         s4.metric(
             "Officers deployed",
-            int(result["officers_assigned"].sum()),
-            delta=f"{int(officers) - int(result['officers_assigned'].sum())} unused",
-        )
-
-        st.caption(
-            f"Assumption: 1 officer processes {OFFICER_THROUGHPUT} violations/hour. "
-            "Officers Needed = ceil(violations_per_hour / 4). "
-            "This throughput figure is an operational assumption, not a measured value."
+            deployed,
+            delta=f"{int(officers) - deployed} unused",
         )
 
         if not covered.empty:
             st.subheader("Covered hotspots")
-            st.dataframe(_display_sim(covered), use_container_width=True)
+            st.dataframe(_fmt_sim(_display_sim(covered)), use_container_width=True)
 
         if not partial.empty:
             st.subheader("Partially covered (officers ran out mid-allocation)")
-            st.dataframe(_display_sim(partial), use_container_width=True)
+            st.dataframe(_fmt_sim(_display_sim(partial)), use_container_width=True)
 
         if not uncovered.empty:
             st.subheader("Uncovered hotspots")
-            st.dataframe(
-                _display_sim(uncovered)[["Hotspot ID", "Impact Score", "Violations", "Officers Needed"]],
-                use_container_width=True,
-            )
+            uncov_display = _display_sim(uncovered)[
+                ["Hotspot ID", "Impact Score", "Violations", "Officers Needed"]
+            ]
+            st.dataframe(_fmt_sim(uncov_display), use_container_width=True)
+
+
+def _sidebar_methodology() -> None:
+    with st.sidebar.expander("About this data"):
+        st.markdown(
+            """
+**Dataset:** 298,450 raw parking violation records from Bangalore (Nov 2023 - Apr 2024),
+filtered to 115,400 approved records. Source: police enforcement mobile app.
+
+**Clustering:** DBSCAN with eps = 0.003 (~333 m radius) and min 50 violations per cluster
+produces 101 hotspots. 4,320 points (3.7%) are treated as noise and excluded.
+
+**Impact score:** `0.6 × count_norm + 0.4 × rush_frac`.
+count_norm is the log-normalized violation count (0-1 across all hotspots).
+rush_frac is the share of that hotspot's violations during rush hours (IST 7-11 or 17-20).
+Rush-hour signal is morning-dominant; evening data is sparse in this dataset.
+
+**Officer recommendation:** `ceil(violations_per_hour / 4)`.
+violations_per_hour = cluster total / 702 enforcement hours (140 days × 5 hrs/day).
+The throughput figure (4 violations per officer per hour) is an **assumption**, not a measurement.
+Results should be interpreted as minimum deployment guidance, not a precise staffing model.
+"""
+        )
 
 
 def main() -> None:
@@ -244,11 +303,13 @@ def main() -> None:
 
     st.sidebar.divider()
     st.sidebar.caption(
-        "Data: 115,400 approved parking violations\n"
+        "Data: 115,400 approved violations\n"
         "Period: Nov 2023 - Apr 2024\n"
         "Hotspots: 101 (DBSCAN eps=0.003)\n"
         "Rush-hour signal: morning IST 7-12"
     )
+
+    _sidebar_methodology()
 
     df = load_hotspots()
 
