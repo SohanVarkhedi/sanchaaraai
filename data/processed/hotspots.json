@@ -1,0 +1,911 @@
+[
+  {
+    "hotspot_id":2,
+    "lat":12.978342,
+    "lon":77.587704,
+    "impact_score":0.8078,
+    "score_breakdown":"{\"violation_count\": 50623.0, \"count_norm\": 1.0, \"rush_violations\": 26305.0, \"rush_frac\": 0.5196, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":72.1479,
+    "recommended_officers":19
+  },
+  {
+    "hotspot_id":3,
+    "lat":12.988735,
+    "lon":77.549685,
+    "impact_score":0.7131,
+    "score_breakdown":"{\"violation_count\": 17747.0, \"count_norm\": 0.8732, \"rush_violations\": 8394.0, \"rush_frac\": 0.473, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":25.293,
+    "recommended_officers":7
+  },
+  {
+    "hotspot_id":6,
+    "lat":12.936988,
+    "lon":77.691427,
+    "impact_score":0.6193,
+    "score_breakdown":"{\"violation_count\": 7229.0, \"count_norm\": 0.7646, \"rush_violations\": 2902.0, \"rush_frac\": 0.4014, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":10.3028,
+    "recommended_officers":3
+  },
+  {
+    "hotspot_id":14,
+    "lat":12.930276,
+    "lon":77.584678,
+    "impact_score":0.5834,
+    "score_breakdown":"{\"violation_count\": 1920.0, \"count_norm\": 0.6043, \"rush_violations\": 1060.0, \"rush_frac\": 0.5521, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.7364,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":46,
+    "lat":13.071001,
+    "lon":77.58886,
+    "impact_score":0.5699,
+    "score_breakdown":"{\"violation_count\": 1081.0, \"count_norm\": 0.5348, \"rush_violations\": 673.0, \"rush_frac\": 0.6226, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.5406,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":19,
+    "lat":13.031974,
+    "lon":77.584689,
+    "impact_score":0.5531,
+    "score_breakdown":"{\"violation_count\": 1779.0, \"count_norm\": 0.5951, \"rush_violations\": 872.0, \"rush_frac\": 0.4902, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.5354,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":9,
+    "lat":12.965191,
+    "lon":77.644792,
+    "impact_score":0.5444,
+    "score_breakdown":"{\"violation_count\": 2110.0, \"count_norm\": 0.6157, \"rush_violations\": 923.0, \"rush_frac\": 0.4374, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":3.0072,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":59,
+    "lat":12.971764,
+    "lon":77.658035,
+    "impact_score":0.518,
+    "score_breakdown":"{\"violation_count\": 747.0, \"count_norm\": 0.4902, \"rush_violations\": 418.0, \"rush_frac\": 0.5596, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.0646,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":25,
+    "lat":12.964784,
+    "lon":77.715907,
+    "impact_score":0.5119,
+    "score_breakdown":"{\"violation_count\": 1746.0, \"count_norm\": 0.5928, \"rush_violations\": 682.0, \"rush_frac\": 0.3906, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.4884,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":49,
+    "lat":12.99543,
+    "lon":77.695942,
+    "impact_score":0.5045,
+    "score_breakdown":"{\"violation_count\": 358.0, \"count_norm\": 0.4014, \"rush_violations\": 236.0, \"rush_frac\": 0.6592, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.5102,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":4,
+    "lat":13.007595,
+    "lon":77.692185,
+    "impact_score":0.5025,
+    "score_breakdown":"{\"violation_count\": 1790.0, \"count_norm\": 0.5958, \"rush_violations\": 649.0, \"rush_frac\": 0.3626, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.5511,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":43,
+    "lat":12.997626,
+    "lon":77.671325,
+    "impact_score":0.4997,
+    "score_breakdown":"{\"violation_count\": 1654.0, \"count_norm\": 0.5862, \"rush_violations\": 612.0, \"rush_frac\": 0.37, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.3573,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":17,
+    "lat":12.933243,
+    "lon":77.61136,
+    "impact_score":0.496,
+    "score_breakdown":"{\"violation_count\": 1352.0, \"count_norm\": 0.5619, \"rush_violations\": 537.0, \"rush_frac\": 0.3972, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.9269,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":5,
+    "lat":12.910597,
+    "lon":77.63425,
+    "impact_score":0.4958,
+    "score_breakdown":"{\"violation_count\": 1521.0, \"count_norm\": 0.5761, \"rush_violations\": 571.0, \"rush_frac\": 0.3754, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.1677,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":35,
+    "lat":12.943548,
+    "lon":77.570576,
+    "impact_score":0.4773,
+    "score_breakdown":"{\"violation_count\": 1167.0, \"count_norm\": 0.5441, \"rush_violations\": 440.0, \"rush_frac\": 0.377, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.6632,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":42,
+    "lat":12.934896,
+    "lon":77.517202,
+    "impact_score":0.4731,
+    "score_breakdown":"{\"violation_count\": 186.0, \"count_norm\": 0.3225, \"rush_violations\": 130.0, \"rush_frac\": 0.6989, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2651,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":45,
+    "lat":12.912233,
+    "lon":77.680974,
+    "impact_score":0.466,
+    "score_breakdown":"{\"violation_count\": 266.0, \"count_norm\": 0.3656, \"rush_violations\": 164.0, \"rush_frac\": 0.6165, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3791,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":11,
+    "lat":13.18538,
+    "lon":77.680573,
+    "impact_score":0.457,
+    "score_breakdown":"{\"violation_count\": 1829.0, \"count_norm\": 0.5984, \"rush_violations\": 448.0, \"rush_frac\": 0.2449, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":2.6067,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":26,
+    "lat":12.988386,
+    "lon":77.537622,
+    "impact_score":0.4543,
+    "score_breakdown":"{\"violation_count\": 288.0, \"count_norm\": 0.3752, \"rush_violations\": 165.0, \"rush_frac\": 0.5729, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.4105,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":58,
+    "lat":12.888504,
+    "lon":77.562821,
+    "impact_score":0.446,
+    "score_breakdown":"{\"violation_count\": 172.0, \"count_norm\": 0.3131, \"rush_violations\": 111.0, \"rush_frac\": 0.6453, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2451,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":29,
+    "lat":12.952328,
+    "lon":77.540855,
+    "impact_score":0.4377,
+    "score_breakdown":"{\"violation_count\": 882.0, \"count_norm\": 0.5103, \"rush_violations\": 290.0, \"rush_frac\": 0.3288, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.257,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":34,
+    "lat":13.029377,
+    "lon":77.539028,
+    "impact_score":0.4369,
+    "score_breakdown":"{\"violation_count\": 609.0, \"count_norm\": 0.4655, \"rush_violations\": 240.0, \"rush_frac\": 0.3941, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.8679,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":15,
+    "lat":12.905518,
+    "lon":77.699759,
+    "impact_score":0.4281,
+    "score_breakdown":"{\"violation_count\": 176.0, \"count_norm\": 0.3158, \"rush_violations\": 105.0, \"rush_frac\": 0.5966, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2508,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":81,
+    "lat":12.978746,
+    "lon":77.6403,
+    "impact_score":0.4245,
+    "score_breakdown":"{\"violation_count\": 299.0, \"count_norm\": 0.3797, \"rush_violations\": 147.0, \"rush_frac\": 0.4916, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.4261,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":1,
+    "lat":12.957972,
+    "lon":77.516125,
+    "impact_score":0.4225,
+    "score_breakdown":"{\"violation_count\": 650.0, \"count_norm\": 0.4734, \"rush_violations\": 225.0, \"rush_frac\": 0.3462, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.9264,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":30,
+    "lat":13.191197,
+    "lon":77.646192,
+    "impact_score":0.4204,
+    "score_breakdown":"{\"violation_count\": 466.0, \"count_norm\": 0.4332, \"rush_violations\": 187.0, \"rush_frac\": 0.4013, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.6641,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":7,
+    "lat":12.91884,
+    "lon":77.651497,
+    "impact_score":0.4136,
+    "score_breakdown":"{\"violation_count\": 196.0, \"count_norm\": 0.3288, \"rush_violations\": 106.0, \"rush_frac\": 0.5408, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2793,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":12,
+    "lat":12.989517,
+    "lon":77.503174,
+    "impact_score":0.408,
+    "score_breakdown":"{\"violation_count\": 204.0, \"count_norm\": 0.3336, \"rush_violations\": 106.0, \"rush_frac\": 0.5196, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2907,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":69,
+    "lat":13.050514,
+    "lon":77.525526,
+    "impact_score":0.4052,
+    "score_breakdown":"{\"violation_count\": 120.0, \"count_norm\": 0.2698, \"rush_violations\": 73.0, \"rush_frac\": 0.6083, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.171,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":65,
+    "lat":13.09949,
+    "lon":77.588195,
+    "impact_score":0.4048,
+    "score_breakdown":"{\"violation_count\": 100.0, \"count_norm\": 0.248, \"rush_violations\": 64.0, \"rush_frac\": 0.64, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1425,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":75,
+    "lat":12.959525,
+    "lon":77.732423,
+    "impact_score":0.4009,
+    "score_breakdown":"{\"violation_count\": 109.0, \"count_norm\": 0.2583, \"rush_violations\": 67.0, \"rush_frac\": 0.6147, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1553,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":37,
+    "lat":12.900133,
+    "lon":77.675521,
+    "impact_score":0.3997,
+    "score_breakdown":"{\"violation_count\": 309.0, \"count_norm\": 0.3836, \"rush_violations\": 131.0, \"rush_frac\": 0.4239, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.4404,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":85,
+    "lat":12.960782,
+    "lon":77.528538,
+    "impact_score":0.3994,
+    "score_breakdown":"{\"violation_count\": 218.0, \"count_norm\": 0.3416, \"rush_violations\": 106.0, \"rush_frac\": 0.4862, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3107,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":56,
+    "lat":12.914874,
+    "lon":77.574647,
+    "impact_score":0.399,
+    "score_breakdown":"{\"violation_count\": 552.0, \"count_norm\": 0.4536, \"rush_violations\": 175.0, \"rush_frac\": 0.317, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.7867,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":87,
+    "lat":12.854908,
+    "lon":77.663748,
+    "impact_score":0.3978,
+    "score_breakdown":"{\"violation_count\": 80.0, \"count_norm\": 0.2213, \"rush_violations\": 53.0, \"rush_frac\": 0.6625, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.114,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":93,
+    "lat":12.99231,
+    "lon":77.652674,
+    "impact_score":0.3948,
+    "score_breakdown":"{\"violation_count\": 141.0, \"count_norm\": 0.2892, \"rush_violations\": 78.0, \"rush_frac\": 0.5532, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.201,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":23,
+    "lat":13.018685,
+    "lon":77.532723,
+    "impact_score":0.392,
+    "score_breakdown":"{\"violation_count\": 388.0, \"count_norm\": 0.4111, \"rush_violations\": 141.0, \"rush_frac\": 0.3634, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.553,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":52,
+    "lat":13.02172,
+    "lon":77.592542,
+    "impact_score":0.3899,
+    "score_breakdown":"{\"violation_count\": 424.0, \"count_norm\": 0.4218, \"rush_violations\": 145.0, \"rush_frac\": 0.342, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.6043,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":24,
+    "lat":13.056489,
+    "lon":77.591517,
+    "impact_score":0.3884,
+    "score_breakdown":"{\"violation_count\": 696.0, \"count_norm\": 0.4816, \"rush_violations\": 173.0, \"rush_frac\": 0.2486, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.9919,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":20,
+    "lat":13.006438,
+    "lon":77.526736,
+    "impact_score":0.3857,
+    "score_breakdown":"{\"violation_count\": 243.0, \"count_norm\": 0.3547, \"rush_violations\": 105.0, \"rush_frac\": 0.4321, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3463,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":78,
+    "lat":12.986944,
+    "lon":77.519521,
+    "impact_score":0.381,
+    "score_breakdown":"{\"violation_count\": 118.0, \"count_norm\": 0.2678, \"rush_violations\": 65.0, \"rush_frac\": 0.5508, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1682,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":0,
+    "lat":12.924283,
+    "lon":77.619145,
+    "impact_score":0.3796,
+    "score_breakdown":"{\"violation_count\": 259.0, \"count_norm\": 0.3624, \"rush_violations\": 105.0, \"rush_frac\": 0.4054, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3691,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":82,
+    "lat":13.007088,
+    "lon":77.757882,
+    "impact_score":0.3789,
+    "score_breakdown":"{\"violation_count\": 60.0, \"count_norm\": 0.187, \"rush_violations\": 40.0, \"rush_frac\": 0.6667, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0855,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":74,
+    "lat":13.002721,
+    "lon":77.595272,
+    "impact_score":0.3779,
+    "score_breakdown":"{\"violation_count\": 229.0, \"count_norm\": 0.3475, \"rush_violations\": 97.0, \"rush_frac\": 0.4236, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3264,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":22,
+    "lat":12.972757,
+    "lon":77.508318,
+    "impact_score":0.3738,
+    "score_breakdown":"{\"violation_count\": 102.0, \"count_norm\": 0.2504, \"rush_violations\": 57.0, \"rush_frac\": 0.5588, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1454,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":41,
+    "lat":12.908408,
+    "lon":77.600775,
+    "impact_score":0.3696,
+    "score_breakdown":"{\"violation_count\": 89.0, \"count_norm\": 0.234, \"rush_violations\": 51.0, \"rush_frac\": 0.573, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1268,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":18,
+    "lat":12.841901,
+    "lon":77.645929,
+    "impact_score":0.3664,
+    "score_breakdown":"{\"violation_count\": 553.0, \"count_norm\": 0.4539, \"rush_violations\": 130.0, \"rush_frac\": 0.2351, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.7881,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":13,
+    "lat":12.913694,
+    "lon":77.606513,
+    "impact_score":0.3659,
+    "score_breakdown":"{\"violation_count\": 438.0, \"count_norm\": 0.4257, \"rush_violations\": 121.0, \"rush_frac\": 0.2763, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.6242,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":71,
+    "lat":12.940613,
+    "lon":77.524618,
+    "impact_score":0.3652,
+    "score_breakdown":"{\"violation_count\": 120.0, \"count_norm\": 0.2698, \"rush_violations\": 61.0, \"rush_frac\": 0.5083, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.171,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":21,
+    "lat":12.887966,
+    "lon":77.640375,
+    "impact_score":0.3641,
+    "score_breakdown":"{\"violation_count\": 903.0, \"count_norm\": 0.5131, \"rush_violations\": 127.0, \"rush_frac\": 0.1406, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":1.287,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":36,
+    "lat":12.978799,
+    "lon":77.695352,
+    "impact_score":0.3592,
+    "score_breakdown":"{\"violation_count\": 278.0, \"count_norm\": 0.3709, \"rush_violations\": 95.0, \"rush_frac\": 0.3417, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3962,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":63,
+    "lat":13.057389,
+    "lon":77.546978,
+    "impact_score":0.3589,
+    "score_breakdown":"{\"violation_count\": 82.0, \"count_norm\": 0.2242, \"rush_violations\": 46.0, \"rush_frac\": 0.561, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1169,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":31,
+    "lat":12.917296,
+    "lon":77.672533,
+    "impact_score":0.3564,
+    "score_breakdown":"{\"violation_count\": 68.0, \"count_norm\": 0.2019, \"rush_violations\": 40.0, \"rush_frac\": 0.5882, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0969,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":39,
+    "lat":12.929244,
+    "lon":77.632608,
+    "impact_score":0.3526,
+    "score_breakdown":"{\"violation_count\": 221.0, \"count_norm\": 0.3433, \"rush_violations\": 81.0, \"rush_frac\": 0.3665, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.315,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":89,
+    "lat":13.071934,
+    "lon":77.633809,
+    "impact_score":0.3506,
+    "score_breakdown":"{\"violation_count\": 63.0, \"count_norm\": 0.1928, \"rush_violations\": 37.0, \"rush_frac\": 0.5873, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0898,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":27,
+    "lat":12.951046,
+    "lon":77.606746,
+    "impact_score":0.3419,
+    "score_breakdown":"{\"violation_count\": 72.0, \"count_norm\": 0.2087, \"rush_violations\": 39.0, \"rush_frac\": 0.5417, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1026,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":50,
+    "lat":13.096401,
+    "lon":77.598143,
+    "impact_score":0.3392,
+    "score_breakdown":"{\"violation_count\": 450.0, \"count_norm\": 0.429, \"rush_violations\": 92.0, \"rush_frac\": 0.2044, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.6413,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":8,
+    "lat":13.047157,
+    "lon":77.501957,
+    "impact_score":0.3363,
+    "score_breakdown":"{\"violation_count\": 268.0, \"count_norm\": 0.3665, \"rush_violations\": 78.0, \"rush_frac\": 0.291, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.382,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":44,
+    "lat":13.007002,
+    "lon":77.579747,
+    "impact_score":0.3344,
+    "score_breakdown":"{\"violation_count\": 79.0, \"count_norm\": 0.2198, \"rush_violations\": 40.0, \"rush_frac\": 0.5063, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1126,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":92,
+    "lat":12.872476,
+    "lon":77.539369,
+    "impact_score":0.3312,
+    "score_breakdown":"{\"violation_count\": 50.0, \"count_norm\": 0.1653, \"rush_violations\": 29.0, \"rush_frac\": 0.58, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0713,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":16,
+    "lat":12.926756,
+    "lon":77.550781,
+    "impact_score":0.3284,
+    "score_breakdown":"{\"violation_count\": 112.0, \"count_norm\": 0.2616, \"rush_violations\": 48.0, \"rush_frac\": 0.4286, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1596,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":76,
+    "lat":12.870387,
+    "lon":77.655543,
+    "impact_score":0.3281,
+    "score_breakdown":"{\"violation_count\": 51.0, \"count_norm\": 0.1677, \"rush_violations\": 29.0, \"rush_frac\": 0.5686, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0727,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":54,
+    "lat":12.875575,
+    "lon":77.595352,
+    "impact_score":0.3268,
+    "score_breakdown":"{\"violation_count\": 118.0, \"count_norm\": 0.2678, \"rush_violations\": 49.0, \"rush_frac\": 0.4153, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1682,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":77,
+    "lat":13.040112,
+    "lon":77.518007,
+    "impact_score":0.3258,
+    "score_breakdown":"{\"violation_count\": 189.0, \"count_norm\": 0.3244, \"rush_violations\": 62.0, \"rush_frac\": 0.328, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2694,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":51,
+    "lat":13.047796,
+    "lon":77.575475,
+    "impact_score":0.3239,
+    "score_breakdown":"{\"violation_count\": 238.0, \"count_norm\": 0.3522, \"rush_violations\": 67.0, \"rush_frac\": 0.2815, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3392,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":70,
+    "lat":13.050759,
+    "lon":77.55285,
+    "impact_score":0.3235,
+    "score_breakdown":"{\"violation_count\": 73.0, \"count_norm\": 0.2104, \"rush_violations\": 36.0, \"rush_frac\": 0.4932, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.104,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":61,
+    "lat":13.09905,
+    "lon":77.576929,
+    "impact_score":0.3105,
+    "score_breakdown":"{\"violation_count\": 112.0, \"count_norm\": 0.2616, \"rush_violations\": 43.0, \"rush_frac\": 0.3839, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1596,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":40,
+    "lat":13.022201,
+    "lon":77.638688,
+    "impact_score":0.3083,
+    "score_breakdown":"{\"violation_count\": 126.0, \"count_norm\": 0.2757, \"rush_violations\": 45.0, \"rush_frac\": 0.3571, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1796,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":53,
+    "lat":13.009015,
+    "lon":77.543109,
+    "impact_score":0.306,
+    "score_breakdown":"{\"violation_count\": 183.0, \"count_norm\": 0.3205, \"rush_violations\": 52.0, \"rush_frac\": 0.2842, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2608,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":94,
+    "lat":12.902351,
+    "lon":77.585805,
+    "impact_score":0.3042,
+    "score_breakdown":"{\"violation_count\": 75.0, \"count_norm\": 0.2136, \"rush_violations\": 33.0, \"rush_frac\": 0.44, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1069,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":60,
+    "lat":12.906225,
+    "lon":77.592188,
+    "impact_score":0.3036,
+    "score_breakdown":"{\"violation_count\": 61.0, \"count_norm\": 0.189, \"rush_violations\": 29.0, \"rush_frac\": 0.4754, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0869,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":96,
+    "lat":12.938275,
+    "lon":77.492811,
+    "impact_score":0.302,
+    "score_breakdown":"{\"violation_count\": 52.0, \"count_norm\": 0.17, \"rush_violations\": 26.0, \"rush_frac\": 0.5, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0741,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":100,
+    "lat":12.934343,
+    "lon":77.623447,
+    "impact_score":0.3,
+    "score_breakdown":"{\"violation_count\": 12.0, \"count_norm\": 0.0, \"rush_violations\": 9.0, \"rush_frac\": 0.75, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0171,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":67,
+    "lat":12.987325,
+    "lon":77.734592,
+    "impact_score":0.299,
+    "score_breakdown":"{\"violation_count\": 213.0, \"count_norm\": 0.3388, \"rush_violations\": 51.0, \"rush_frac\": 0.2394, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3036,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":80,
+    "lat":12.917156,
+    "lon":77.595987,
+    "impact_score":0.2928,
+    "score_breakdown":"{\"violation_count\": 80.0, \"count_norm\": 0.2213, \"rush_violations\": 32.0, \"rush_frac\": 0.4, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.114,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":55,
+    "lat":13.035031,
+    "lon":77.624515,
+    "impact_score":0.2911,
+    "score_breakdown":"{\"violation_count\": 220.0, \"count_norm\": 0.3427, \"rush_violations\": 47.0, \"rush_frac\": 0.2136, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.3135,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":68,
+    "lat":12.9385,
+    "lon":77.577871,
+    "impact_score":0.2894,
+    "score_breakdown":"{\"violation_count\": 105.0, \"count_norm\": 0.2538, \"rush_violations\": 36.0, \"rush_frac\": 0.3429, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1496,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":97,
+    "lat":12.941879,
+    "lon":77.747294,
+    "impact_score":0.2866,
+    "score_breakdown":"{\"violation_count\": 52.0, \"count_norm\": 0.17, \"rush_violations\": 24.0, \"rush_frac\": 0.4615, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0741,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":95,
+    "lat":13.056021,
+    "lon":77.507455,
+    "impact_score":0.2832,
+    "score_breakdown":"{\"violation_count\": 50.0, \"count_norm\": 0.1653, \"rush_violations\": 23.0, \"rush_frac\": 0.46, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0713,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":28,
+    "lat":12.907015,
+    "lon":77.545634,
+    "impact_score":0.2804,
+    "score_breakdown":"{\"violation_count\": 145.0, \"count_norm\": 0.2926, \"rush_violations\": 38.0, \"rush_frac\": 0.2621, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2067,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":32,
+    "lat":13.045837,
+    "lon":77.750314,
+    "impact_score":0.2769,
+    "score_breakdown":"{\"violation_count\": 81.0, \"count_norm\": 0.2228, \"rush_violations\": 29.0, \"rush_frac\": 0.358, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1154,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":48,
+    "lat":12.896621,
+    "lon":77.720071,
+    "impact_score":0.2744,
+    "score_breakdown":"{\"violation_count\": 63.0, \"count_norm\": 0.1928, \"rush_violations\": 25.0, \"rush_frac\": 0.3968, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0898,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":73,
+    "lat":12.839877,
+    "lon":77.67714,
+    "impact_score":0.268,
+    "score_breakdown":"{\"violation_count\": 136.0, \"count_norm\": 0.2849, \"rush_violations\": 33.0, \"rush_frac\": 0.2426, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1938,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":66,
+    "lat":12.979955,
+    "lon":77.653244,
+    "impact_score":0.2669,
+    "score_breakdown":"{\"violation_count\": 59.0, \"count_norm\": 0.185, \"rush_violations\": 23.0, \"rush_frac\": 0.3898, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0841,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":91,
+    "lat":13.00331,
+    "lon":77.662525,
+    "impact_score":0.2546,
+    "score_breakdown":"{\"violation_count\": 58.0, \"count_norm\": 0.183, \"rush_violations\": 21.0, \"rush_frac\": 0.3621, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0827,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":38,
+    "lat":12.819334,
+    "lon":77.688414,
+    "impact_score":0.2542,
+    "score_breakdown":"{\"violation_count\": 96.0, \"count_norm\": 0.2431, \"rush_violations\": 26.0, \"rush_frac\": 0.2708, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1368,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":47,
+    "lat":13.033869,
+    "lon":77.557546,
+    "impact_score":0.25,
+    "score_breakdown":"{\"violation_count\": 148.0, \"count_norm\": 0.295, \"rush_violations\": 27.0, \"rush_frac\": 0.1824, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2109,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":57,
+    "lat":13.121562,
+    "lon":77.630913,
+    "impact_score":0.248,
+    "score_breakdown":"{\"violation_count\": 167.0, \"count_norm\": 0.3095, \"rush_violations\": 26.0, \"rush_frac\": 0.1557, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.238,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":90,
+    "lat":13.014128,
+    "lon":77.492147,
+    "impact_score":0.2477,
+    "score_breakdown":"{\"violation_count\": 58.0, \"count_norm\": 0.183, \"rush_violations\": 20.0, \"rush_frac\": 0.3448, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0827,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":83,
+    "lat":12.940442,
+    "lon":77.624104,
+    "impact_score":0.2319,
+    "score_breakdown":"{\"violation_count\": 115.0, \"count_norm\": 0.2647, \"rush_violations\": 21.0, \"rush_frac\": 0.1826, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1639,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":79,
+    "lat":13.121208,
+    "lon":77.615177,
+    "impact_score":0.2237,
+    "score_breakdown":"{\"violation_count\": 204.0, \"count_norm\": 0.3336, \"rush_violations\": 12.0, \"rush_frac\": 0.0588, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2907,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":10,
+    "lat":12.93497,
+    "lon":77.536503,
+    "impact_score":0.2143,
+    "score_breakdown":"{\"violation_count\": 175.0, \"count_norm\": 0.3152, \"rush_violations\": 11.0, \"rush_frac\": 0.0629, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.2494,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":64,
+    "lat":12.894397,
+    "lon":77.598984,
+    "impact_score":0.2079,
+    "score_breakdown":"{\"violation_count\": 77.0, \"count_norm\": 0.2167, \"rush_violations\": 15.0, \"rush_frac\": 0.1948, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1097,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":33,
+    "lat":13.035234,
+    "lon":77.735021,
+    "impact_score":0.1927,
+    "score_breakdown":"{\"violation_count\": 57.0, \"count_norm\": 0.1809, \"rush_violations\": 12.0, \"rush_frac\": 0.2105, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0812,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":72,
+    "lat":12.975769,
+    "lon":77.531617,
+    "impact_score":0.1724,
+    "score_breakdown":"{\"violation_count\": 61.0, \"count_norm\": 0.189, \"rush_violations\": 9.0, \"rush_frac\": 0.1475, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0869,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":62,
+    "lat":13.003453,
+    "lon":77.723502,
+    "impact_score":0.1675,
+    "score_breakdown":"{\"violation_count\": 66.0, \"count_norm\": 0.1983, \"rush_violations\": 8.0, \"rush_frac\": 0.1212, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0941,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":84,
+    "lat":12.958817,
+    "lon":77.66785,
+    "impact_score":0.1648,
+    "score_breakdown":"{\"violation_count\": 100.0, \"count_norm\": 0.248, \"rush_violations\": 4.0, \"rush_frac\": 0.04, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.1425,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":99,
+    "lat":12.988851,
+    "lon":77.688896,
+    "impact_score":0.1565,
+    "score_breakdown":"{\"violation_count\": 54.0, \"count_norm\": 0.1745, \"rush_violations\": 7.0, \"rush_frac\": 0.1296, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.077,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":98,
+    "lat":13.051364,
+    "lon":77.507757,
+    "impact_score":0.1444,
+    "score_breakdown":"{\"violation_count\": 16.0, \"count_norm\": 0.0324, \"rush_violations\": 5.0, \"rush_frac\": 0.3125, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0228,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":86,
+    "lat":13.030582,
+    "lon":77.563092,
+    "impact_score":0.1443,
+    "score_breakdown":"{\"violation_count\": 43.0, \"count_norm\": 0.1475, \"rush_violations\": 6.0, \"rush_frac\": 0.1395, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0613,
+    "recommended_officers":1
+  },
+  {
+    "hotspot_id":88,
+    "lat":12.960042,
+    "lon":77.561428,
+    "impact_score":0.1232,
+    "score_breakdown":"{\"violation_count\": 50.0, \"count_norm\": 0.1653, \"rush_violations\": 3.0, \"rush_frac\": 0.06, \"formula\": \"0.6 * count_norm + 0.4 * rush_frac\"}",
+    "violations_per_hour":0.0713,
+    "recommended_officers":1
+  }
+]

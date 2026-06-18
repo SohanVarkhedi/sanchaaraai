@@ -44,11 +44,11 @@ Status: todo / doing / done
 
 ## Phase 4: Frontend Shell (B, runs in parallel with Phase 2-3)
 
-- [ ] Streamlit app with sidebar nav: Map / Priority List / Simulator
-- [ ] Map screen: folium or pydeck map, hotspots as markers sized by impact score
-- [ ] Priority list screen: ranked table with score breakdown column
-- [ ] Simulator screen: officer/tow truck input sliders, coverage output table
-- [ ] build all screens against sample/fake data first
+- [x] Streamlit app with sidebar nav: Map / Priority List / Simulator
+- [x] Map screen: folium or pydeck map, hotspots as markers sized by impact score
+- [x] Priority list screen: ranked table with score breakdown column
+- [x] Simulator screen: officer/tow truck input sliders, coverage output table
+- [x] built against real data/processed/hotspots.json (no fake data needed)
 
 ---
 
