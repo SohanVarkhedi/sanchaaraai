@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="app_title">Sanchaara AI — Dashboard</title>
+  <meta name="description" content="Sanchaara AI dashboard — hotspot map, priority list, resource simulator, and city insights for Bangalore parking enforcement.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Load translation engine first -->
+  <script src="js/i18n.js"></script>
+
+  <style>
+    html, body { height: 100%; overflow: hidden; }
+    .hidden { display: none !important; }
+    /* Leaflet dark mode fix */
+    .leaflet-tile-pane { filter: brightness(0.9) saturate(1.1); }
+    /* custom tooltip */
+    .pp-tooltip {
+      background: rgba(8,16,28,0.95) !important;
+      border: 1px solid rgba(123,108,246,0.28) !important;
+      border-radius: 8px !important;
+      color: #F0F4FF !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 12px !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+    }
+    .pp-tooltip::before { border-top-color: rgba(123,108,246,0.28) !important; }
+    .leaflet-control-zoom a {
+      background: rgba(9,17,31,0.95) !important;
+      border-color: rgba(255,255,255,0.1) !important;
+      color: #A8B4CC !important;
+    }
+    .leaflet-control-zoom a:hover { color: #7B6CF6 !important; }
+    /* Map container */
+    .map-pane { flex: 1; position: relative; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body class="dashboard-page">
+
+<!-- ═══════════ GLOBAL LOADING ═══════════════════════════ -->
+<div id="global-loading" style="
+  position:fixed;inset:0;z-index:9999;
+  background:var(--bg-primary);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:16px;">
+  <div style="font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:-0.02em;" data-i18n-html="app_logo">
+    Sanchaara<span>AI</span>
+  </div>
+  <div class="loading-dots">
+    <span></span><span></span><span></span>
+  </div>
+  <div style="font-size:12px;color:var(--text-muted);" data-i18n="side_judge_loading">Loading enforcement data…</div>
+</div>
+
+<!-- ═══════════ TOP BAR ═══════════════════════════════════ -->
+<header class="dash-topbar" role="banner">
+  <div class="dash-topbar-logo">
+    <span class="dash-topbar-name" data-i18n-html="app_logo">Sanchaara<span>AI</span></span>
+  </div>
+
+  <div class="topbar-divider" aria-hidden="true"></div>
+
+  <!-- Tab buttons -->
+  <nav aria-label="Dashboard navigation" style="display:flex;gap:2px;">
+    <button class="topbar-tab active" data-tab="map" aria-label="Map view" data-i18n="nav_map">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+      Map
+    </button>
+    <button class="topbar-tab" data-tab="priority" aria-label="Priority list" data-i18n="nav_priority_list">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Priority List
+    </button>
+    <button class="topbar-tab" data-tab="simulator" aria-label="Resource simulator" data-i18n="nav_simulator">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      Simulator
+    </button>
+    <button class="topbar-tab" data-tab="insights" aria-label="City insights" data-i18n="nav_insights">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Insights
+    </button>
+  </nav>
+
+  <div class="topbar-spacer"></div>
+
+  <div class="topbar-meta">
+    <div class="topbar-pulse" aria-hidden="true"></div>
+    <span data-i18n="ticker_meta">115,400 violations · Nov 2023 – Mar 2024</span>
+  </div>
+
+  <button id="lang-toggle-btn" class="btn btn-ghost btn-sm" style="margin-left:10px;font-family:var(--font-display);">🌐 EN / ಕನ್ನಡ</button>
+  <a href="index.html" class="btn btn-ghost btn-sm" style="margin-left:10px;" aria-label="Back to landing page" data-i18n="back_to_home">← Home</a>
+</header>
+
+<!-- Warning banner when falling back to random demo data -->
+<div id="demo-banner" class="hidden" style="background:var(--accent-amber); color:#000; font-family:var(--font-display); font-weight:700; font-size:12.5px; text-align:center; padding:8px 16px; border-bottom:1px solid rgba(0,0,0,0.1); z-index:100; position:relative; letter-spacing:0.02em;">
+  ⚠️ RUNNING IN DEMO FALLBACK MODE (CORS blocked loading hotspots.json). Run <code>python serve.py</code> and navigate to <a href="http://localhost:8000/frontend/dashboard.html" style="color:#000; text-decoration:underline; font-weight:800;">http://localhost:8000/frontend/dashboard.html</a> to view the real Bangalore dataset.
+</div>
+
+
+<!-- ═══════════ CONTROLS BAR ══════════════════════════════ -->
+<div class="dash-controls" role="toolbar" aria-label="Filter controls">
+  <label class="sr-only" for="station-filter" data-i18n="filter_station_lbl">Filter by police station</label>
+  <select class="dash-select" id="station-filter" aria-label="Police station filter">
+    <option value="all" data-i18n="all_stations">All police stations</option>
+  </select>
+
+  <div class="filter-chip-group" role="group" aria-label="Severity filter">
+    <button class="filter-chip active" data-filter="all"      aria-pressed="true" data-i18n="severity_all">All</button>
+    <button class="filter-chip"        data-filter="critical" aria-pressed="false" data-i18n="severity_critical">Critical</button>
+    <button class="filter-chip"        data-filter="high"     aria-pressed="false" data-i18n="severity_high">High</button>
+    <button class="filter-chip"        data-filter="watch"    aria-pressed="false" data-i18n="severity_watch">Watch</button>
+  </div>
+
+  <div class="layer-tabs" role="group" aria-label="Map layer">
+    <button class="layer-tab active" data-layer="impact"   aria-pressed="true" data-i18n="layer_impact">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 14 2 2 4-4"/></svg>
+      Impact
+    </button>
+    <button class="layer-tab" data-layer="volume"   aria-pressed="false" data-i18n="layer_volume">Volume</button>
+    <button class="layer-tab" data-layer="junction" aria-pressed="false" data-i18n="layer_junction">Junction</button>
+    <button class="layer-tab" data-layer="heatmap"  aria-pressed="false" data-i18n="layer_heatmap">Heatmap</button>
+  </div>
+</div>
+
+<!-- ═══════════ DASHBOARD BODY ════════════════════════════ -->
+<div class="dash-body">
+
+  <!-- ── MAIN PANEL ─────────────────────────────────────── -->
+  <main class="dash-main" role="main">
+
+    <!-- MAP TAB -->
+    <div class="tab-pane active" data-pane="map" role="tabpanel" aria-label="Map view">
+      <div class="map-pane">
+        <!-- Map info overlay -->
+        <div class="map-layer-info" id="map-layer-info" aria-live="polite">
+          <div class="map-layer-info-title" data-i18n="map_popup_impact">Impact Layer</div>
+          <div class="map-layer-info-desc" data-i18n="map_layer_impact_desc">Overall congestion-priority score. Circle size reflects cluster spread. Color = impact level.</div>
+        </div>
+        <!-- Map legend -->
+        <div class="map-legend" aria-label="Map legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#FF5C72;"></div><span data-i18n="map_legend_crit">Critical (≥0.65)</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#F5A623;"></div><span data-i18n="map_legend_high">High (0.50–0.64)</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#22D47A;"></div><span data-i18n="map_legend_watch">Medium / Watch</span></div>
+        </div>
+        <div id="leaflet-map" aria-label="Bangalore hotspot map"></div>
+      </div>
+    </div>
+
+    <!-- PRIORITY LIST TAB -->
+    <div class="tab-pane" data-pane="priority" role="tabpanel" aria-label="Priority list">
+      <div class="priority-pane">
+        <div class="priority-header">
+          <div>
+            <h2 style="font-family:var(--font-display);font-size:18px;font-weight:700;" data-i18n="priority_title">Parking Congestion Priority Zones</h2>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:3px;">
+              <span data-i18n="priority_subtitle">Zones ranked by impact score</span> · <span id="priority-count">–</span>
+            </p>
+          </div>
+          <div style="font-size:11px;color:var(--text-muted);text-align:right;line-height:1.6;" data-i18n="priority_formula_note">
+            Formula: 0.5 × count_norm + 0.3 × rush_frac + 0.2 × sev_norm
+          </div>
+        </div>
+        <div class="priority-table-wrap">
+          <table class="priority-table" role="table" aria-label="Priority hotspot list">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="col_rank">Rank</th>
+                <th scope="col" data-i18n="col_id">ID</th>
+                <th scope="col" data-i18n="col_junction">Junction</th>
+                <th scope="col" data-i18n="col_station">Police Station</th>
+                <th scope="col" data-i18n="col_impact">Impact Score</th>
+                <th scope="col" data-i18n="col_violations">Violations</th>
+                <th scope="col" data-i18n="col_officers_am">Officers (AM)</th>
+                <th scope="col" data-i18n="col_peak_shift">Peak Shift</th>
+                <th scope="col" data-i18n="col_top_vehicle">Top Vehicle</th>
+              </tr>
+            </thead>
+            <tbody id="priority-table-body">
+              <tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:40px;">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size: 11px; color: var(--text-muted); padding: 10px 4px 0 4px; text-align: left; line-height: 1.5;" data-i18n="priority_footnote_desc">
+          Count Norm: log-normalized violation volume. Rush-Hr Frac: share during IST 7-11 or 17-20. Sev Norm: avg vehicle weight normalized (HGV=1.0, Scooter=0.2). Officers (AM): morning shift officers. Throughput of 4 vph is an assumption.
+        </div>
+      </div>
+    </div>
+
+    <!-- SIMULATOR TAB -->
+    <div class="tab-pane" data-pane="simulator" role="tabpanel" aria-label="Resource simulator">
+      <div class="sim-layout">
+        <!-- Controls -->
+        <div class="sim-controls" role="form" aria-label="Simulator controls">
+          <div class="sim-controls-title" data-i18n="sim_resources">Resources</div>
+
+          <div class="sim-control-group">
+            <div class="sim-control-label">
+              <span data-i18n="sim_officers_label">Officers available</span>
+              <span id="sim-officers-val">30</span>
+            </div>
+            <input type="range" class="sim-range" id="sim-officers"
+                   min="1" max="200" value="30" step="1"
+                   aria-label="Number of officers available">
+          </div>
+
+          <div class="sim-control-group">
+            <div class="sim-control-label">
+              <span data-i18n="sim_trucks_label">Tow trucks available</span>
+              <span id="sim-trucks-val">5</span>
+            </div>
+            <input type="range" class="sim-range" id="sim-trucks"
+                   min="0" max="40" value="5" step="1"
+                   aria-label="Number of tow trucks available">
+          </div>
+
+          <div class="sim-control-group">
+            <div class="sim-control-label" data-i18n="sim_shift_label">Deployment shift</div>
+            <select class="sim-shift-select" id="sim-shift" aria-label="Deployment shift">
+              <option value="morning" data-i18n="sim_shift_morning_val">Morning (06:00–12:00)</option>
+              <option value="afternoon" data-i18n="sim_shift_afternoon_val">Afternoon (12:00–18:00)</option>
+              <option value="night" data-i18n="sim_shift_night_val">Night (18:00–06:00)</option>
+            </select>
+          </div>
+
+          <div class="sim-note" data-i18n="sim_resources_note">
+            Officers allocated greedily from rank 1 downward.<br>
+            Tow trucks assigned only where heavy vehicles (HGV/Bus/Tanker/Lorry) exceed 20% of violations.
+          </div>
+
+          <button class="sim-run-btn" id="sim-run" data-i18n="sim_run_btn" aria-label="Run simulation">
+            ▶ Run Simulation
+          </button>
+
+          <!-- Mini summary -->
+          <div class="glass" style="padding:14px;margin-top:8px;display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;" data-i18n="sim_summary_label">Deployment Summary</div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;">
+              <span style="color:var(--text-muted);" data-i18n="sim_deployed_officers">Officers deployed</span>
+              <span id="sim-deployed" style="font-family:var(--font-display);font-weight:700;color:var(--accent-teal);">–</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;">
+              <span style="color:var(--text-muted);" data-i18n="sim_unused_officers">Unused officers</span>
+              <span id="sim-unused" style="font-family:var(--font-display);font-weight:700;color:var(--text-secondary);">–</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;">
+              <span style="color:var(--text-muted);" data-i18n="sim_tow_used">Tow trucks used</span>
+              <span id="sim-trucks-used" style="font-family:var(--font-display);font-weight:700;color:var(--accent-amber);">–</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="sim-results">
+          <!-- Coverage summary -->
+          <div class="coverage-summary" role="region" aria-label="Coverage summary">
+            <div class="cov-stat cov-covered">
+              <div class="cov-stat-val" id="sim-covered">–</div>
+              <div class="cov-stat-label" data-i18n="sim_covered_label">Covered</div>
+            </div>
+            <div class="cov-stat cov-partial">
+              <div class="cov-stat-val" id="sim-partial">–</div>
+              <div class="cov-stat-label" data-i18n="sim_partial_label">Partial</div>
+            </div>
+            <div class="cov-stat cov-uncov">
+              <div class="cov-stat-val" id="sim-uncovered">–</div>
+              <div class="cov-stat-label" data-i18n="sim_uncovered_label">Uncovered</div>
+            </div>
+          </div>
+
+          <!-- Coverage progress bar -->
+          <div style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;" data-i18n="sim_coverage_rate_lbl">Coverage Rate</span>
+              <span id="sim-coverage-pct" style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--accent-teal);">–</span>
+            </div>
+            <div style="height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;">
+              <div id="sim-coverage-bar" style="height:100%;background:linear-gradient(to right,var(--accent-teal),var(--accent-purple));border-radius:3px;transition:width 0.5s ease;width:0%;"></div>
+            </div>
+          </div>
+
+          <!-- Coverage Map -->
+          <div class="sim-map-section" style="margin-bottom: 20px;">
+            <h4 style="font-family:var(--font-display);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-secondary);margin-bottom:8px;display:flex;align-items:center;gap:7px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+              <span data-i18n="sim_coverage_map_title">Coverage Map</span>
+            </h4>
+            <div id="sim-map" style="height: 320px; border-radius: var(--r-md); border: 1px solid var(--border-subtle); overflow: hidden; background: #06080F; position: relative;"></div>
+            <div style="font-size: 10px; color: var(--text-muted); display: flex; gap: 12px; margin-top: 8px; padding: 0 4px;">
+              <span style="display:inline-flex;align-items:center;gap:5px;"><div style="width:8px;height:8px;border-radius:50%;background:#22D47A;"></div> <span data-i18n="sim_legend_covered">Covered</span></span>
+              <span style="display:inline-flex;align-items:center;gap:4px;"><div style="width:8px;height:8px;border-radius:50%;background:#F5A623;"></div> <span data-i18n="sim_legend_partial">Partial</span></span>
+              <span style="display:inline-flex;align-items:center;gap:4px;"><div style="width:8px;height:8px;border-radius:50%;background:#FF5C72;"></div> <span data-i18n="sim_legend_uncovered">Uncovered</span></span>
+            </div>
+          </div>
+
+          <!-- Covered table -->
+          <div class="sim-table-section sim-table-covered hidden">
+            <h4><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="sim_tbl_covered">Covered Zones</span></h4>
+            <div id="sim-covered-table"></div>
+          </div>
+
+          <!-- Partial table -->
+          <div class="sim-table-section sim-table-partial hidden">
+            <h4><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> <span data-i18n="sim_tbl_partial">Partial Coverage</span></h4>
+            <div id="sim-partial-table"></div>
+          </div>
+
+          <!-- Uncovered table -->
+          <div class="sim-table-section sim-table-uncov hidden">
+            <h4><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> <span data-i18n="sim_tbl_uncovered">Uncovered Zones</span></h4>
+            <div id="sim-uncovered-table"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSIGHTS TAB -->
+    <div class="tab-pane" data-pane="insights" role="tabpanel" aria-label="City insights">
+      <div class="insights-pane">
+        
+        <!-- Key metrics stats row -->
+        <div class="dash-stats-row full" role="region" aria-label="Key metrics" style="border: 1px solid rgba(255,255,255,0.065); border-radius: var(--r-md); background: rgba(16,22,42,0.45); overflow: hidden; margin-bottom: 8px;">
+          <div class="stat-cell">
+            <div class="stat-cell-header">
+              <div class="stat-cell-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="4" width="4" height="16" rx="1"/><rect x="10" y="9" width="4" height="11" rx="1"/><rect x="2" y="14" width="4" height="6" rx="1"/></svg></div>
+              <div class="stat-cell-label" data-i18n="insights_total_violations">Violations Analyzed</div>
+            </div>
+            <div class="stat-cell-value" id="stat-total" data-current="0">–</div>
+            <div class="stat-cell-sub" data-i18n="insights_total_violations_sub">violations in hotspots</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-header">
+              <div class="stat-cell-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+              <div class="stat-cell-label" data-i18n="insights_hotspots">Scored Urban Cells</div>
+            </div>
+            <div class="stat-cell-value" id="stat-cells" data-current="0">–</div>
+            <div class="stat-cell-sub" data-i18n="insights_hotspots_sub">DBSCAN hotspots</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-header">
+              <div class="stat-cell-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+              <div class="stat-cell-label" data-i18n="insights_junction_linked">Junction-Linked Cases</div>
+            </div>
+            <div class="stat-cell-value" id="stat-junctions" data-current="0">–</div>
+            <div class="stat-cell-sub" data-i18n="insights_junction_linked_sub">of filtered hotspots</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-cell-header">
+              <div class="stat-cell-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <div class="stat-cell-label" data-i18n="insights_critical_hs">Critical Hotspots</div>
+            </div>
+            <div class="stat-cell-value" id="stat-critical" data-current="0">–</div>
+            <div class="stat-cell-sub" data-i18n="insights_critical_hs_sub">score ≥ 0.65</div>
+          </div>
+        </div>
+        <div class="insight-card glass" aria-label="Violations by hour">
+          <h3 data-i18n="chart_title_hour">Violations by Hour (IST)</h3>
+          <div class="chart-canvas-wrap" style="height:220px;">
+            <canvas id="chart-hour" aria-label="Hourly violations bar chart"></canvas>
+          </div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:8px;" data-i18n="chart_desc_hour">Amber = rush-hour (07–11 IST). Evening data sparse — enforcement is morning-concentrated.</p>
+        </div>
+
+        <div class="insight-card glass" aria-label="Violations by day of week">
+          <h3 data-i18n="chart_title_dow">Violations by Day of Week</h3>
+          <div class="chart-canvas-wrap" style="height:220px;">
+            <canvas id="chart-dow" aria-label="Day of week violations bar chart"></canvas>
+          </div>
+        </div>
+
+        <div class="insight-card glass" aria-label="Top violation types">
+          <h3 data-i18n="chart_title_vt">Top Violation Types</h3>
+          <div class="chart-canvas-wrap" style="height:240px;">
+            <canvas id="chart-vt" aria-label="Violation types horizontal bar chart"></canvas>
+          </div>
+        </div>
+
+        <div class="insight-card glass" aria-label="Vehicle type breakdown">
+          <h3 data-i18n="chart_title_vehicle">Vehicle Type Breakdown</h3>
+          <div class="chart-canvas-wrap" style="height:280px;">
+            <canvas id="chart-vehicle" aria-label="Vehicle type donut chart"></canvas>
+          </div>
+        </div>
+
+        <div class="insight-card glass" aria-label="Monthly violation trend">
+          <h3 data-i18n="chart_title_monthly">Monthly Violation Trend</h3>
+          <div class="chart-canvas-wrap" style="height:240px;">
+            <canvas id="chart-monthly" aria-label="Monthly violations line chart"></canvas>
+          </div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:8px;" data-i18n="chart_desc_monthly">Nov 2023 and Mar 2024 are partial months (dimmed). Feb–Mar 2024 sparse data is a reporting gap, not a real decline.</p>
+        </div>
+
+        <div class="insight-card glass full" aria-label="Impact score distribution">
+          <h3 data-i18n="chart_title_score_dist">Impact Score Distribution</h3>
+          <div class="chart-canvas-wrap" style="height:180px;">
+            <canvas id="chart-score-dist" aria-label="Impact score histogram"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── SIDE PANEL ──────────────────────────────────────── -->
+  <aside class="dash-side" role="complementary" aria-label="Hotspot detail panel">
+    <!-- Header -->
+    <div class="side-header">
+      <span class="side-header-title" data-i18n="side_overview_title">Overview</span>
+      <div class="side-tabs" role="tablist" aria-label="Side panel sections">
+        <button class="side-tab active" data-pane="overview" role="tab" data-i18n="side_tab_overview">Overview</button>
+        <button class="side-tab"        data-pane="detail"   role="tab" data-i18n="side_tab_hotspot">Hotspot</button>
+        <button class="side-tab"        data-pane="method"   role="tab" data-i18n="side_tab_method">Method</button>
+      </div>
+    </div>
+
+    <!-- Overview pane -->
+    <div class="side-body" id="side-pane-overview">
+      <!-- Judge brief -->
+      <div class="judge-brief">
+        <div class="judge-brief-hd">
+          <div class="judge-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <span class="judge-title" data-i18n="side_judge_brief_title">Judge Brief</span>
+        </div>
+        <p class="judge-text" id="judge-brief-text" data-i18n="side_judge_loading">Loading intelligence summary…</p>
+      </div>
+
+      <!-- Hotspot list -->
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;padding:0 2px;" data-i18n="side_top_hotspots_title">
+        Top Hotspots
+      </div>
+      <div id="hotspot-list" aria-label="Hotspot list" aria-live="polite">
+        <div class="state-loading" aria-busy="true">
+          <div class="spinner" aria-hidden="true"></div>
+          <span data-i18n="side_loading_hs">Loading hotspots…</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotspot detail pane -->
+    <div class="side-body" id="side-pane-detail" style="display:none;">
+      <div id="hotspot-detail">
+        <div class="state-empty">
+          <span style="font-size:24px;" aria-hidden="true">👆</span>
+          <span data-i18n="side_empty_detail">Click a hotspot on the map<br>or in the list to see details</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Method pane -->
+    <div class="side-body" id="side-pane-method" style="display:none;">
+      <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">
+        <div class="glass" style="padding:14px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;" data-i18n="method_dataset_title">Dataset</div>
+          <p data-i18n="method_dataset_desc">298,450 raw records filtered to 115,400 approved. Period: Nov 2023 – Mar 2024. Columns: lat/lon, timestamp, violation type, vehicle type, police station.</p>
+        </div>
+        <div class="glass" style="padding:14px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;" data-i18n="method_clustering_title">Clustering</div>
+          <p data-i18n="method_clustering_desc">DBSCAN eps=0.003, min_samples=50. Downtown giant cluster sub-clustered at eps=0.0015 into 20 zones. Final: 120 hotspots, 4.9% noise discarded.</p>
+        </div>
+        <div class="glass" style="padding:14px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;" data-i18n="method_impact_title">Impact Score</div>
+          <p style="font-family:var(--font-mono);font-size:12px;color:var(--accent-teal);margin-bottom:6px;">0.5 × count_norm + 0.3 × rush_frac + 0.2 × severity_norm</p>
+          <p data-i18n="method_impact_desc">Severity weights: HGV=1.0, Scooter=0.2 (assumptions). Rush-hour = IST 07–12.</p>
+        </div>
+        <div class="glass" style="padding:14px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;" data-i18n="method_shift_title">Shift Deployment</div>
+          <p data-i18n="method_shift_desc">Officer needs per shift (morning 06–12, afternoon 12–18, night 18–06) using real violation counts ÷ shift hours over dataset span. Throughput: 4 vph (assumption).</p>
+        </div>
+        <div class="glass" style="padding:14px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px;" data-i18n="method_tow_title">Tow Truck</div>
+          <p data-i18n="method_tow_desc">Assigned only where heavy vehicles (HGV/Bus/Lorry/Tanker) exceed 20% of violations in a hotspot.</p>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ═══════════ SCRIPTS ════════════════════════════════════ -->
+<script src="js/hotspots_data.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/map.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/simulator.js"></script>
+
+<script>
+/* Layer info panel updates */
+const layerInfos = {
+  impact:   { titleKey: 'map_popup_impact',   descKey: 'map_layer_impact_desc' },
+  volume:   { titleKey: 'layer_volume',   descKey: 'map_layer_volume_desc' },
+  junction: { titleKey: 'layer_junction', descKey: 'map_layer_junction_desc' },
+  heatmap:  { titleKey: 'layer_heatmap',  descKey: 'map_layer_heatmap_desc' },
+};
+
+function updateLayerInfoText() {
+  const activeTabEl = document.querySelector('.layer-tab.active');
+  if (!activeTabEl) return;
+  const activeLayer = activeTabEl.dataset.layer;
+  const info = layerInfos[activeLayer];
+  if (!info) return;
+
+  const titleEl = document.querySelector('.map-layer-info-title');
+  const descEl = document.querySelector('.map-layer-info-desc');
+  if (titleEl) titleEl.textContent = window.i18n.t(info.titleKey);
+  if (descEl) descEl.textContent = window.i18n.t(info.descKey);
+}
+
+document.querySelectorAll('.layer-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    updateLayerInfoText();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Bind language toggle button
+  const toggleBtn = document.getElementById('lang-toggle-btn');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentLang = window.i18n.getLanguage();
+      const nextLang = currentLang === 'en' ? 'kn' : 'en';
+      window.i18n.setLanguage(nextLang);
+    });
+  }
+
+  // Handle custom dynamic translations on change
+  window.addEventListener('languagechanged', () => {
+    updateLayerInfoText();
+  });
+  
+  // Set initial info panel text based on active language
+  updateLayerInfoText();
+});
+</script>
+
+</body>
+</html>

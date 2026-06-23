@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="app_title">Sanchaara AI — Bengaluru Traffic Intelligence</title>
+  <meta name="description" content="AI-powered parking enforcement intelligence for Bengaluru Traffic Police.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+  <!-- Load translation engine first -->
+  <script src="js/i18n.js"></script>
+  <style>
+    /* Styling for the road texture lightly overlayed */
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+                        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+      background-size: 8px 8px;
+      background-position: 0 0, 4px 4px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <!-- Procedural Traffic Flow Background -->
+  <canvas id="traffic-bg"></canvas>
+
+  <!-- Dark Vignette Overlay -->
+  <div id="hero-vignette"></div>
+
+  <!-- UI Overlay Container -->
+  <div id="ui-overlay">
+    
+    <!-- Navigation -->
+    <nav id="nav">
+      <div class="nav-left">
+        <span class="nav-logo" data-i18n-html="app_logo_short">SC<span class="amber">AI</span></span>
+        <div class="live-pill">
+          <div class="live-dot"></div>
+          <span data-i18n="tmc_status">TMC ONLINE</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button id="lang-toggle-btn">🌐 EN / ಕನ್ನಡ</button>
+        <a href="dashboard.html" class="nav-btn" data-i18n="console_login">Console Login →</a>
+      </div>
+    </nav>
+
+    <!-- Centered Hero Panel -->
+    <div id="hero-center">
+      <div class="hero-tag" data-i18n="hero_tag">BENGALURU TRAFFIC POLICE · TMC SYSTEM</div>
+      <h1 class="hero-title" data-i18n-html="app_logo">SANCHAARA <span class="amber">AI</span></h1>
+      <p class="hero-desc" data-i18n="hero_desc">
+        AI-Powered Parking Enforcement & Congestion Analytics. Spatial density clustering identifies 120 key hotspots, optimizing BTP enforcement routing across 46 police jurisdictions.
+      </p>
+      <div class="hero-actions">
+        <a href="dashboard.html" class="cta-btn" data-i18n="open_dashboard">
+          Open Dashboard
+          <span class="cta-arr">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── TICKER ─── -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span data-i18n="ticker_1">115,400 VALIDATED VIOLATIONS</span><span class="dot">·</span>
+    <span data-i18n="ticker_2">120 RISK-RANKED HOTSPOTS</span><span class="dot">·</span>
+    <span data-i18n="ticker_3">46 POLICE STATIONS</span><span class="dot">·</span>
+    <span data-i18n="ticker_4">DBSCAN SPATIAL CLUSTERING</span><span class="dot">·</span>
+    <span data-i18n="ticker_5">BENGALURU TRAFFIC POLICE</span><span class="dot">·</span>
+    <span data-i18n="ticker_6">AI ENFORCEMENT INTELLIGENCE</span><span class="dot">·</span>
+    <span data-i18n="ticker_1">115,400 VALIDATED VIOLATIONS</span><span class="dot">·</span>
+    <span data-i18n="ticker_2">120 RISK-RANKED HOTSPOTS</span><span class="dot">·</span>
+    <span data-i18n="ticker_3">46 POLICE STATIONS</span><span class="dot">·</span>
+    <span data-i18n="ticker_4">DBSCAN SPATIAL CLUSTERING</span><span class="dot">·</span>
+    <span data-i18n="ticker_5">BENGALURU TRAFFIC POLICE</span><span class="dot">·</span>
+    <span data-i18n="ticker_6">AI ENFORCEMENT INTELLIGENCE</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ─── SECTION 2: LIVE CCTV CAMERAS GRID ─── -->
+<section id="section-cctv" class="scroll-section">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="accent-line"></span>
+      <h2 class="section-title" data-i18n="cctv_title">LIVE TRAFFIC CCTV FEEDS</h2>
+      <p class="section-subtitle" data-i18n="cctv_subtitle">Real-time mock cctv telemetry captured across Bangalore traffic corridors</p>
+    </div>
+
+    <div class="cctv-grid">
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_1_1781876572508.png" alt="CCTV Feed 1">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_mg_road">CAM 01 // MG ROAD</span>
+            <span class="cctv-status" data-i18n="cctv_secure">SECURE</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_2_1781876595015.png" alt="CCTV Feed 2">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_silk_board">CAM 02 // SILK BOARD</span>
+            <span class="cctv-status danger" data-i18n="cctv_overcrowd">OVERCROWD</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_3_1781876616173.png" alt="CCTV Feed 3">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_marathahalli">CAM 03 // MARATHAHALLI</span>
+            <span class="cctv-status" data-i18n="cctv_secure">SECURE</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_4_1781876647818.png" alt="CCTV Feed 4">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_indiranagar">CAM 04 // INDIRANAGAR</span>
+            <span class="cctv-status danger" data-i18n="cctv_violation">VIOLATION DETECTED</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_5_1781876681365.png" alt="CCTV Feed 5">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_koramangala">CAM 05 // KORAMANGALA</span>
+            <span class="cctv-status" data-i18n="cctv_secure">SECURE</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+
+      <div class="cctv-card">
+        <div class="cctv-img-wrap">
+          <img src="assets/bangalore_traffic_cctv_6_1781876731105.png" alt="CCTV Feed 6">
+          <div class="cctv-overlay">
+            <span class="cctv-tag" data-i18n="cam_hebbal">CAM 06 // HEBBAL FLYOVER</span>
+            <span class="cctv-status danger" data-i18n="cctv_congested">CONGESTED</span>
+          </div>
+          <div class="scanlines"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 3: DBSCAN CLUSTERING SIMULATOR ─── -->
+<section id="section-dbscan" class="scroll-section">
+  <div class="section-container split-layout">
+    
+    <div class="split-left">
+      <div class="accent-line"></div>
+      <h2 class="section-title" data-i18n="dbscan_title">DBSCAN SPATIAL CLUSTERING</h2>
+      <p class="section-desc" data-i18n="dbscan_desc">
+        Violations are grouped automatically using Density-Based Spatial Clustering. The system filters out random noise (scattered parking tickets) and collapses coordinates into dense hotspot nodes.
+      </p>
+      
+      <div class="dbscan-parameters">
+        <div class="param-card">
+          <span class="param-val">0.003</span>
+          <span class="param-lbl" data-i18n="dbscan_eps">Epsilon (eps)</span>
+        </div>
+        <div class="param-card">
+          <span class="param-val">50</span>
+          <span class="param-lbl" data-i18n="dbscan_min_samples">Min Samples</span>
+        </div>
+      </div>
+      
+      <p class="section-note" data-i18n="dbscan_scroll_note">
+        <strong>Scroll Down</strong> to watch scattered raw violations collapse dynamically into tight, localized BTP enforcement hotspots.
+      </p>
+    </div>
+
+    <div class="split-right">
+      <div id="dbscan-canvas-wrap">
+        <canvas id="dbscan-canvas"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SECTION 4: TACTICAL ENFORCEMENT ABSTRACTIONS ─── -->
+<section id="section-features" class="scroll-section">
+  <div class="section-container">
+    <div class="section-header center">
+      <span class="accent-line"></span>
+      <h2 class="section-title" data-i18n="features_title">TMC ENGINE ABSTRACTIONS</h2>
+      <p class="section-subtitle" data-i18n="features_subtitle">Tactical modules running within the Sanchaara AI Console</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <h3 class="feat-title" data-i18n="feat_priority_title">Prioritization</h3>
+        <p class="feat-desc" data-i18n="feat_priority_desc">
+          Hotspots are prioritized dynamically using the formula:<br>
+          <code class="code-block">0.5 * Count + 0.3 * RushHour + 0.2 * Severity</code>
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <h3 class="feat-title" data-i18n="feat_alloc_title">Resource Allocator</h3>
+        <p class="feat-desc" data-i18n="feat_alloc_desc">
+          Greedily deploys available officers to the highest-priority zones. Automatically dispatches tow trucks where heavy vehicles exceed 20% of infractions.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h3 class="feat-title" data-i18n="feat_insights_title">City Insights</h3>
+        <p class="feat-desc" data-i18n="feat_insights_desc">
+          Visualizes peak enforcement hours, day-of-week distributions, and breakdown of violation types (Wrong Parking, Double Parking, Obstruction).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo" data-i18n-html="app_logo">SANCHAARA <span class="amber">AI</span></span>
+    <span class="footer-note" data-i18n="footer_note">Bengaluru Traffic Police Command console · Flipkart Gridlock Hackathon</span>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ─── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/landing.js"></script>
+<script>
+  // Dynamic language switcher sync
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('lang-toggle-btn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const currentLang = window.i18n.getLanguage();
+        const nextLang = currentLang === 'en' ? 'kn' : 'en';
+        window.i18n.setLanguage(nextLang);
+      });
+    }
+  });
+</script>
+</body>
+</html>

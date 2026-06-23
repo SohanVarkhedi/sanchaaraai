@@ -1,0 +1,146 @@
+/* ═══════════════════════════════════════════════════════════
+   ANIMATIONS — Sanchaara AI
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Core Keyframes ─────────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(110%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.25; transform: scaleY(0.7); }
+  50%       { opacity: 1;    transform: scaleY(1); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.72; transform: scale(0.96); }
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.75; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+@keyframes glowBreath {
+  0%, 100% { box-shadow: 0 0 14px rgba(123, 108, 246, 0.25); }
+  50%       { box-shadow: 0 0 40px rgba(123, 108, 246, 0.65); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-9px); }
+}
+
+@keyframes scanLine {
+  from { top: -2px; }
+  to   { top: 100%; }
+}
+
+@keyframes dotFlash {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40%            { opacity: 1;   transform: scale(1); }
+}
+
+@keyframes counterIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes borderTrail {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Utility Animation Classes ──────────────────────────── */
+.animate-fade-up   { animation: fadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in   { animation: fadeIn      0.4s ease both; }
+.animate-scale-in  { animation: scaleIn     0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
+.animate-float     { animation: float 3.5s ease-in-out infinite; }
+.animate-pulse     { animation: pulse 2.5s ease-in-out infinite; }
+.animate-glow      { animation: glowBreath 2.5s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(123,108,246,0.14) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+/* ─── Stagger Delays ─────────────────────────────────────── */
+.d1  { animation-delay: 0.1s; }
+.d2  { animation-delay: 0.2s; }
+.d3  { animation-delay: 0.3s; }
+.d4  { animation-delay: 0.4s; }
+.d5  { animation-delay: 0.5s; }
+.d6  { animation-delay: 0.6s; }
+.d7  { animation-delay: 0.7s; }
+.d8  { animation-delay: 0.8s; }
+
+/* ─── Transition Presets ─────────────────────────────────── */
+.transition-all    { transition: all 0.28s cubic-bezier(0.4,0,0.2,1); }
+.transition-spring { transition: all 0.42s cubic-bezier(0.34,1.56,0.64,1); }
+.transition-slow   { transition: all 0.6s cubic-bezier(0.4,0,0.2,1); }
+
+/* ─── Loading Dots ────────────────────────────────────────── */
+.loading-dots {
+  display: inline-flex; gap: 5px; align-items: center;
+}
+.loading-dots span {
+  width: 6px; height: 6px;
+  border-radius: 50%; background: var(--accent-teal);
+  animation: dotFlash 1.4s ease-in-out infinite both;
+}
+.loading-dots span:nth-child(2) { animation-delay: 0.16s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.32s; }
+
+/* ─── Hover Lift ──────────────────────────────────────────── */
+.hover-lift { transition: var(--transition); }
+.hover-lift:hover { transform: translateY(-4px); }
+
+/* ─── Scan Line Overlay ───────────────────────────────────── */
+.scan-overlay {
+  position: absolute; inset: 0;
+  overflow: hidden; pointer-events: none;
+}
+.scan-overlay::after {
+  content: '';
+  position: absolute; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(123,108,246,0.4), transparent);
+  animation: scanLine 4s linear infinite;
+}

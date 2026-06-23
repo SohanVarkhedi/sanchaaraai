@@ -1,0 +1,223 @@
+/* ═══════════════════════════════════════════════════════════
+   SANCHAARA AI — Design System
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Custom Properties ─────────────────────────────────── */
+:root {
+  /* Backgrounds — deep navy-black */
+  --bg-primary:    #06080F;
+  --bg-secondary:  #09111F;
+  --bg-tertiary:   #0D1524;
+  --bg-card:       rgba(13, 21, 36, 0.92);
+  --bg-card-hover: rgba(18, 30, 52, 0.97);
+
+  /* Brand — warm indigo/violet (replaces teal) */
+  --accent-teal:        #7B6CF6;
+  --accent-teal-mid:    #5A54C4;
+  --accent-teal-dim:    rgba(123, 108, 246, 0.12);
+  --accent-teal-glow:   rgba(123, 108, 246, 0.38);
+  --accent-coral:       #FF5C72;
+  --accent-coral-dim:   rgba(255, 92, 114, 0.12);
+  --accent-amber:       #F5A623;
+  --accent-amber-dim:   rgba(245, 166, 35, 0.12);
+  --accent-purple:      #C084FC;
+  --accent-purple-dim:  rgba(192, 132, 252, 0.12);
+  --accent-green:       #22D47A;
+  --accent-green-dim:   rgba(34, 212, 122, 0.12);
+
+  /* Text */
+  --text-primary:   #F0F4FF;
+  --text-secondary: #8896B3;
+  --text-muted:     #3D4E6A;
+  --text-accent:    var(--accent-teal);
+
+  /* Borders */
+  --border-subtle:  rgba(255, 255, 255, 0.055);
+  --border-medium:  rgba(255, 255, 255, 0.10);
+  --border-glow:    rgba(123, 108, 246, 0.24);
+  --border-coral:   rgba(255, 92, 114, 0.28);
+  --border-amber:   rgba(245, 166, 35, 0.28);
+  --border-purple:  rgba(192, 132, 252, 0.28);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body:    'Inter', -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Spacing */
+  --sp-1: 4px; --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 20px; --sp-6: 24px;
+  --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+  --sp-16: 64px; --sp-24: 96px;
+
+  /* Radii */
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-full: 9999px;
+
+  /* Effects */
+  --glass-blur:       blur(24px) saturate(1.6);
+  --glass-blur-heavy: blur(48px) saturate(1.8);
+  --shadow-teal:      0 0 32px rgba(123, 108, 246, 0.22);
+  --shadow-coral:     0 0 32px rgba(255, 92, 114, 0.22);
+  --shadow-lg:        0 24px 48px rgba(0, 0, 0, 0.6);
+  --transition:       all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; }
+select, input { font-family: var(--font-body); }
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(0,255,209,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-teal); }
+
+/* ─── Utility Classes ─────────────────────────────────────── */
+.glass {
+  background: linear-gradient(145deg, rgba(13,21,36,0.92) 0%, rgba(7,11,20,0.9) 100%);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-md);
+}
+.glass-teal  { border-color: var(--border-glow);   box-shadow: var(--shadow-teal); }
+.glass-coral { border-color: var(--border-coral);  box-shadow: var(--shadow-coral); }
+
+.text-teal   { color: var(--accent-teal); }
+.text-coral  { color: var(--accent-coral); }
+.text-amber  { color: var(--accent-amber); }
+.text-purple { color: var(--accent-purple); }
+.text-muted  { color: var(--text-muted); }
+.text-secondary { color: var(--text-secondary); }
+
+/* ─── Badge ───────────────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.badge-teal   { background: var(--accent-teal-dim);   border: 1px solid var(--border-glow);   color: var(--accent-teal); }
+.badge-coral  { background: var(--accent-coral-dim);  border: 1px solid var(--border-coral);  color: var(--accent-coral); }
+.badge-amber  { background: var(--accent-amber-dim);  border: 1px solid var(--border-amber);  color: var(--accent-amber); }
+.badge-purple { background: var(--accent-purple-dim); border: 1px solid var(--border-purple); color: var(--accent-purple); }
+.badge-green  { background: var(--accent-green-dim);  border: 1px solid rgba(0,204,102,0.3);  color: var(--accent-green); }
+
+/* ─── Navigation ──────────────────────────────────────────── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 14px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: var(--transition);
+}
+.nav-glass {
+  background: rgba(2, 4, 8, 0.65);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-logo-mark {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 15px; font-weight: 800;
+  color: #000; letter-spacing: -0.03em;
+}
+.nav-logo-text {
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+  color: var(--text-primary); letter-spacing: -0.01em;
+}
+.nav-logo-text span { color: var(--accent-teal); }
+
+.nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary); font-size: 14px; font-weight: 500;
+  padding: 6px 14px; border-radius: var(--r-sm);
+  transition: var(--transition);
+}
+.nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+.nav-links a.active { color: var(--accent-teal); }
+
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 22px; border-radius: var(--r-sm);
+  font-family: var(--font-display); font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: var(--transition-spring);
+  white-space: nowrap; text-decoration: none;
+}
+.btn-primary {
+  background: var(--accent-teal); color: #000706;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(0, 255, 209, 0.55);
+}
+.btn-ghost {
+  background: transparent; color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+.btn-ghost:hover {
+  border-color: var(--border-glow);
+  color: var(--accent-teal);
+  background: var(--accent-teal-dim);
+}
+.btn-sm { padding: 7px 14px; font-size: 12px; }
+.btn-icon {
+  width: 34px; height: 34px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--r-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.btn-icon:hover { border-color: var(--border-glow); color: var(--accent-teal); }
+
+/* ─── Divider ─────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-subtle), transparent);
+}
+
+/* ─── Loading Spinner ─────────────────────────────────────── */
+.spinner {
+  width: 28px; height: 28px;
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--accent-teal);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+/* ─── Tooltip ─────────────────────────────────────────────── */
+[data-tip] { position: relative; }
+[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 11px; font-weight: 500;
+  padding: 5px 10px; border-radius: var(--r-sm);
+  white-space: nowrap; pointer-events: none; z-index: 999;
+}
